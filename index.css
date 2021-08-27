@@ -10,13 +10,29 @@ body {
 }
 
 .main{
-    border: 1px solid #fff;
     display: flex;
     flex-direction: column;
 }
 .header{
     display: flex;
+    flex-direction: row;
     justify-content: space-around;
+}
+.header a{
+    width: 110px;
+    height: 83px;
+    background-image: url("./assets/postit.png");
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    margin: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .pict{
     width: 300px;
@@ -33,7 +49,6 @@ body {
     align-items: center;
 }
 .content{
-    border: 1px solid #fff;
     display: flex;
     flex-direction: column;
     align-items: center;
