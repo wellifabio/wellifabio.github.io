@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+body {
+	background-color: #eee;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	font-size: small;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center
+}
+
+.cabecalho{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	width: 800px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 4px;
+	padding: 10px;
+	margin: 10px;
+}
+.rodape{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	width: 800px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-radius: 4px;
+	padding: 10px;
+	margin: 10px;
+}
+
+form {
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	display: grid;
+	grid-template-columns: 250px 550px;
+	padding: 10px;
+}
+
+label {
+	margin: 10px;
+}
+
+input, select, button {
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin: 5px;
+	padding: 10px;
+}
+
+button {
+	cursor: pointer;
+}
+
+.pedidos{
+	background-color: #fff;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	display: grid;
+	grid-template-columns: 400px 400px;
+	padding: 10px;
+	margin: 10px;
+}
+
+.card{
+	display: grid;
+	grid-template-columns: 300px 80px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	margin: 5px;
+	padding: 10px;
+}
+
+.card button{
+	border: 0px;
+}
+
+.dados{
+	display: grid;
+	grid-template-columns: 180px 100px;
+}
+
+.producao .card{
+	background: #eee;
+}
+
+.entrega .card{
+	background: #ddd;
+}

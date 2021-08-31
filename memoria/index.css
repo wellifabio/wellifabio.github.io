@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.titulo{
+    margin: 30px;
+    margin-top: 35px;
+}
+
+.botao{
+    width: 240px;
+    height: 40px;
+    margin: 30px;
+}
+.quadro{
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 250px 250px;
+}
+
+.card{
+    background-image: url("./assets/verso.png");
+    border: none;
+    border-radius: 20px;
+    width: 240px;
+    height: 200px;
+    cursor: pointer;
+}
+.head{
+    display: flex;
+    flex-direction: row;
+}

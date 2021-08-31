@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dados>
+<nomes>
+<nome>Ana</nome>
+<nome>Bruna</nome>
+<nome>Carla</nome>
+<nome>Daniela</nome>
+<nome>Eva</nome>
+<nome>Flávia</nome>
+<nome>Gisele</nome>
+<nome>Helena</nome>
+<nome>Ivone</nome>
+<nome>Jaqueline</nome>
+<nome>Keli</nome>
+<nome>Luciana</nome>
+<nome>Maria</nome>
+<nome>Naiara</nome>
+<nome>Olga</nome>
+<nome>Paula</nome>
+<nome>Queila</nome>
+<nome>Raissa</nome>
+<nome>Sara</nome>
+<nome>Tatiane</nome>
+<nome>Ursula</nome>
+<nome>Valéria</nome>
+<nome>Wendy</nome>
+<nome>Yara</nome>
+<nome>Xeila</nome>
+<nome>Zélia</nome>
+<nome>Antônio</nome>
+<nome>Brito</nome>
+<nome>Clóvis</nome>
+<nome>Douglas</nome>
+<nome>Evandro</nome>
+<nome>Fábio</nome>
+<nome>Gilberto</nome>
+<nome>Hugo</nome>
+<nome>Ivo</nome>
+<nome>João</nome>
+<nome>Kleiton</nome>
+<nome>Luis</nome>
+<nome>Marcos</nome>
+<nome>Norberto</nome>
+<nome>Osvaldo</nome>
+<nome>Pedro</nome>
+<nome>Quevin</nome>
+<nome>Raul</nome>
+<nome>Saulo</nome>
+<nome>Timóteo</nome>
+<nome>Umberto</nome>
+<nome>Valter</nome>
+<nome>Willian</nome>
+<nome>Yago</nome>
+<nome>Xailo</nome>
+<nome>Zuim</nome>
+</nomes>
+<sobrenomes>
+<sobrenome>Silva</sobrenome>
+<sobrenome>Souza</sobrenome>
+<sobrenome>Oliveira</sobrenome>
+<sobrenome>Mattos</sobrenome>
+<sobrenome>Matos</sobrenome>
+<sobrenome>da Silva</sobrenome>
+<sobrenome>de Souza</sobrenome>
+<sobrenome>de Oliveira</sobrenome>
+<sobrenome>Martins</sobrenome>
+<sobrenome>Martim</sobrenome>
+<sobrenome>Alves</sobrenome>
+<sobrenome>Filho</sobrenome>
+<sobrenome>Júnior</sobrenome>
+<sobrenome>Neto</sobrenome>
+<sobrenome>Sobrinho</sobrenome>
+<sobrenome>Bispo</sobrenome>
+<sobrenome>Custódio</sobrenome>
+<sobrenome>Teixeira</sobrenome>
+</sobrenomes>
+<logradouros>
+<logradouro>Rua Valter Souza</logradouro>
+<logradouro>Rua Pedro Martim</logradouro>
+<logradouro>Rua Pedro Silva Martins</logradouro>
+<logradouro>Rua Xailo Souza</logradouro>
+<logradouro>Rua Brito de Souza</logradouro>
+<logradouro>Av. Brasil</logradouro>
+<logradouro>Av. Paulista</logradouro>
+<logradouro>Paça Ivone Souza</logradouro>
+<logradouro>Praça Antônio Silva Sobrinho</logradouro>
+<logradouro>Av. XV de Novembro</logradouro>
+<logradouro>Av. 7 de setembro</logradouro>
+<logradouro>Praça dos Trabalhadores</logradouro>
+<logradouro>Rua dos Trabalhadores</logradouro>
+<logradouro>Rua do açúcar</logradouro>
+<logradouro>Rua das Rosas</logradouro>
+<logradouro>Rua das Flores</logradouro>
+<logradouro>Rua do Mel</logradouro>
+</logradouros>
+<bairros>
+<bairro>Centro</bairro>
+<bairro>Jardim Brasil</bairro>
+<bairro>Jardim São Paulo</bairro>
+<bairro>Parque das Flores</bairro>
+</bairros>
+<cidades>
+<cidade>Americana, SP</cidade>
+<cidade>Campinas, SP</cidade>
+<cidade>Jaguariúna, SP</cidade>
+<cidade>Nova Odessa, SP</cidade>
+<cidade>Pedreira, SP</cidade>
+<cidade>Amparo, SP</cidade>
+</cidades>
+</dados>

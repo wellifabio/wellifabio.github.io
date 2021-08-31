@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="./assets/icone.png">
+    <title>Jogo da Memória Flores</title>
+</head>
+<body onload="virarTodas(), espere()">
+    <div class="head">
+        <h3 class="titulo">Teste sua memória com flores</h3>
+        <button class="botao" type="button" onclick="iniciar(this),deVoltaAoJogo()">Iniciar</button>
+    </div>
+    <div class="quadro">
+        <button class="card" type="button" id="bt1" onclick="jogar(this)"></button>
+        <button class="card" type="button" id="bt2" onclick="jogar(this)"></button>
+        <button class="card" type="button" id="bt3" onclick="jogar(this)"></button>
+        <button class="card" type="button" id="bt4" onclick="jogar(this)"></button>
+        <button class="card" type="button" id="bt5" onclick="jogar(this)"></button>
+        <button class="card" type="button" id="bt6" onclick="jogar(this)"></button>
+        <button class="card" type="button" id="bt7" onclick="jogar(this)"></button>
+        <button class="card" type="button" id="bt8" onclick="jogar(this)"></button>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="delivery.css">
+    <link rel="shortcut icon" href="./assets/icon-motoboy.png">
+    <title>Delivery Lanchão</title>
+</head>
+
+<body onload="preencherForm(), obterAgora()">
+    <div class="cabecalho">
+        <h2>Faça a gestão de suas entregas</h2>
+    </div>
+    <div class="pedido">
+        <form>
+            <label>Cliente:</label><input type="text" id="cliente">
+            <label>Endereço:</label><input type="text" id="endereco">
+            <label>Produto:</label><select id="produto">
+            </select>
+            <button type="button" onclick="lancarPedido(), preencherForm(), obterAgora()">Gerar Pedido</button>
+            <input type="text" id="agora" readonly="readonly">
+        </form>
+    </div>
+    <div class="pedidos">
+        <div class="producao">
+            <h4>Em execução</h4>
+        </div>
+        <div class="entrega">
+            <h4>A caminho</h4>
+        </div>
+    </div>
+    <div class="rodape">
+        <p>
+            <b>Exemplo de utilização do sistema:</b>
+            1) O telefonista anota os dados do pedido, da entrega e
+            gera o pedido 2) com apenas um clique, despacha para a entrega.
+            3) Ao ser notificado pelo entregador <b>finaliza o pedido.</b>
+            4) Ao finalizar todos os pedidos do dia faz download da planilha que posteriormente
+            pode gerar <b> relatórios de produtividade, eficiência, qualidade </b>entre outros.
+            (Faça o teste neste simulador) 
+        </p>
+    </div>
+</body>
+<script src="delivery.js"></script>
+<script src="./uteis/uteis.js"></script>
+</html>
