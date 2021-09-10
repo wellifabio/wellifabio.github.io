@@ -1,0 +1,44 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button{
+    border-radius: 5px;
+    font-size: large;
+    width: 200px;
+    height: 50px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+#game{
+    background-image: url("./assets/grid.png");
+    background-size: cover;
+    display:grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 220px 220px 220px;
+}
+
+#game button{
+    border: none;
+    background: none;
+    width: 250px;
+    height: 220px;
+    color:rgb(5, 5, 54);
+    margin: 5px;
+    cursor: pointer;
+}
+
+img{
+    width: 200px;
+    height: 190px;
+}
+
+.tela{
+    position: absolute;
+    top:77px;
+    display: none;
+}

@@ -9,20 +9,9 @@ body {
     align-items: center;
 }
 
-.main{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-.header a{
+a{
     width: 140px;
     height: 105px;
-    background-image: url("./assets/postit.png");
     background-size: cover;
     text-decoration: none;
     text-align: center;
@@ -36,6 +25,40 @@ body {
     flex-direction: column;
     justify-content: center;
 }
+
+.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.header a{
+    background-image: url("./assets/postitblue.png");
+}
+
+.content{
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.content a{
+    background-image: url("./assets/postit.png");
+}
+
 .pict{
     width: 300px;
     height: 300px;
@@ -44,19 +67,18 @@ body {
     max-width: 300px;
     border-radius: 50%;
 }
+
 .about{
     width: 700px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-.content{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 @media(max-width:900px){
+    .content{
+        display: contents;
+    }
     .header{
         display: contents;
     }
