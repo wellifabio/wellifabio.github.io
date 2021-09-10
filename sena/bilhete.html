@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="ico.png">
     <link rel="stylesheet" type="text/css" href="bilhete.css" />
-    <title>Gera Jogos SENA</title>
+    <title>MEGA SENA Preenchedor de Jogos</title>
 </head>
 
 <body onload="preencherCartela()">
     <div class="geral">
         <div class="conteudo" id="corpo">
-            <label> Digite os números ou gere jogos aleatórios:</label>
+            <h3>Preencha jogos da Mega Sena</h3>
+            <label> Você pode digitar seus números, preencher o bilhete clicando <br /> nos números na imagem ao lado ou
+                sortear jogos aleatórios, <br /> boa sorte
+                e divirta-se:</label>
             <input type="text" oninput="verificarMinimoSeis()" id="jogo1"
                 placeholder="Digite os números separados por espaços ex: 05 08 10 14 16 55" />
             <input type="text" oninput="verificarMinimoSeis()" id="jogo2"
@@ -31,7 +34,7 @@
                     <option value="15">15</option>
                 </select>
             </label>
-            <button onclick="geraJogos()">Gera Jogos</button>
+            <button onclick="geraJogos()">Sortear jogos aleatórios</button>
             <button onclick="limpar()">Limpar</button>
         </div>
         <div class="bilhete">

@@ -2,6 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family:Arial, Helvetica, sans-serif;
 }
 .geral{
     display:flex;
@@ -68,11 +69,9 @@ label{
     min-width: 400px;
     margin: 5px;
     padding: 10px;
-    border: 1px solid #000;
+    border: 1px solid #cfd;
     border-radius: 4px;
-    font-family:Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    font-size:medium;
+    font-size:small;
     text-align: center;
 }
 
@@ -80,14 +79,14 @@ input{
     min-width: 400px;
     margin: 5px;
     padding: 10px;
-    border: 2px solid #000;
+    border: 1px solid #9ba;
     border-radius: 4px;
 }
 
 select{
     min-width: 100px;
     padding: 5px;
-    border: 2px solid #000;
+    border: 1px solid #9ba;
     border-radius: 4px;
 }
 
@@ -95,7 +94,7 @@ select{
     min-width: 425px;
     margin: 5px;
     padding: 10px;
-    border: 2px solid #000;
+    border: 1px solid #ccc;
     border-radius: 4px;
     background-color: rgb(32, 170, 145);
     color: #fff;
