@@ -9,7 +9,7 @@
     <title>Gera Jogos SENA</title>
 </head>
 
-<body>
+<body onload="preencherCartela()">
     <div class="geral">
         <div class="conteudo" id="corpo">
             <label> Digite os números ou gere jogos aleatórios:</label>
@@ -32,8 +32,12 @@
                 </select>
             </label>
             <button onclick="geraJogos()">Gera Jogos</button>
+            <button onclick="limpar()">Limpar</button>
         </div>
         <div class="bilhete">
+            <div class="j1"></div>
+            <div class="j2"></div>
+            <div class="j3"></div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"

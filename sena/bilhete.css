@@ -22,7 +22,48 @@ body{
 	height:559px;
 	display: flex;
     flex-direction: column;
+    align-items: center;
+    opacity: 0.6;
 }
+
+.j1{
+    margin-top: 105px;
+    margin-left: 13px;
+    display: grid;
+    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 29px 31px 35px;
+    grid-template-rows: 16px 15px 16px 15px 16px 15px;
+}
+
+.j2{
+    margin-top: 24px;
+    margin-left: 13px;
+    display: grid;
+    grid-template-columns: 30px 30px 30px 30px 30px 30px 30px 29px 31px 35px;
+    grid-template-rows: 16px 15px 16px 15px 16px 15px;
+}
+
+.j3{
+    margin-top: 35px;
+    width: 100%;
+    height: 10px;
+}
+
+.cheio{
+    background-color: #000;
+    border: none;
+    width: 15px;
+    height: 9px;
+    cursor: pointer;
+}
+
+.vazio{
+    background-color: transparent;
+    border: none;
+    width: 15px;
+    height: 9px;
+    cursor: pointer;
+}
+
 label{
     min-width: 400px;
     margin: 5px;
@@ -50,7 +91,7 @@ select{
     border-radius: 4px;
 }
 
-button{
+.conteudo button{
     min-width: 425px;
     margin: 5px;
     padding: 10px;

@@ -2,7 +2,9 @@ const jogo1 = document.getElementById("jogo1");
 const jogo2 = document.getElementById("jogo2");
 const corpo = document.getElementById("corpo");
 const btPDF = document.createElement("button");
-const bilhete = document.querySelector(".bilhete");
+const j1 = document.querySelector(".j1");
+const j2 = document.querySelector(".j2");
+const j3 = document.querySelector(".j3");
 btPDF.innerHTML = "Download do bilhete preechido";
 btPDF.setAttribute("onclick", "salvarPDF()");
 btPDF.setAttribute("id", "btPDF");
@@ -11,11 +13,22 @@ var jogos = [];
 var numeros = [];
 var qtdNum = 0;
 
+function limpar() {
+    jogo1.value = "";
+    jogo2.value = "";
+    preencherCartela();
+    if (isBtPDF) {
+        document.getElementById("btPDF").remove();
+        isBtPDF = false;
+    }
+}
+
 function geraJogos() {
     qtdNum = parseInt(document.getElementById("qtdNum").value);
     let nTemp = 0;
     jogos = [];
     for (x = 0; x < 2; x++) {
+        numeros = [];
         for (i = 0; i < qtdNum; i++) {
             while (numeros.indexOf(nTemp = Math.floor(Math.random() * 59 + 1)) >= 0);
             numeros[i] = nTemp;
@@ -23,15 +36,14 @@ function geraJogos() {
         for (i = 0; i < qtdNum; i++)if (parseInt(numeros[i]) < 10) numeros[i] = "0" + numeros[i];
         numeros = numeros.sort();
         jogos.push(numeros);
-        numeros = [];
     }
     jogo1.value = jogos[0].toString().replaceAll(",", " ");
     jogo2.value = jogos[1].toString().replaceAll(",", " ");
     verificarMinimoSeis();
-    //preencherNaTela()
 }
 
 function verificarMinimoSeis() {
+    preencherCartela();
     if ((jogo1.value.length > 16 || jogo2.value.length > 16) && !isBtPDF) {
         corpo.appendChild(btPDF);
         isBtPDF = true;
@@ -87,13 +99,93 @@ function salvarPDF() {
     doc.rect(xx, yy, 5.2, 2.6, 'F');
     doc.save('bilhete.pdf');
 }
- /*
-function preencherNaTela() {
-    let tabela1 = "<table border='1'>";
-    for (i = 0; i < 6; i++){
-        tabela1+="<tr><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>";
+
+function preencherCartela() {
+    j1.innerHTML = "";
+    let p;
+    for (i = 0; i < 60; i++) {
+        p = document.createElement("button");
+        p.className = isInJogo(i + 1, true);
+        p.value = (i + 1);
+        p.setAttribute("onclick", "chekClick(this,1)");
+        j1.appendChild(p);
     }
-    tabela1 += "</table>";
-    bilhete.innerHTML = tabela1;
+    j2.innerHTML = "";
+    for (i = 0; i < 60; i++) {
+        p = document.createElement("button");
+        p.className = isInJogo(i + 1, false);
+        p.value = (i + 1);
+        p.setAttribute("onclick", "chekClick(this,2)");
+        j2.appendChild(p);
+    }
+    preencherQuantosNumeros();
 }
-*/
+
+function preencherQuantosNumeros() {
+    j3.innerHTML = "";
+    let p;
+    let posicao = -125;
+    if (jogo1.value.length > 0 && jogo2.value.length > 0) {
+        jogos = [];
+        numeros = jogo1.value.split(" ");
+        outros = jogo2.value.split(" ");
+        if (numeros.length >= 6 && numeros.length <= 15 && numeros.length == outros.length) {
+            p = document.createElement("div");
+            p.className = "cheio";
+            posicao += 30 * numeros.length;
+            p.setAttribute("style", "margin-left:" + posicao + "px;");
+            j3.appendChild(p);
+        }
+    }
+}
+
+function isInJogo(val, j) {
+    if (j)
+        numeros = jogo1.value.split(" ");
+    else
+        numeros = jogo2.value.split(" ");
+    for (x = 0; x < numeros.length; x++)
+        if (numeros[x] == val)
+            return "cheio";
+    return "vazio";
+}
+
+function chekClick(e, j) {
+    jogos = [];
+    if (e.value < 10) e.value = "0" + e.value;
+    numeros = jogo1.value.split(" ");
+    if (j == 1)
+        if (contem(e.value, numeros))
+            numeros.splice(numeros.indexOf(e.value), 1);
+        else
+            numeros.push(e.value);
+    numeros = numeros.sort();
+    jogos.push(numeros);
+    numeros = jogo2.value.split(" ");
+    if (j == 2)
+        if (contem(e.value, numeros))
+            numeros.splice(numeros.indexOf(e.value), 1);
+        else
+            numeros.push(e.value);
+    numeros = numeros.sort();
+    jogos.push(numeros);
+    jogo1.value = jogos[0].toString().replaceAll(",", " ");
+    jogo2.value = jogos[1].toString().replaceAll(",", " ");
+    jogo1.value = limpaEspacos(jogo1.value);
+    jogo2.value = limpaEspacos(jogo2.value);
+    preencherCartela();
+}
+
+function contem(v, vetor) {
+    for (x = 0; x < vetor.length; x++)
+        if (vetor[x] == v)
+            return true;
+    return false;
+}
+
+function limpaEspacos(c) {
+    if (c.substr(0, 1) === " ")
+        return c.substr(1);
+    else
+        return c;
+}
