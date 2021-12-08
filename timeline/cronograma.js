@@ -45,13 +45,13 @@ function criarCronograma() {
         btFaixa.setAttribute("class","faixa");
         btSalvar = document.createElement("button");
         btSalvar.setAttribute("onclick", "salvarCSV()");
-        btSalvar.innerHTML = "Salvar em CSV";
+        btSalvar.innerHTML = "Save in CSV";
         btPrint = document.createElement("button");
         btPrint.setAttribute("onclick", "imprimir()");
-        btPrint.innerHTML = "Imprimir";
+        btPrint.innerHTML = "Print";
         btReset = document.createElement("button");
         btReset.setAttribute("onclick", "document.location.reload(true);");
-        btReset.innerHTML = "Reiniciar";
+        btReset.innerHTML = "Reload";
         btFaixa.appendChild(btSalvar);
         btFaixa.appendChild(btPrint);
         btFaixa.appendChild(btReset);
