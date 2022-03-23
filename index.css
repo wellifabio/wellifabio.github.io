@@ -1,7 +1,7 @@
 body {
     background: url("./assets/back.png") repeat-x fixed;
     background-size: contain;
-    background-color: #def;
+    background-color: #fff;
     padding-top: 10px;
     font-family: "courier new", Arial, Helvetica, sans-serif;
     display: flex;
