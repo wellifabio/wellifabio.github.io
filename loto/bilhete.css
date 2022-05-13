@@ -1,0 +1,93 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.geral{
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.faixaBT{
+    display: flex;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    align-items: center;
+}
+
+.bts{
+    width: 150px;
+    display:grid;
+    margin-left: 10px;
+    margin-right: 10px;
+    grid-template-columns: 30px 30px 30px 30px 30px;
+    grid-template-rows: 40px 40px 40px 40px 40px;
+}
+
+.inputNum{
+    border: 1px solid #666;
+    border-radius: 3px;
+    background-color: #eee;
+    cursor:pointer;
+}
+.inputClicked{
+    border: 1px solid rgb(245, 192, 238);
+    border-radius: 3px;
+    background-color: rgb(134, 43, 127);
+    cursor:pointer;
+    color: #fff;
+}
+.inputNum:hover{
+    background-color: #ccc;
+}
+
+label{
+    min-width: 400px;
+    margin: 5px;
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 4px;
+    font-family:Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size:medium;
+    text-align: center;
+}
+
+input{
+    min-width: 400px;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
+select{
+    min-width: 100px;
+    padding: 5px;
+    border: 2px solid #000;
+    border-radius: 4px;
+}
+
+.btAction{
+    min-width: 425px;
+    margin: 5px;
+    padding: 10px;
+    border: 2px solid #000;
+    border-radius: 4px;
+    background-color: rgb(170, 32, 170);
+    color: #fff;
+    cursor:pointer;
+}
+
+img{
+    opacity: 50%;
+    margin: 10px;
+}

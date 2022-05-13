@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="ico.png">
+    <link rel="stylesheet" type="text/css" href="bilhete.css" />
+    <title>Gera Jogos SENA</title>
+</head>
+
+<body onload="gerarBotoes()">
+    <div class="geral">
+        <div class="conteudo" id="corpo">
+            <label> Digite, clique nos números ou gere jogos aleatórios:</label>
+            <div class="faixaBT">
+                <div class="faixaBT">Jogo 1<div id="botoes1" class="bts"></div>
+                </div>
+                <div class="faixaBT">Jogo 2<div id="botoes2" class="bts"></div>
+                </div>
+            </div>
+            <input type="text" oninput="verificarMinimo()" id="jogo1"
+                placeholder="Jogo1 ex: 01 04 05 06 08 13 14 15 17 18 19 20 22 24 25" />
+            <input type="text" oninput="verificarMinimo()" id="jogo2"
+                placeholder="Jogo2 ex: 01 04 05 07 09 10 14 16 18 19 20 22 23 24 25" />
+            <label> Escolha quantos números:
+                <select id="qtdNum">
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                </select>
+                </select>
+            </label>
+            <button onclick="geraJogos()" class="btAction">Gera Jogos</button>
+        </div>
+        <div class="conteudo">
+            <img src="./bilhete.png" width="400px">
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+        integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
+        crossorigin="anonymous"></script>
+    <script src="bilhete.js"></script>
+</body>
+
+</html>
