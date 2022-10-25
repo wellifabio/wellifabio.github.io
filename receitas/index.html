@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/ico.png">
+    <title>Minhas Receitas</title>
+</head>
+
+<body onload="carregar()">
+    <header>
+        <h1>Minhas Receitas</h1>
+        <button onclick="modalCreate.classList.remove('oculto');">Adicionar</button>
+    </header>
+    <main>
+        <section id="cards">
+            <div class="card oculto">
+                <div>
+                    <div id="id"><b>Id:</b></div><button id="btn">X</button>
+                </div>
+                <div id="tipo"><b>Tipo:</b> </div>
+                <div id="nome"><b>Nome:</b> </div>
+                <div id="ingredientes"><b>Ingredientes:</b> </div>
+                <div id="modoPreparo"><b>Modo de Preparo:</b> </div>
+                <img id="img" src="./assets/default.png">
+            </div>
+        </section>
+        <section id="modalCreate" class="modal oculto">
+            <form onsubmit="create()" id="create" class="forms">
+                <h2>Adicionar Receita</h2>
+                <div>
+                    <label for="tipo">Tipo:</label>
+                    <select name="tipo" id="tipo">
+                        <option value="salgado">Salgado</option>
+                        <option value="doce">Doce</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nome" required>
+                </div>
+                <div>
+                    <label for="ingredientes">Ingredientes:</label>
+                    <textarea name="ingredientes" id="ingredientes" required></textarea>
+                </div>
+                <div>
+                    <label for="modoPreparo">Modo de Preparo:</label>
+                    <textarea name="modoPreparo" id="modoPreparo" required></textarea>
+                </div>
+                <div>
+                    <label for="img">Imagem:</label>
+                    <input type="file" name="img" id="file" onchange="toImgBase64()" accept="image/jpeg, image/png">
+                    <img src="./assets/default.png" name="imagem" alt="Imagem">
+                </div>
+                <div class="botoes">
+                    <button type="submit">Adicionar</button>
+                    <button type="reset">Limpar</button>
+                    <button onclick="modalCreate.classList.add('oculto');">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="script.js"></script>
+
+</html>
