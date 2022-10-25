@@ -17,13 +17,14 @@ const carregar = () => {
         .catch(err => alert("Erro ao carregar dados do BD:" + err));
 }
 
-const create = () => {
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
     let receita = {
         nome: form.nome.value,
         tipo: form.tipo.value,
         ingredientes: form.ingredientes.value,
         modoPreparo: form.modoPreparo.value,
-        foto: null
+        foto: fotoBase64
     }
     alert(JSON.stringify(receita));
     const options = {
@@ -40,7 +41,7 @@ const create = () => {
                 alert("Erro ao enviar dados para o servidor, erro: " + resp)
         })
         .catch(err => console.error(err));
-}
+});
 
 function readAll() {
     dados.forEach(e => {
