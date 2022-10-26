@@ -116,12 +116,10 @@ main{
     background-color: rgba(0,0,0,0.5);
 }
 
-.forms{
-    position: relative;
-}
-
 form{
-    width: 90%;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
     height: 82vh;
     background-color: #133;
     margin: 10px;
@@ -133,7 +131,7 @@ form{
     justify-content: space-between;
     box-shadow: 0 0 10px #eee;
     position: relative;
-    top:100px;
+    top:10px;
     color: #eee;
 }
 
@@ -210,4 +208,26 @@ form textarea{
 
 .oculto{
     display: none;
+}
+
+@media(max-width:600px){
+    *{
+        margin: 0px;
+    }
+    form{
+        height: 100%;
+    }
+    form button{
+        font-size: small;
+    }
+    form label{
+        width: 100px;
+        font-size: small;
+    }
+    h1{
+        font-size: medium;
+    }
+    header buttom {
+        font-size: 14px;
+    }
 }

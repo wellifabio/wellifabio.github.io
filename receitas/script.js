@@ -26,7 +26,6 @@ form.addEventListener('submit', (e) => {
         modoPreparo: form.modoPreparo.value,
         foto: fotoBase64
     }
-    alert(JSON.stringify(receita));
     const options = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -83,10 +82,15 @@ function isImgBase64(img) {
 
 const toImgBase64 = () => {
     let file = document.querySelector("#file")['files'][0];
-    let fr = new FileReader();
-    fr.onload = function () {
-        fotoBase64 = fr.result.replace("data:", "").replace(/^.+,/, "");
-        form.imagem.src = isImgBase64(fotoBase64);
+    if (file.size < 20000) {
+        let fr = new FileReader();
+        fr.onload = function () {
+            fotoBase64 = fr.result.replace("data:", "").replace(/^.+,/, "");
+            form.imagem.src = isImgBase64(fotoBase64);
+        }
+        fr.readAsDataURL(file);
+    }else{
+        alert("O arquivo deve ser menor que que 18Kb");
+        document.querySelector("#file").value = null;
     }
-    fr.readAsDataURL(file);
 }
