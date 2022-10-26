@@ -53,6 +53,7 @@ function readAll() {
         receita.querySelector("#ingredientes").innerHTML += e.ingredientes;
         receita.querySelector("#modoPreparo").innerHTML += e.modoPreparo;
         receita.querySelector("#img").src = isImgBase64(e.foto);
+		if(e.tipo == "doce") receita.setAttribute("style","background-color:#ffcc99;");
         cards.appendChild(receita);
     });
 }
