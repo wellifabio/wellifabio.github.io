@@ -13,7 +13,11 @@
 <body onload="carregar()">
     <header>
         <h1>Minhas Receitas</h1>
-        <button onclick="modalCreate.classList.remove('oculto');">Adicionar</button>
+        <div>
+            <button id="btnAdd" onclick="modalCreate.classList.remove('oculto');">Adicionar</button>
+            <button id="btnLogin" onclick="modalLogin.classList.remove('oculto');">Entrar</button>
+            <button id="btnSair" onclick="sair()">Sair</button>
+        </div>
     </header>
     <main>
         <section id="cards">
@@ -31,34 +35,50 @@
         <section id="modalCreate" class="modal oculto">
             <form id="create">
                 <h2>Adicionar Receita</h2>
-                <div>
-                    <label for="tipo">Tipo:</label>
-                    <select name="tipo" id="tipo">
-                        <option value="salgado">Salgado</option>
+                <div style="justify-content: space-around;">
+                    <h3>Tipo:</h3>
+                    <select name="tipo" id="tipo" placeholder="Tipo">
+                        <option value="salgado">Salgada</option>
                         <option value="doce">Doce</option>
                     </select>
                 </div>
                 <div>
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" required>
+                    <input type="text" name="nome" id="nome" placeholder="Nome da receita" required />
                 </div>
                 <div>
                     <label for="ingredientes">Ingredientes:</label>
-                    <textarea name="ingredientes" id="ingredientes" required></textarea>
+                    <textarea name="ingredientes" id="ingredientes" placeholder="Ingredientes" required></textarea>
                 </div>
                 <div>
                     <label for="modoPreparo">Modo de Preparo:</label>
-                    <textarea name="modoPreparo" id="modoPreparo" required></textarea>
+                    <textarea name="modoPreparo" id="modoPreparo" placeholder="Modo de Preparo" required></textarea>
                 </div>
                 <div>
                     <label for="img">Imagem:</label>
                     <input type="file" name="img" id="file" onchange="toImgBase64()" accept="image/jpeg, image/png">
-                    <img src="./assets/default.png" name="imagem" alt="Imagem">
                 </div>
+                <img src="./assets/default.png" name="imagem" alt="Imagem">
                 <div class="botoes">
                     <button type="submit">Adicionar</button>
-                    <button type="reset">Limpar</button>
-                    <button onclick="modalCreate.classList.add('oculto');">Cancelar</button>
+                    <button type="reset" onclick="modalCreate.classList.add('oculto');">Cancelar</button>
+                </div>
+            </form>
+        </section>
+        <section id="modalLogin" class="modal oculto">
+            <form id="login" style="height:200px">
+                <h2>Fazer login</h2>
+                <div>
+                    <label for="email">E-mail:</label>
+                    <input type="text" name="email" id="email" placeholder="Email" required />
+                </div>
+                <div>
+                    <label for="senha">Senha:</label>
+                    <input type="password" name="senha" id="senha" required />
+                </div>
+                <div class="botoes">
+                    <button type="submit">Login</button>
+                    <button type="reset" onclick="modalLogin.classList.add('oculto');">Cancelar</button>
                 </div>
             </form>
         </section>

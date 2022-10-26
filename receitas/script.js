@@ -2,9 +2,11 @@ const url = 'https://receitaswfom.herokuapp.com';
 const cards = document.querySelector("#cards");
 const card = document.querySelector(".card");
 const form = document.querySelector("#create");
+const login = document.querySelector("#login");
 
 var dados = [];
 var fotoBase64 = null;
+var user = localStorage.getItem("login");
 
 const carregar = () => {
     const options = { method: 'GET' };
@@ -15,7 +17,37 @@ const carregar = () => {
             readAll();
         })
         .catch(err => alert("Erro ao carregar dados do BD:" + err));
+    if (user == null) {
+        document.querySelector("#btnAdd").classList.add('oculto');
+        document.querySelector("#btnSair").classList.add('oculto');
+    } else
+        document.querySelector("#btnLogin").classList.add('oculto');
 }
+
+login.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let usuario = {
+        email: login.email.value,
+        password: login.senha.value
+    }
+    console.log(JSON.stringify(usuario));
+    const options = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(usuario)
+    }
+    fetch(url + '/login', options)
+        .then(resp => resp.status)
+        .then(resp => {
+            if (resp == 202) {
+                localStorage.setItem("login", "logado");
+                window.location.reload();
+            } else
+                alert("Email e/ou senha inválido");
+        })
+        .catch(err => console.error(err));
+
+});
 
 form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -53,7 +85,8 @@ function readAll() {
         receita.querySelector("#ingredientes").innerHTML += e.ingredientes;
         receita.querySelector("#modoPreparo").innerHTML += e.modoPreparo;
         receita.querySelector("#img").src = isImgBase64(e.foto);
-		if(e.tipo == "doce") receita.setAttribute("style","background-color:#ffcc99;");
+        if (e.tipo == "doce") receita.setAttribute("style", "background-color:#ffcc99;");
+        if (user == null) receita.querySelector("#btn").classList.add('oculto');
         cards.appendChild(receita);
     });
 }
@@ -90,8 +123,13 @@ const toImgBase64 = () => {
             form.imagem.src = isImgBase64(fotoBase64);
         }
         fr.readAsDataURL(file);
-    }else{
+    } else {
         alert("O arquivo deve ser menor que que 18Kb");
         document.querySelector("#file").value = null;
     }
+}
+
+const sair = () => {
+    localStorage.removeItem("login");
+    window.location.reload();
 }
