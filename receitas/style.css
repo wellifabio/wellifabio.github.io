@@ -61,8 +61,7 @@ main{
 }
 
 .card{
-    width: 400px;
-    height: 600px;
+    max-width: 350px;
     background-color: #eee;
     margin: 10px;
     padding: 10px;
@@ -82,7 +81,7 @@ main{
 }
 
 .card div button{
-    background-color: #511;
+    background-color: rgb(110, 16, 16);
     color: #eee;
     padding: 10px;
     padding-left: 13px;
@@ -96,8 +95,8 @@ main{
 
 .card div button:hover{
     background-color: #eee;
-    box-shadow: 0 0 10px #511;
-    color: #511;
+    box-shadow: 0 0 10px rgb(110, 16, 16);
+    color: rgb(110, 16, 16);
 }
 
 #img{
@@ -120,23 +119,23 @@ form{
     position: relative;
     width: 100%;
     max-width: 600px;
-    height: 82vh;
+    height: 600px;
     background-color: #133;
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-between;
     box-shadow: 0 0 10px #eee;
     position: relative;
     top:10px;
     color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 form button{
-    background-color: #511;
+    background-color: rgb(110, 16, 16);
     color: #eee;
     padding: 10px;
     padding-left: 13px;
@@ -150,8 +149,8 @@ form button{
 
 form button:hover{
     background-color: #eee;
-    box-shadow: 0 0 10px #511;
-    color: #511;
+    box-shadow: 0 0 10px rgb(110, 16, 16);
+    color: rgb(110, 16, 16);
 }
 
 form div{
@@ -191,7 +190,7 @@ form label{
 
 form textarea{
     width: 100%;
-    height: 100px;
+    height: 50px;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -202,8 +201,8 @@ form textarea{
 .botoes{
     width: 100%;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .oculto{
@@ -215,19 +214,36 @@ form textarea{
         margin: 0px;
     }
     form{
-        height: 100%;
+        width: 100%;
+        height: 460px;
+        margin: 0;
+        display: inline;
+        flex-wrap: wrap;
+        text-align: center;
+        position:absolute;
     }
     form button{
         font-size: small;
     }
-    form label{
-        width: 100px;
+    form input{
         font-size: small;
+        margin: 5px;
+    }
+    form label{
+        display: none;
+    }
+    form textarea{
+        margin: 5px;
+        height: 30px;
     }
     h1{
         font-size: medium;
     }
     header buttom {
         font-size: 14px;
+    }
+    form img{
+        width: 200px;
+        height: 150px;
     }
 }
