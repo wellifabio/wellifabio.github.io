@@ -1,7 +1,7 @@
 body {
     background: url("./assets/back.png") repeat-x fixed;
     background-size: contain;
-    background-color: #fff;
+    background-color: #aba;
     padding-top: 10px;
     font-family: "courier new", Arial, Helvetica, sans-serif;
     display: flex;
@@ -9,23 +9,109 @@ body {
     align-items: center;
 }
 
-.main{
+header {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.block{
+main {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.qr{
+section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer a {
+    width: 140px;
+    height: 105px;
+    background-size: cover;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    margin: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.avatar {
+    width: 300px;
+    height: 300px;
+}
+
+.avatar img {
+    max-width: 300px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #000;
+}
+
+.qr {
     width: 250px;
     margin: 30px;
 }
-.ancora{
+
+.about {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    width: 100%;
+    max-width: 1050px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content a {
+    width: 140px;
+    height: 105px;
+    background-size: cover;
+    text-decoration: none;
+    text-align: center;
+    padding: 5px;
+    margin: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    color: black;
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.postit {
+    background-image: url("./assets/postit.png");
+}
+
+.postitblue {
+    background-image: url("./assets/postitblue.png");
+}
+
+.postitred {
+    background-image: url("./assets/postitred.png");
+}
+
+.ancora {
     color: black;
     text-decoration: none;
     text-align: center;
@@ -33,79 +119,16 @@ body {
     font-size: 30px;
 }
 
-.header{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.header a{
-    width: 140px;
-    height: 105px;
-    background-size: cover;
-    text-decoration: none;
-    text-align: center;
-    padding: 5px;
-    margin: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: black;
-    font-size: large;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url("./assets/postitblue.png");
-}
-
-.content{
-    width: 800px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.content a{
-    width: 140px;
-    height: 105px;
-    background-size: cover;
-    text-decoration: none;
-    text-align: center;
-    padding: 5px;
-    margin: 30px;
-    font-family: 'Times New Roman', Times, serif;
-    font-style: italic;
-    color: black;
-    font-size: large;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-image: url("./assets/postit.png");
-}
-
-.pict{
-    width: 300px;
-    height: 300px;
-}
-.pict img{
-    max-width: 300px;
-    border-radius: 50%;
-}
-
-.about{
-    width: 700px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-@media(max-width:900px){
-    .content{
+@media(max-width:700px) {
+    .content {
         display: contents;
     }
-    .header{
+
+    footer {
         display: contents;
     }
-    .about{
+
+    .about {
         width: 380px;
     }
 }

@@ -10,80 +10,52 @@
 	<title>Wellington Teacher</title>
 </head>
 
-<body>
-	<div class="main">
-		<header class="block" id="topo">
-			<div class="pict"><img alt="Wellington face drawing by https://github.com/Liss1302" title="Wellington face drawing by https://github.com/Liss1302"
-					src="./assets/avatar.jpg" /></div>
-			<div class="about">
-				<h1 style="text-align: center;">Wellington Fábio de Oliveira Martins</h1>
-				<p><b><a class="ancora" href="#principal" title="Go to main content">wellifabio</a></b></p>
-				<a href="https://linktr.ee/wellifabio" target="_blank">
-					<img alt="QRcode that points to the linktr.ee website" src="./assets/wellifabio.png" class="qr" title="find me">
-				</a>
-				<p style="padding: 20px;">
-					Technical Course Teacher, IT Technician, BackEnd Developer (php, jsp, Spring)
-					Brazil SENAI Instructor in the technique course of development system
-				</p>
-				<p style="padding: 20px;">
-					Brazilian, married, 41 years old, two children
-				</p>
-			</div>
-		</header>
-		<main class="block" id="principal">
-			<label style="font-weight: bold; max-width: 800px;">Projects and example exercises practiced in classes in
-				the technical course on systems development:</label>
-			<div class="content">
+<body onload="load()">
+	<header id="topo">
+		<div class="avatar"><img alt="Wellington face drawing by https://github.com/Liss1302"
+				title="Wellington face drawing by https://github.com/Liss1302" src="./assets/avatar.jpg" /></div>
+		<div class="about">
+			<h1 style="text-align: center;">Wellington Fábio de Oliveira Martins</h1>
+			<p><b><a class="ancora" href="#principal" title="Go to main content">wellifabio</a></b></p>
+			<a href="https://linktr.ee/wellifabio" target="_blank">
+				<img alt="QRcode that points to the linktr.ee website" src="./assets/wellifabio.png" class="qr"
+					title="find me">
+			</a>
+			<p style="padding: 20px;">
+				Technical Course Teacher, IT Technician, BackEnd Developer (php, jsp, Spring)
+				Brazil SENAI Instructor in the technique course of development system
+			</p>
+			<p style="padding: 20px;">
+				Brazilian, married, 41 years old, two children
+			</p>
+		</div>
+	</header>
+	<main id="principal">
+		<section>
+			<h2>Projects and example exercises practiced in classes in the technical course on systems development:</h2>
+			<div id="aulas" class="content">
 				<img src="./assets/aulas.png" style="height: 100px;margin: 30px;"
 					alt="Drawing of Wellington pointing to a whiteboard"
 					title="Drawing of Wellington pointing to a whiteboard" />
-				<a href="./timeline" target="_blank">JavaScript - Gantt chart generator</a>
-				<a href="./delivery/delivery.html" target="_blank">JavaScript - Delivery Manager (pt-br)</a>
-				<a href="./receitas" target="_blank">Cookbook blog (Blog de Receitas)<br />(pt-br)</a>
 			</div>
-			<div class="content">
-				<a href="./memoria" target="_blank">JavaScript - Memory Game <br />(pt-br)</a>
-				<a href="./sena/bilhete.html" target="_blank">Brazil lottery game generator Sena<br />(pt-br)</a>
-				<a href="./loto/bilhete.html" target="_blank">Brazil lottery game generator Loto<br />(pt-br)</a>
-				<a href="./hash" target="_blank">JavaScript - Hash Game</a>
-			</div>
-			<div class="content">
-				<a href="https://github.com/wellifabio/senai2022/blob/master/outros/old_1des/fpoo/aula25/PetsLogin/doc/prototipo.pdf" target="_blank">Java Desktop - PetShop Solution example<br />(pt-br)</a>
-				<a href="https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/ProjetoHortelino/doc/prototipo.pdf" target="_blank">Java Desktop - Inventory and sales management<br />(pt-br)</a>
-				<a href="https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Estacionamento/docs/prototipo.pdf" target="_blank">Java Desktop - Park Solution example<br />(pt-br)</a>
-			</div>
-			<div  class="content">
-				<a href="https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Mapeador/docs/prototipo.pdf" target="_blank">Java Desktop - Small Nets Solution example<br />(pt-br)</a>
-				<a href="https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Money/docs/prototipo.pdf" target="_blank">Counting money - Solution example<br />(pt-br)</a>	
-			</div>
-			<label style="font-weight: bold; max-width: 800px;">Projects and ideas in development, along with some
-				hobbies:</label>
-			<div class="content">
+		</section>
+		<section>
+			<h2>Projects and ideas in development, along with some hobbies:</h2>
+			<div id="projetos" class="content">
 				<img src="./assets/prof.png" style="height: 100px;margin: 30px;"
-					alt="Wellington drawing pointing to a chart"
-					title="Wellington drawing pointing to a chart" />
-				<a href="https://wellifabio.000webhostapp.com/" target="_blank">Web Site - Old<br />(pt-br)</a></a>
-				<a href="https://openacova.000webhostapp.com/sinventario/view/" target="_blank">PHP MySQL Inventory
-					Manager<br />(pt-br)</a>
-				<a href="https://openacova.000webhostapp.com/maoamiga/" target="_blank">PHP MySQL Funeral (Helping
-					Hand)(pt-br)</a>
+					alt="Wellington drawing pointing to a chart" title="Wellington drawing pointing to a chart" />
 			</div>
-			<div class="content">
-				<a href="https://wellifabio.000webhostapp.com/view/files/projetos/diversos" target="_blank">Projects
-					AutoCad 3D modelling</a>
-				<a href="https://wellifabio.000webhostapp.com/view/files/projetos/academia/" target="_blank">My
-					architect CAD hobby</a>
-				<a href="https://wellifabio.000webhostapp.com/view/files/projetos/minhacasa/" target="_blank">My
-					building hobby</a>
-			</div>
-			<p><b><a class="ancora" href="#topo" title="Back to the top">My generic CV</a></b></p>
-		</main>
-		<footer class="header">
-			<img src="./assets/cv.png" style="height: 100px;margin: 30px;" alt="foto 3 por 4 do wellington de gravata"
-				title="foto 3 por 4 do wellington de gravata" />
-			<a alt="Postit azul link" href="./cv.html" target="_blank">CV</a>
-			<a alt="Postit azul link" href="./cv.pdf" target="_blank">Curriculum Vitae PDF<br />(pt-br)</a>
-		</footer>
+			<h3><a class="ancora" href="#topo" title="Back to the top">My generic CV</a></h3>
+		</section>
+	</main>
+	<footer>
+		<img src="./assets/cv.png" style="height: 100px;margin: 30px;" alt="foto 3 por 4 do wellington de gravata"
+			title="foto 3 por 4 do wellington de gravata" />
+		<a class="postitblue" alt="Postit azul link" href="./cv.html" target="_blank">CV</a>
+		<a class="postitblue" alt="Postit azul link" href="./cv.pdf" target="_blank">Curriculum Vitae
+			PDF<br />(pt-br)</a>
+	</footer>
 </body>
+<script src="script.js"></script>
 
 </html>
