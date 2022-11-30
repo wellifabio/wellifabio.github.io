@@ -15,8 +15,13 @@ let corsOptions = {
     ],
     "methods": "GET,PUT,POST,DELETE",
     "preflightContinue": false,
-    "optionsSuccessStatus": 200
+    "optionsSuccessStatus": 200,
+    limit: '1mb'
 };
+
+let reqLimit = {
+    limit: '1mb'
+}
 
 //Importar dao e rotas
 const dao = require('./src/dao/receita.dao');
@@ -26,6 +31,7 @@ const receita = require('./src/routes/receita.route');
 //Iniciar a API
 const app = express()
     .use(express.json(corsOptions))
+    .use(express.urlencoded(reqLimit))
     .use(cors())
     .use('/', receita);
 
