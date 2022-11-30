@@ -1,3 +1,4 @@
+require('dotenv').config();
 var Receita = require('../models/receita.model');
 
 const teste = function (req, res) {
@@ -5,8 +6,8 @@ const teste = function (req, res) {
 };
 
 const login = (req, res) => {
-    if (req.body.email == "admin@admin.com")
-        if (req.body.password == "1234")
+    if (req.body.email == process.env.USER)
+        if (req.body.password == process.env.USER_PASSWD)
             res.status(202).json("admin").end();
         else
             res.status(404).json("password inválido").end();

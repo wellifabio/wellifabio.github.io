@@ -1,7 +1,8 @@
 const url = 'https://receitaswfom.herokuapp.com';
 const cards = document.querySelector("#cards");
 const card = document.querySelector(".card");
-const form = document.querySelector("#create");
+const create = document.querySelector("#create");
+const update = document.querySelector("#update");
 const login = document.querySelector("#login");
 
 var dados = [];
@@ -49,13 +50,13 @@ login.addEventListener('submit', (e) => {
 
 });
 
-form.addEventListener('submit', (e) => {
+create.addEventListener('submit', (e) => {
     e.preventDefault();
     let receita = {
-        nome: form.nome.value,
-        tipo: form.tipo.value,
-        ingredientes: form.ingredientes.value,
-        modoPreparo: form.modoPreparo.value,
+        nome: create.nome.value,
+        tipo: create.tipo.value,
+        ingredientes: create.ingredientes.value,
+        modoPreparo: create.modoPreparo.value,
         foto: fotoBase64
     }
     const options = {
@@ -75,6 +76,7 @@ form.addEventListener('submit', (e) => {
 });
 
 function readAll() {
+    let i = 0;
     dados.forEach(e => {
         let receita = card.cloneNode(true);
         receita.classList.remove("oculto");
@@ -85,10 +87,23 @@ function readAll() {
         receita.querySelector("#ingredientes").innerHTML += e.ingredientes;
         receita.querySelector("#modoPreparo").innerHTML += e.modoPreparo;
         receita.querySelector("#img").src = isImgBase64(e.foto);
+        receita.querySelector("#alt").setAttribute("onclick", `alterar('${i}')`);
         if (e.tipo == "doce") receita.setAttribute("style", "background-color:#ffcc99;");
-        if (user == null) receita.querySelector("#btn").classList.add('oculto');
+        if (user == null) {
+            receita.querySelector("#alt").classList.add('oculto');
+            receita.querySelector("#btn").classList.add('oculto');
+        }
         cards.appendChild(receita);
+        i++;
     });
+}
+
+function alterar(indice){
+    modalUpdate.classList.remove('oculto');
+    update.tipo.value = dados[indice].tipo;
+    update.nome.value = dados[indice].nome;  
+    update.ingredientes.value = dados[indice].ingredientes;
+    update.modoPreparo.value = dados[indice].modoPreparo; 
 }
 
 function del(id) {

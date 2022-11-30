@@ -23,7 +23,7 @@
         <section id="cards">
             <div class="card oculto">
                 <div>
-                    <div id="id"><b>Id:</b></div><button id="btn">X</button>
+                    <div id="id"><b>Id:</b></div><button id="alt">*</button><button id="btn">X</button>
                 </div>
                 <div id="tipo"><b>Tipo:</b> </div>
                 <div id="nome"><b>Nome:</b> </div>
@@ -37,31 +37,64 @@
                 <h2>Adicionar Receita</h2>
                 <div style="justify-content: space-around;">
                     <h3>Tipo:</h3>
-                    <select name="tipo" id="tipo" placeholder="Tipo">
+                    <select name="tipo" id="tipoC" placeholder="Tipo">
                         <option value="salgado">Salgada</option>
                         <option value="doce">Doce</option>
                     </select>
                 </div>
                 <div>
                     <label for="nome">Nome:</label>
-                    <input type="text" name="nome" id="nome" placeholder="Nome da receita" required />
+                    <input type="text" name="nome" id="nomeC" placeholder="Nome da receita" required />
                 </div>
                 <div>
                     <label for="ingredientes">Ingredientes:</label>
-                    <textarea name="ingredientes" id="ingredientes" placeholder="Ingredientes" required></textarea>
+                    <textarea name="ingredientes" id="ingredientesC" placeholder="Ingredientes" required></textarea>
                 </div>
                 <div>
                     <label for="modoPreparo">Modo de Preparo:</label>
-                    <textarea name="modoPreparo" id="modoPreparo" placeholder="Modo de Preparo" required></textarea>
+                    <textarea name="modoPreparo" id="modoPreparoC" placeholder="Modo de Preparo" required></textarea>
                 </div>
                 <div>
                     <label for="img">Imagem:</label>
-                    <input type="file" name="img" id="file" onchange="toImgBase64()" accept="image/jpeg, image/png">
+                    <input type="file" name="img" id="fileC" onchange="toImgBase64()" accept="image/jpeg, image/png">
                 </div>
                 <img src="./assets/default.png" name="imagem" alt="Imagem">
                 <div class="botoes">
                     <button type="submit">Adicionar</button>
                     <button type="reset" onclick="modalCreate.classList.add('oculto');">Cancelar</button>
+                </div>
+            </form>
+        </section>
+        <section id="modalUpdate" class="modal oculto">
+            <form id="update">
+                <h2>Alterar Receita</h2>
+                <div style="justify-content: space-around;">
+                    <h3>Tipo:</h3>
+                    <select name="tipo" id="tipoU" placeholder="Tipo">
+                        <option value="salgado">Salgada</option>
+                        <option value="doce">Doce</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="nome">Nome:</label>
+                    <input type="text" name="nome" id="nomeU" placeholder="Nome da receita" required />
+                </div>
+                <div>
+                    <label for="ingredientes">Ingredientes:</label>
+                    <textarea name="ingredientes" id="ingredientesU" placeholder="Ingredientes" required></textarea>
+                </div>
+                <div>
+                    <label for="modoPreparo">Modo de Preparo:</label>
+                    <textarea name="modoPreparo" id="modoPreparoU" placeholder="Modo de Preparo" required></textarea>
+                </div>
+                <div>
+                    <label for="img">Imagem:</label>
+                    <input type="file" name="img" id="fileU" onchange="toImgBase64()" accept="image/jpeg, image/png">
+                </div>
+                <img src="./assets/default.png" name="imagem" alt="Imagem">
+                <div class="botoes">
+                    <button type="submit">Alterar</button>
+                    <button type="reset" onclick="modalUpdate.classList.add('oculto');">Cancelar</button>
                 </div>
             </form>
         </section>

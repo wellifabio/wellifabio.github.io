@@ -89,7 +89,8 @@ main{
     font-size: 20px;
     border: none;
     border-radius: 5px;
-    margin-left: 20px;
+    margin-left: 5px;
+    width: 40px;
     cursor: pointer;
 }
 
