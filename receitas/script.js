@@ -116,7 +116,7 @@ function isImgBase64(img) {
 
 const toImgBase64 = () => {
     let file = document.querySelector("#file")['files'][0];
-    if (file.size < 200000) {
+    if (file.size < 204800) {
         let fr = new FileReader();
         fr.onload = function () {
             fotoBase64 = fr.result.replace("data:", "").replace(/^.+,/, "");
@@ -124,7 +124,7 @@ const toImgBase64 = () => {
         }
         fr.readAsDataURL(file);
     } else {
-        alert("O arquivo deve ser menor que que 18Kb");
+        alert("O arquivo deve ser menor que que 200Kb");
         document.querySelector("#file").value = null;
     }
 }
