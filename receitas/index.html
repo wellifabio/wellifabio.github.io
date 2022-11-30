@@ -56,7 +56,7 @@
                 </div>
                 <div>
                     <label for="img">Imagem:</label>
-                    <input type="file" name="img" id="fileC" onchange="toImgBase64()" accept="image/jpeg, image/png">
+                    <input type="file" name="img" id="fileC" onchange="prevImgCreate()" accept="image/jpeg, image/png">
                 </div>
                 <img src="./assets/default.png" name="imagem" alt="Imagem">
                 <div class="botoes">
@@ -76,6 +76,10 @@
                     </select>
                 </div>
                 <div>
+                    <label for="id">Id:</label>
+                    <input type="text" name="id" id="idU" required readonly />
+                </div>
+                <div>
                     <label for="nome">Nome:</label>
                     <input type="text" name="nome" id="nomeU" placeholder="Nome da receita" required />
                 </div>
@@ -89,7 +93,7 @@
                 </div>
                 <div>
                     <label for="img">Imagem:</label>
-                    <input type="file" name="img" id="fileU" onchange="toImgBase64()" accept="image/jpeg, image/png">
+                    <input type="file" name="img" id="fileU" onchange="prevImgUpdate()" accept="image/jpeg, image/png">
                 </div>
                 <img src="./assets/default.png" name="imagem" alt="Imagem">
                 <div class="botoes">

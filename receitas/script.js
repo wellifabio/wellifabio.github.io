@@ -98,13 +98,41 @@ function readAll() {
     });
 }
 
-function alterar(indice){
+function alterar(indice) {
     modalUpdate.classList.remove('oculto');
+    update.id.value = dados[indice]._id;
     update.tipo.value = dados[indice].tipo;
-    update.nome.value = dados[indice].nome;  
+    update.nome.value = dados[indice].nome;
     update.ingredientes.value = dados[indice].ingredientes;
-    update.modoPreparo.value = dados[indice].modoPreparo; 
+    update.modoPreparo.value = dados[indice].modoPreparo;
+    update.imagem.src = isImgBase64(dados[indice].foto);
+    if (dados[indice].foto != null) fotoBase64 = dados[indice].foto;
 }
+
+update.addEventListener('submit', (e) => {
+    e.preventDefault();
+    let receita = {
+        nome: update.nome.value,
+        tipo: update.tipo.value,
+        ingredientes: update.ingredientes.value,
+        modoPreparo: update.modoPreparo.value,
+        foto: fotoBase64
+    }
+    const options = {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(receita)
+    }
+    fetch(url + '/update/' + update.id.value, options)
+        .then(resp => resp.status)
+        .then(resp => {
+            if (resp == 200)
+                window.location.reload();
+            else
+                alert("Erro ao enviar dados para o servidor, erro: " + resp)
+        })
+        .catch(err => console.error(err));
+});
 
 function del(id) {
     if (confirm("Confirma a exclusão da receita id: " + id)) {
@@ -129,13 +157,28 @@ function isImgBase64(img) {
         return `./assets/default.png`;
 }
 
-const toImgBase64 = () => {
-    let file = document.querySelector("#file")['files'][0];
+const prevImgCreate = () => {
+    let file = document.querySelector("#fileC")['files'][0];
     if (file.size < 1048576) {
         let fr = new FileReader();
         fr.onload = function () {
             fotoBase64 = fr.result.replace("data:", "").replace(/^.+,/, "");
-            form.imagem.src = isImgBase64(fotoBase64);
+            create.imagem.src = isImgBase64(fotoBase64);
+        }
+        fr.readAsDataURL(file);
+    } else {
+        alert("O arquivo deve ser menor que que 1MB");
+        document.querySelector("#file").value = null;
+    }
+}
+
+const prevImgUpdate = () => {
+    let file = document.querySelector("#fileU")['files'][0];
+    if (file.size < 1048576) {
+        let fr = new FileReader();
+        fr.onload = function () {
+            fotoBase64 = fr.result.replace("data:", "").replace(/^.+,/, "");
+            update.imagem.src = isImgBase64(fotoBase64);
         }
         fr.readAsDataURL(file);
     } else {
