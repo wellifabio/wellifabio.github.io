@@ -116,7 +116,7 @@ function isImgBase64(img) {
 
 const toImgBase64 = () => {
     let file = document.querySelector("#file")['files'][0];
-    if (file.size < 20000) {
+    if (file.size < 200000) {
         let fr = new FileReader();
         fr.onload = function () {
             fotoBase64 = fr.result.replace("data:", "").replace(/^.+,/, "");
