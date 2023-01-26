@@ -15,6 +15,11 @@ const aulas = [
 		text: "JavaScript - Gantt chart generator"
 	},
 	{
+		href: "./clima",
+		target: "_blank",
+		text: "JavaScript - Learning ChartJS"
+	},
+	{
 		href: "./delivery/delivery.html",
 		target: "_blank",
 		text: "JavaScript - Delivery Manager (pt-br)"
