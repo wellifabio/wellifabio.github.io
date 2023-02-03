@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/6d8d60d3-6a61-4830-a1ec-98808cb77d66/appservices/subscriptions/6d8d60d3-6a61-4830-a1ec-98808cb77d66/resourceGroups/appsvc_linux_centralus/providers/Microsoft.Web/sites/receitasmongo",
+    "appService.deploySubpath": "."
+}

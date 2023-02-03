@@ -1,4 +1,6 @@
-# Deploy/Implantação
+# Deploy (Com Azure)
+- https://learn.microsoft.com/pt-br/azure/app-service/quickstart-nodejs?tabs=windows&pivots=development-environment-vscode#set-up-your-initial-environment
+# Deploy (Com HEROKU)
 $ heroku login<br/>
 <br/>
 $ heroku git:clone -a patrimoniomongo<br/>
