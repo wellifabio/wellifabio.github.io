@@ -1,8 +1,0 @@
-{
-    "name": "WFOM API RECEITAS: Node.js",
-    "description": "Simples API NodeJS teste NodeJS + MongoDB",
-    "repository": "https://github.com/wellifabio",
-    "keywords": ["node", "express", "heroku"],
-    "image": "heroku/nodejs"
-  }
-  
