@@ -5,7 +5,7 @@ const aulas = [
 		text: "Chatroom / Sala de Bate papo (pt - br)"
 	},
 	{
-		href: "./receitas",
+		href: "https://expressjs-mongoose-production-0d7e.up.railway.app/",
 		target: "_blank",
 		text: "Cookbook blog (Blog de Receitas) (pt - br)"
 	},
