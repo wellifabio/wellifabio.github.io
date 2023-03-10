@@ -45,7 +45,7 @@ const aulas = [
 		text: "JavaScript - Hash Game"
 	},
 	{
-		href: "https://github.com/wellifabio/senai2022/blob/master/outros/old_1des/fpoo/aula25/PetsLogin/doc/prototipo.pdf",
+		href: "https://github.com/wellifabio/senai2022/blob/master/old/1des/fpoo/aula25/PetsLogin/doc/prototipo.pdf",
 		target: "_blank",
 		text: "Java Desktop - PetShop Solution example<br (pt - br)"
 	},
