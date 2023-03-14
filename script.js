@@ -1,15 +1,5 @@
 const aulas = [
 	{
-		href: "./chat",
-		target: "_blank",
-		text: "Chatroom / Sala de Bate papo (pt - br)"
-	},
-	{
-		href: "https://expressjs-mongoose-production-0d7e.up.railway.app/",
-		target: "_blank",
-		text: "Cookbook blog (Blog de Receitas) (pt - br)"
-	},
-	{
 		href: "./timeline",
 		target: "_blank",
 		text: "JavaScript - Gantt chart generator"
@@ -45,6 +35,16 @@ const aulas = [
 		text: "JavaScript - Hash Game"
 	},
 	{
+		href: "./chat",
+		target: "_blank",
+		text: "Chatroom / Sala de Bate papo (pt - br)"
+	},
+	{
+		href: "https://expressjs-mongoose-production-0d7e.up.railway.app/",
+		target: "_blank",
+		text: "Cookbook blog (Blog de Receitas) (pt - br)"
+	},
+	{
 		href: "https://github.com/wellifabio/senai2022/blob/master/old/1des/fpoo/aula25/PetsLogin/doc/prototipo.pdf",
 		target: "_blank",
 		text: "Java Desktop - PetShop Solution example<br (pt - br)"
@@ -67,13 +67,13 @@ const aulas = [
 	{
 		href: "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Money/docs/prototipo.pdf",
 		target: "_blank",
-		text: "Counting money - Solution example<br (pt - br)"
+		text: "Java Desktop - Counting money Solution example<br (pt - br)"
 	}
 ];
 
 const projetos = [
 	{
-		href: "https://wellifabio.000webhostapp.com/",
+		href: "./assets/diversos/miniold.png",
 		target: "_blank",
 		text: "Web Site - Old<br (pt - br)"
 	},
