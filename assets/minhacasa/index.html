@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icone.png">
+    <title>My building hobby</title>
+</head>
+<style>
+    body {
+        background: url("../back.png',") repeat-x fixed;
+        background-size: contain;
+        background-color: #aba;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    img {
+        margin: 10px;
+        box-shadow: 0 0 10px #000;
+    }
+</style>
+
+<body>
+</body>
+<script>
+    const files = [
+        'tresvisoes.png',
+        'casa01.png',
+        'casacima.png',
+        'escadas01.png',
+        'escadas02.png',
+        'sotao.png',
+        'lage-garagem.png',
+        'carpintaria-lazer.png',
+        'gatao.jpg',
+        'frente03.jpg',
+        'frente01.jpg',
+        'frente02.jpg', 
+        'muros01.jpg',
+        'paisagem-frontal01.jpg',
+        'atraz01.jpg',
+        'garagem01.jpg',
+        'quintal01.jpg',
+        'lateral01.jpg',
+        'lateral02.jpg',     
+        'sotao01.jpg',
+        'sotao02.jpg',
+        'portao01.jpg',
+        'portao02.jpg',
+        'colunas01.jpg',
+        'escada-externa01.jpg',
+        'escada-externa02.jpg',
+        'escada-interna05.jpg',
+        'escada-interna04.jpg',
+        'escada-interna01.jpg',
+        'escada-interna02.jpg',
+        'escada-interna03.jpg',
+        'escada-lazer01.jpg',
+        'escada-lazer02.jpg',
+        'parede-quartos01.jpg',
+        'parede-quartos02.jpg'
+    ]
+    files.forEach(file => {
+        const img = document.createElement('img');
+        img.style.width = '800px';
+        img.src = file;
+        img.alt = file.split('.')[1].substring(1).toUpperCase();
+        document.body.appendChild(img);
+    })
+</script>
+
+</html>

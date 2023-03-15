@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icone.jpg">
+    <title>My architect CAD hobby</title>
+</head>
+<style>
+    body {
+        background: url("../back.jpg") repeat-x fixed;
+        background-size: contain;
+        background-color: #aba;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    img {
+        margin: 10px;
+        box-shadow: 0 0 10px #000;
+    }
+</style>
+
+<body>
+</body>
+<script>
+    const files = [
+        './foto1.jpg',
+        './foto2.jpg',
+        './foto3.jpg',
+        './foto4.jpg',
+        './foto5.jpg',
+        './foto6.jpg',
+        './foto7.jpg',
+        './foto8.jpg',
+        './foto9.jpg',
+        './foto10.jpg',
+        './foto11.jpg',
+        './foto12.jpg',
+        './foto13.jpg',
+        './foto14.jpg',
+        './foto15.jpg',
+        './foto16.jpg',
+        './foto17.jpg',
+        './foto18.jpg',
+        './foto19.jpg',
+        './foto20.jpg',
+        './foto21.jpg',
+        './foto22.jpg',
+        './foto23.jpg'
+    ]
+    files.forEach(file => {
+        const img = document.createElement('img');
+        img.style.width = '800px';
+        img.src = file;
+        img.alt = file.split('.')[1].substring(1).toUpperCase();
+        document.body.appendChild(img);
+    })
+</script>
+
+</html>

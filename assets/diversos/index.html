@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icone.png">
+    <title>Projects AutoCad 3D Modelling</title>
+</head>
+<style>
+    body {
+        background: url("../back.png") repeat-x fixed;
+        background-size: contain;
+        background-color: #aba;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    img {
+        margin: 10px;
+        box-shadow: 0 0 10px #000;
+    }
+</style>
+
+<body>
+</body>
+<script>
+    const files = [
+        './barril01.png',
+        './barril02.png',
+        './barril03.png',
+        './casinha01.png',
+        './casinha02.png',
+        './chaveboca01.png',
+        './cozinha01.png',
+        './cozinha02.png',
+        './pistao01.png',
+        './pistao02.png',
+        './pistao03.png',
+        './pistao04.png',
+        './roda01.png',
+        './roda02.png',
+        './roda03.png',
+        './sofa.png',
+        './armario01.png',
+    ]
+    files.forEach(file => {
+        const img = document.createElement('img');
+        img.style.width = '800px';
+        img.src = file;
+        img.alt = file.split('.')[1].substring(1).toUpperCase();
+        document.body.appendChild(img);
+    })
+</script>
+
+</html>

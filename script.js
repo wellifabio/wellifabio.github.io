@@ -73,34 +73,29 @@ const aulas = [
 
 const projetos = [
 	{
-		href: "./assets/diversos/miniold.png",
+		href: "./assets/containner/",
 		target: "_blank",
-		text: "Web Site - Old<br (pt - br)"
+		text: "Projects AutoCad 3D - Container Snack Bar"
 	},
 	{
-		href: "https://openacova.000webhostapp.com/sinventario/view/",
-		target: "_blank",
-		text: "PHP MySQL Inventory Manager < br(pt - br)"
-	},
-	{
-		href: "https://openacova.000webhostapp.com/maoamiga/",
-		target: "_blank",
-		text: "PHP MySQL Funeral (Helping	Hand) (pt - br)"
-	},
-	{
-		href: "https://wellifabio.000webhostapp.com/view/files/projetos/diversos",
+		href: "./assets/diversos/",
 		target: "_blank",
 		text: "Projects AutoCad 3D modelling"
 	},
 	{
-		href: "https://wellifabio.000webhostapp.com/view/files/projetos/academia/",
+		href: "./assets/academia/",
 		target: "_blank",
 		text: "My architect CAD hobby"
 	},
 	{
-		href: "https://wellifabio.000webhostapp.com/view/files/projetos/minhacasa/",
+		href: "./assets/minhacasa/",
 		target: "_blank",
 		text: "My building hobby"
+	},
+	{
+		href: "./assets/diversos/miniold.html",
+		target: "_blank",
+		text: "Web Site - Old<br (pt - br)"
 	},
 ]
 
