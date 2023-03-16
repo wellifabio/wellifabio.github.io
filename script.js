@@ -40,6 +40,11 @@ const aulas = [
 		text: "Chatroom / Sala de Bate papo (pt - br)"
 	},
 	{
+		href: "./rand",
+		target: "_blank",
+		text: "Randomizer data/Gerador de dados aleatórios (pt - br)"
+	},
+	{
 		href: "https://expressjs-mongoose-production-0d7e.up.railway.app/",
 		target: "_blank",
 		text: "Cookbook blog (Blog de Receitas) (pt - br)"

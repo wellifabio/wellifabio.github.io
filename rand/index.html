@@ -10,6 +10,7 @@
 </head>
 
 <body>
+    <header><h1>Gerador de dados pseudo aleatórios</h1></header>
     <main>
         <div class="container">
             <label>Digite a placa de um veículo:</label>
@@ -24,7 +25,7 @@
             <textarea id="cpfRes" cols="30" rows="2"></textarea>
         </div>
         <div class="container">
-            <label>Digite o ddd e quantos números de telefone deseja criar:</label>
+            <label>Digite o ddd e quantos números de <b>telefone</b> deseja criar:</label>
             <div>
                 <input id="ddd" type="number" placeholder="DDD" required/>
                 <input id="qtdTel" type="number" placeholder="Quantos" required/>
@@ -33,12 +34,31 @@
             <textarea id="telefones" cols="30" rows="10"></textarea>
         </div>
         <div class="container">
-            <label>Digite quantos CPFs deseja criar:</label>
+            <label>Digite quantos <b>CPFs</b> deseja criar:</label>
             <input id="qtdCpf" type="number" placeholder="Quantos" required/>
             <button id="btCpfs">Criar</button>
             <textarea id="cpfs" cols="30" rows="10"></textarea>
         </div>
+        <div class="container">
+            <label>Digite quantos <b>Nomes</b> deseja criar:</label>
+            <input id="qtdNomes" type="number" placeholder="Quantos" required/>
+            <button id="btNomes">Criar</button>
+            <textarea id="nomes" cols="30" rows="10"></textarea>
+        </div>
+        <div class="container">
+            <label>Digite quantos <b>Endereços</b> deseja criar:</label>
+            <input id="qtdEnds" type="number" placeholder="Quantos" required/>
+            <button id="btEnds">Criar</button>
+            <textarea id="enderecos" cols="30" rows="10"></textarea>
+        </div>
+        <div class="container">
+            <label>Digite quantas <b>Placas</b> deseja criar:</label>
+            <input id="qtdPlacas" type="number" placeholder="Quantos" required/>
+            <button id="btPlacas">Criar</button>
+            <textarea id="placas" cols="30" rows="10"></textarea>
+        </div>
     </main>
 </body>
 <script src="./script.js"></script>
+<script src="./uteis/uteis.js"></script>
 </html>

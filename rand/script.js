@@ -4,16 +4,25 @@ const cpf = document.querySelector("#cpf");
 const ddd = document.querySelector("#ddd");
 const qtdTel = document.querySelector("#qtdTel");
 const qtdCpf = document.querySelector("#qtdCpf");
+const qtdNomes = document.querySelector("#qtdNomes");
+const qtdEnds = document.querySelector("#qtdEnds");
+const qtdPlacas = document.querySelector("#qtdPlacas");
 
 const btPlaca = document.querySelector("#btPlaca");
 const btCpf = document.querySelector("#btCpf");
 const btTels = document.querySelector("#btTels");
 const btCpfs = document.querySelector("#btCpfs");
+const btNomes = document.querySelector("#btNomes");
+const btEnds = document.querySelector("#btEnds");
+const btPlacas = document.querySelector("#btPlacas");
 
 const placaRes = document.querySelector("#placaRes");
 const cpfRes = document.querySelector("#cpfRes");
 const telefones = document.querySelector("#telefones");
 const cpfs = document.querySelector("#cpfs");
+const nomes = document.querySelector("#nomes");
+const enderecos = document.querySelector("#enderecos");
+const placas = document.querySelector("#placas");
 
 //Arrow Funtions para eventos dos botões
 btPlaca.addEventListener("click", () => {
@@ -53,6 +62,28 @@ btCpfs.addEventListener("click", () => {
         cpfs.innerHTML += (novoCPF() + "\n");
     }
 });
+
+btNomes.addEventListener("click", () => {
+    nomes.innerHTML = "";
+    for (x = 0; x < parseInt(qtdNomes.value); x++) {
+        nomes.innerHTML += (geraNomeCompleto() + "\n");
+    }
+});
+
+btEnds.addEventListener("click", () => {
+    enderecos.innerHTML = "";
+    for (x = 0; x < parseInt(qtdEnds.value); x++) {
+        enderecos.innerHTML += (geraEnderecos() + "\n");
+    }
+});
+
+btPlacas.addEventListener("click", () => {
+    placas.innerHTML = "";
+    for (x = 0; x < parseInt(qtdPlacas.value); x++) {
+        placas.innerHTML += (novaPlaca() + "\n");
+    }
+});
+
 
 //Funções uteis conforme solicitado
 function validaPlaca(placa) {
@@ -117,6 +148,14 @@ function novoDecimal() {
     return Math.floor(Math.random() * 10);
 }
 
+function novoDecimal() {
+    return Math.floor(Math.random() * 10);
+}
+
+function novaLetra() {
+    return String.fromCharCode(parseInt(Math.floor(Math.random() * 26 + 65)));
+}
+
 function novoTelefone() {
     let retorno = "";
     for (i = 0; i < 9; i++) {
@@ -138,4 +177,17 @@ function novoCPF() {
     limpo = limpo.replace("-", "");
     let digito = calculaDigito(limpo);
     return (cpf + "-" + digito);
+}
+
+function novaPlaca(){
+    let placa = "";
+    placa += novaLetra();
+    placa += novaLetra();
+    placa += novaLetra();
+    placa += "-";
+    placa += novoDecimal();
+    placa += novaLetra();
+    placa += novoDecimal();
+    placa += novoDecimal();
+    return placa;
 }
