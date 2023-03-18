@@ -33,6 +33,16 @@ header input[type="text"] {
     margin-left: 10px;
 }
 
+header button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px #333;
+    background-color: #aba;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 main {
     width: 100vw;
     height: 95vh;
@@ -131,11 +141,52 @@ footer {
     box-shadow: 1px 1px 5px #333;
 }
 
+.canvas {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: top;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.canvas::-webkit-scrollbar {
+    width: 5px;
+}
+
+.canvas::-webkit-scrollbar-track {
+    background: #fff9de;
+}
+
+.canvas::-webkit-scrollbar-thumb {
+    background-color: #f7e388;
+    border: 1px solid #dabc38;
+}
+
+.canvas img {
+    width: 170px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.canvash {
+    max-height: 58vh;
+}
+
+.canvasw {
+    max-height: 30vh;
+}
+
+.canvasp {
+    max-height: 27vh;
+}
+
+
 #novo {
     position: relative;
-    width: 40vw;
-    height: 40vh;
-    background: #f7f088;
+    width: 30vw;
+    height: 35vh;
+    background: #f7e388;
     box-shadow: 1px 1px 5px #333;
     top: 15vh;
     display: flex;
@@ -144,6 +195,97 @@ footer {
     padding: 5px;
 }
 
+#novo label {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 5px;
+}
+
+#novo .rodape button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px #333;
+    background-color: #aba;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.txBtCores {
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.txBtCores textarea {
+    width: 90%;
+    height: 100%;
+    border: none;
+    box-shadow: 1px 1px 5px #333;
+    padding: 5px;
+    margin: 10px;
+    opacity: 0.8;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    font-size: 22px;
+}
+
+.txBtCores div {
+    width: 10%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.txBtCores button {
+    width: 40px;
+    height: 35px;
+    border: none;
+    box-shadow: 1px 1px 5px #333;
+    cursor: pointer;
+}
+
+.rodape {
+    width: 100%;
+    height: 25%;
+}
+
+#novo .rodape button {
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    box-shadow: 1px 1px 5px #333;
+    background-color: #aba;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .modal {
     display: none;
+}
+
+.ptitfull {
+    position: relative;
+    display: flex;
+}
+
+.ptitfull figcaption{
+    width: 95%;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-align: center;
+    padding: 3px;
 }

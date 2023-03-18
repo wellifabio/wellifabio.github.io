@@ -10,82 +10,92 @@
     <title>Planeje seu novo negócio</title>
 </head>
 
-<body>
+<body onload="load()">
     <header>
         <img src="./assets/canvas.png" alt="ìcone Canvas" width="35px">
         <h1>Projeto:</h1>
         <input type="text" placeholder="Digite o nome do seu projeto:">
+        <button onclick="window.localStorage.removeItem('postits');window.location.reload()">Limpar</button>
     </header>
     <main>
         <div id="faixa1">
             <div class="coluna">
-                <div class="containner" id="c1">
-                    <div class="faixa" onclick="addPostit(c1)">
+                <div class="containner">
+                    <div class="faixa" onclick="addPostit(0)">
                         <h3>Parceiros chaves</h3>
                         <img src="./assets/alianca.png" alt="Logo parceria">
                     </div>
+                    <div class="canvas canvash" id="p0"></div>
                 </div>
             </div>
             <div class="coluna">
-                <div class="containner" id="c2">
-                    <div class="faixa" onclick="addPostit(c2)">
+                <div class="containner">
+                    <div class="faixa" onclick="addPostit(1)">
                         <h3>Atividades chaves</h3>
                         <img src="./assets/ferramentas.png" alt="Logo ferramentas">
                     </div>
+                    <div class="canvas canvasp" id="p1"></div>
                 </div>
-                <div class="containner" id="c3">
-                    <div class="faixa" onclick="addPostit(c3)">
+                <div class="containner">
+                    <div class="faixa" onclick="addPostit(2)">
                         <h3>Recursos chaves</h3>
                         <img src="./assets/dinheiro.png" alt="Logo dinheiro">
                     </div>
+                    <div class="canvas canvasp" id="p2"></div>
                 </div>
             </div>
             <div class="coluna">
-                <div class="containner" id="c4">
-                    <div class="faixa" onclick="addPostit(c4)">
+                <div class="containner">
+                    <div class="faixa" onclick="addPostit(3)">
                         <h3>Preposições de valores</h3>
                         <img src="./assets/presente.png" alt="Logo presente">
                     </div>
+                    <div class="canvas canvash" id="p3"></div>
                 </div>
             </div>
             <div class="coluna">
-                <div class="containner" id="c5">
-                    <div class="faixa" onclick="addPostit(c5)">
+                <div class="containner">
+                    <div class="faixa" onclick="addPostit(4)">
                         <h3>Relacionamento com clientes</h3>
                         <img src="./assets/coracao.png" alt="Logo coração">
                     </div>
+                    <div class="canvas canvasp" id="p4"></div>
                 </div>
-                <div class="containner" id="c6">
-                    <div class="faixa" onclick="addPostit(c6)">
+                <div class="containner">
+                    <div class="faixa" onclick="addPostit(5)">
                         <h3>Canais</h3>
                         <img src="./assets/caminhao.png" alt="Logo caminhão">
                     </div>
+                    <div class="canvas canvasp" id="p5"></div>
                 </div>
             </div>
             <div class="coluna">
-                <div class="containner" id="c7">
-                    <div class="faixa" onclick="addPostit(c7)">
+                <div class="containner">
+                    <div class="faixa" onclick="addPostit(6)">
                         <h3>Segmentação de clientes</h3>
                         <img src="./assets/mamaebebe.png" alt="Logo mãe e bebê">
                     </div>
+                    <div class="canvas canvash" id="p6"></div>
                 </div>
             </div>
         </div>
         <div id="faixa2">
             <div class="coluna">
-                <div class="containner" id="c8">
-                    <div class="faixa" onclick="addPostit(c8)">
+                <div class="containner">
+                    <div class="faixa" onclick="addPostit(7)">
                         <h3>Custos</h3>
                         <img src="./assets/dolar.png" alt="Logo notas de dolar">
                     </div>
+                    <div class="canvas canvasw" id="p7"></div>
                 </div>
             </div>
             <div class="coluna">
-                <div class="containner" id="c9">
-                    <div class="faixa" onclick="addPostit(c9)">
+                <div class="containner">
+                    <div class="faixa" onclick="addPostit(8)">
                         <h3>Receitas</h3>
                         <img src="./assets/maquininha.png" alt="Logo máquina de cartão de crédito">
                     </div>
+                    <div class="canvas canvasw" id="p8"></div>
                 </div>
             </div>
         </div>
@@ -93,16 +103,16 @@
     <footer id="rodape" class="modal">
         <div id="novo">
             <label id="orientacao"></label>
-            <div>
-                <textarea name="" id="" cols="30" rows="10"></textarea>
+            <div class="txBtCores">
+                <textarea id="texto" cols="30" rows="5"></textarea>
                 <div>
-                    <button onclick="cor(1)"></button>
-                    <button onclick="cor(2)"></button>
-                    <button onclick="cor(3)"></button>
+                    <button style="background-color: #f7e388;" onclick="cor(0)"></button>
+                    <button style="background-color: #f8b3b3;" onclick="cor(1)"></button>
+                    <button style="background-color: #88eaf7;" onclick="cor(2)"></button>
                 </div>
             </div>
-            <div>
-                <button onclick="add()">Adicionar</button>
+            <div class="rodape">
+                <button id="acao" onclick="add()">Adicionar</button>
                 <button onclick="rodape.classList.toggle('modal')">Cancelar</button>
             </div>
         </div>
