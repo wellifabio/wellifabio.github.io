@@ -44,7 +44,7 @@ const updte = (i) => {
     document.querySelector("#texto").value = postits[i].texto;
     document.querySelector("#acao").innerHTML = "Atualizar";
     document.querySelector("#acao").setAttribute("onclick", `update('${i}')`);
-    document.querySelector(".rodape").innerHTML += `<button onclick="del('${i}')">X</button>`;
+    document.querySelector(".rodape").innerHTML += `<button onclick="del('${i}')"><img src="./assets/lixo.png" width="20px" alt="Del"></button>`;
     cor(postits[i].cor);
     params.onde = postits[i].where;
 }
