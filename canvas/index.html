@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="./assets/canvas.png">
-    <link rel="stylesheet" href="style.css">
+    <link id="style" rel="stylesheet" href="style.css">
     <title>Planeje seu novo negócio</title>
 </head>
 
@@ -14,8 +14,15 @@
     <header>
         <img src="./assets/canvas.png" alt="ìcone Canvas" width="35px">
         <h1>Projeto:</h1>
-        <input type="text" placeholder="Digite o nome do seu projeto:">
-        <button onclick="window.localStorage.removeItem('postits');window.location.reload()">Limpar</button>
+        <input type="text" placeholder="Digite o nome do seu projeto:" id="titulo" />
+        <button onclick="salvar()">Salvar</button>
+        <input type="file" id="abrir" accept=".json" />
+        <button
+            onclick="window.localStorage.removeItem('postits');window.localStorage.removeItem('titulo');window.location.reload()">
+            Limpar
+        </button>
+        <button onclick="view()">Visualizar</button>
+        <button onclick="pdf()">PDF</button>
     </header>
     <main>
         <div id="faixa1">
@@ -118,6 +125,9 @@
         </div>
     </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.4.1/jspdf.debug.js"
+    integrity="sha384-THVO/sM0mFD9h7dfSndI6TS0PgAGavwKvB5hAxRRvc0o9cPLohB0wb/PTA7LdUHs"
+    crossorigin="anonymous"></script>
 <script src="./script.js"></script>
 
 </html>

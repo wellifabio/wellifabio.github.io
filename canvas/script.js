@@ -17,14 +17,19 @@ const params = {
     ]
 }
 
+document.getElementById("titulo").addEventListener("keyup", () => {
+    window.localStorage.setItem("titulo", document.getElementById("titulo").value);
+});
+
 const load = () => {
-    postits.forEach((e,i) => {
-        let g = Math.floor(Math.random() * 6) - 2;      
+    postits.forEach((e, i) => {
+        let g = Math.floor(Math.random() * 6) - 2;
         let onde = document.querySelector(`#p${e.where}`);
         let ftSize = e.texto.length > 80 ? 14 : 20;
         onde.innerHTML +=
             `<figure class="ptitfull"><img src="${params.postit[e.cor]}" style="transform: rotate(${g}deg);" onclick="updte('${i}')"><figcaption style = "font-size:${ftSize}px;cursor:pointer;" onclick="updte('${i}')">${e.texto}</figcaption></figure>`;
     });
+    document.getElementById("titulo").value = window.localStorage.getItem("titulo");
 }
 
 const addPostit = (where) => {
@@ -76,3 +81,47 @@ const cor = (i) => {
     params.cor = i;
     document.querySelector("#novo").setAttribute("style", `background-color: ${params.corHexa[i]};`)
 }
+
+const view = () => {
+    if (document.querySelector("#style").href.split("/")[4] == "print.css")
+        document.querySelector("#style").setAttribute("href", "style.css");
+    else document.querySelector("#style").setAttribute("href", "print.css");
+}
+
+//Tirar um print da tela e salvar como pdf
+const pdf = async () => {
+    let doc = new jsPDF({
+        orientation: 'landscape',
+        unit: 'mm',
+        format: 'a3',
+        putOnlyUsedFonts: true,
+        floatPrecision: 16,
+        compress: true,
+        precision: 100
+    });
+    doc.addHTML(document.body, async function () {
+        await doc.save("canvas.pdf");
+    });
+}
+
+const salvar = () => {
+    if (postits.length > 0) {
+        let a = document.createElement("a");
+        a.href = "data:," + JSON.stringify(postits);
+        a.download = "canvas.json";
+        a.click();
+        alert("Canvas salvo na pasta padrão de downloads do seu computador");
+    } else {
+        alert("Não há dados serem salvos.");
+    }
+}
+
+document.getElementById("abrir").addEventListener("change", (e) => {
+    let file = e.target.files[0];
+    let reader = new FileReader();
+    reader.readAsText(file);
+    reader.onload = function () {
+        window.localStorage.setItem("postits", reader.result);
+        window.location.reload();
+    };
+});
