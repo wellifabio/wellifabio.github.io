@@ -88,22 +88,6 @@ const view = () => {
     else document.querySelector("#style").setAttribute("href", "print.css");
 }
 
-//Tirar um print da tela e salvar como pdf
-const pdf = async () => {
-    let doc = new jsPDF({
-        orientation: 'landscape',
-        unit: 'mm',
-        format: 'a3',
-        putOnlyUsedFonts: true,
-        floatPrecision: 16,
-        compress: true,
-        precision: 100
-    });
-    doc.addHTML(document.body, async function () {
-        await doc.save("canvas.pdf");
-    });
-}
-
 const salvar = () => {
     if (postits.length > 0) {
         let a = document.createElement("a");

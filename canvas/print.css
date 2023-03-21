@@ -289,3 +289,10 @@ footer {
     text-align: center;
     padding: 3px;
 }
+
+@media print{
+    @page {size: landscape}
+    @media print {
+        button, textarea, select {display:none;}
+    }
+}
