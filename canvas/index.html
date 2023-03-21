@@ -17,7 +17,7 @@
         <input type="text" placeholder="Digite o nome do seu projeto:" id="titulo" />
         <button onclick="salvar()">Salvar</button>
         <input type="file" id="abrir" accept=".json" />
-        <button
+        <button id="btLimpar"
             onclick="window.localStorage.removeItem('postits');window.localStorage.removeItem('titulo');window.location.reload()">
             Limpar
         </button>

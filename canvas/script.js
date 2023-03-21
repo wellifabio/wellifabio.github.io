@@ -88,7 +88,8 @@ const view = () => {
         window.location.reload();
     } else {
         document.querySelector("#style").setAttribute("href", "print.css");
-        document.querySelector("#header").innerHTML += `<button onclick="window.print();">Imprimir PDF</button>`
+        document.querySelector("#btLimpar").setAttribute("style", "display:none;");
+        document.querySelector("#header").innerHTML += `<button onclick="window.print();">Imprimir PDF</button>`;
     }
 }
 
