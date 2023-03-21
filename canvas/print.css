@@ -292,7 +292,7 @@ footer {
 
 @media print {
     @page {
-        size: A3 landscape;
+        size: a3 landscape;
         margin: 0;
     }
     header{

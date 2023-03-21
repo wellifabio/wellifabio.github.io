@@ -19,6 +19,7 @@ const params = {
 
 document.getElementById("titulo").addEventListener("keyup", () => {
     window.localStorage.setItem("titulo", document.getElementById("titulo").value);
+    document.querySelector("tit").innerHTML = "Projeto: " + document.getElementById("titulo").value
 });
 
 const load = () => {
