@@ -8,7 +8,7 @@ const params = {
         "Aqui, devem ser relacionadas quais as outras empresas serão parceiras do negócio. Geralmente, são serviços necessários para o funcionamento do empreendimento e os fornecedores.",
         "Relacione aqui as ações necessárias para a realização da proposta de valor.",
         "Relacione aqui os recursos necessários para realizar a proposta de valor, para fazer o negócio funcionar.",
-        "Conectar prestadores de serviço a clientes por uma pequena comissão",
+        "Defina o produto ou serviço e o valor para os clientes. O valor, a razão ou o motivo pelo qual os clientes se interessam e adquirem os produtos e serviços.",
         "Defina aqui como fazer para conquistar e manter uma boa relação com os clientes.",
         "Defina de que forma os produtos serão conhecidos, como chegarão aos clientes e como os clientes irão interagir com o negócio.",
         "Defina quem são os clientes que se pretende atender. Eles têm um perfil específico? Como estão agrupados? Onde estão localizados? Há uma necessidade comum?",
