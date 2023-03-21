@@ -83,9 +83,12 @@ const cor = (i) => {
 }
 
 const view = () => {
-    if (document.querySelector("#style").href.split("/")[4] == "print.css")
-        document.querySelector("#style").setAttribute("href", "style.css");
-    else document.querySelector("#style").setAttribute("href", "print.css");
+    if (document.querySelector("#style").href.split("/")[4] == "print.css") {
+        window.location.reload();
+    } else {
+        document.querySelector("#style").setAttribute("href", "print.css");
+        document.querySelector("#header").innerHTML += `<button onclick="window.print();">Imprimir PDF</button>`
+    }
 }
 
 const salvar = () => {
