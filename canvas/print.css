@@ -73,7 +73,8 @@ footer {
     font-size: large;
     font-weight: bold;
     text-align: left;
-    margin: 10px;
+    margin-left: 10px;
+    margin-botton: 5px;
 }
 
 #faixa1 {
