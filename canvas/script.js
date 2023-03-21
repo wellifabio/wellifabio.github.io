@@ -19,7 +19,6 @@ const params = {
 
 document.getElementById("titulo").addEventListener("keyup", () => {
     window.localStorage.setItem("titulo", document.getElementById("titulo").value);
-    document.querySelector("tit").innerHTML = "Projeto: " + document.getElementById("titulo").value
 });
 
 const load = () => {
@@ -31,6 +30,7 @@ const load = () => {
             `<figure class="ptitfull"><img src="${params.postit[e.cor]}" style="transform: rotate(${g}deg);" onclick="updte('${i}')"><figcaption style = "font-size:${ftSize}px;cursor:pointer;" onclick="updte('${i}')">${e.texto}</figcaption></figure>`;
     });
     document.getElementById("titulo").value = window.localStorage.getItem("titulo");
+    document.querySelector("#tit").innerHTML = "Projeto: " + document.getElementById("titulo").value
 }
 
 const addPostit = (where) => {

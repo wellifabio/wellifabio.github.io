@@ -69,10 +69,9 @@ footer {
 }
 
 #tit{
-    position: absolute;
-    top: 0px;
-    left: 0px;
+    width: 100%;
     font-weight: bold;
+    text-align: left;
 }
 
 #faixa1 {
