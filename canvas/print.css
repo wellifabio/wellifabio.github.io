@@ -295,10 +295,7 @@ footer {
         size: A3 landscape;
         margin: 0;
     }
-    button,
-    input,
-    textarea,
-    select {
+    header{
         display: none;
     }
 }
