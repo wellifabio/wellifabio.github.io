@@ -290,9 +290,15 @@ footer {
     padding: 3px;
 }
 
-@media print{
-    @page {size: landscape}
-    @media print {
-        button, textarea, select {display:none;}
+@media print {
+    @page {
+        size: A3 landscape;
+        margin: 0;
+    }
+    button,
+    input,
+    textarea,
+    select {
+        display: none;
     }
 }
