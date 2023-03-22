@@ -89,6 +89,7 @@ const view = () => {
     } else {
         document.querySelector("#style").setAttribute("href", "print.css");
         document.querySelector("#btLimpar").setAttribute("style", "display:none;");
+        document.querySelector("#btView").innerHTML = "Cancelar";
         document.querySelector("#header").innerHTML += `<button onclick="window.print();">Imprimir PDF</button>`;
     }
 }
