@@ -1,4 +1,4 @@
-const postits = window.localStorage.getItem("postits") == null ? [] : JSON.parse(window.localStorage.getItem("postits"));
+const project = window.localStorage.getItem("project") == null ? { titulo: null, postits: []} : JSON.parse(window.localStorage.getItem("project"));
 const params = {
     onde: undefined,
     cor: 0,
@@ -18,19 +18,22 @@ const params = {
 }
 
 document.getElementById("titulo").addEventListener("keyup", () => {
-    window.localStorage.setItem("titulo", document.getElementById("titulo").value);
+    project.titulo = document.getElementById("titulo").value;
+    window.localStorage.setItem("project", JSON.stringify(project));
 });
 
 const load = () => {
-    postits.forEach((e, i) => {
-        let g = Math.floor(Math.random() * 6) - 2;
-        let onde = document.querySelector(`#p${e.where}`);
-        let ftSize = e.texto.length > 80 ? 14 : 20;
-        onde.innerHTML +=
-            `<figure class="ptitfull"><img src="${params.postit[e.cor]}" style="transform: rotate(${g}deg);" onclick="updte('${i}')"><figcaption style = "font-size:${ftSize}px;cursor:pointer;" onclick="updte('${i}')">${e.texto}</figcaption></figure>`;
-    });
-    document.getElementById("titulo").value = window.localStorage.getItem("titulo");
-    document.querySelector("#tit").innerHTML = "Projeto: " + window.localStorage.getItem("titulo");
+    if (project.postits != undefined) {
+        project.postits.forEach((e, i) => {
+            let g = Math.floor(Math.random() * 6) - 2;
+            let onde = document.querySelector(`#p${e.where}`);
+            let ftSize = e.texto.length > 80 ? 14 : 20;
+            onde.innerHTML +=
+                `<figure class="ptitfull"><img src="${params.postit[e.cor]}" style="transform: rotate(${g}deg);" onclick="updte('${i}')"><figcaption style = "font-size:${ftSize}px;cursor:pointer;" onclick="updte('${i}')">${e.texto}</figcaption></figure>`;
+        });
+        document.getElementById("titulo").value = project.titulo;
+        document.querySelector("#tit").innerHTML = "Projeto: " + project.titulo;
+    }
 }
 
 const addPostit = (where) => {
@@ -41,13 +44,13 @@ const addPostit = (where) => {
 
 const updte = (i) => {
     document.querySelector("#rodape").classList.toggle("modal");
-    document.querySelector("#orientacao").innerHTML = params.orientacoes[postits[i].where];
-    document.querySelector("#texto").value = postits[i].texto;
+    document.querySelector("#orientacao").innerHTML = params.orientacoes[project.postits[i].where];
+    document.querySelector("#texto").value = project.postits[i].texto;
     document.querySelector("#acao").innerHTML = "Atualizar";
     document.querySelector("#acao").setAttribute("onclick", `update('${i}')`);
-    document.querySelector(".rodape").innerHTML += `<button onclick="del('${i}')"><img src="./assets/lixo.png" width="20px" alt="Del"></button>`;
-    cor(postits[i].cor);
-    params.onde = postits[i].where;
+    document.querySelector(".rodape").innerHTML += `<button onclick="del('${i}')">&nbsp;<img src="./assets/lixo.png" width="14px" alt="Del">&nbsp;</button>`;
+    cor(project.postits[i].cor);
+    params.onde = project.postits[i].where;
 }
 
 const add = () => {
@@ -56,8 +59,8 @@ const add = () => {
         texto: document.querySelector("#texto").value,
         where: params.onde
     }
-    postits.push(postit);
-    window.localStorage.setItem("postits", JSON.stringify(postits));
+    project.postits.push(postit);
+    window.localStorage.setItem("project", JSON.stringify(project));
     window.location.reload();
 }
 
@@ -67,14 +70,14 @@ const update = (i) => {
         texto: document.querySelector("#texto").value,
         where: params.onde
     }
-    postits[i] = postit;
-    window.localStorage.setItem("postits", JSON.stringify(postits));
+    project.postits[i] = postit;
+    window.localStorage.setItem("project", JSON.stringify(project));
     window.location.reload();
 }
 
 const del = (i) => {
-    postits.splice(i, 1);
-    window.localStorage.setItem("postits", JSON.stringify(postits));
+    project.postits.splice(i, 1);
+    window.localStorage.setItem("project", JSON.stringify(project));
     window.location.reload();
 }
 
@@ -96,9 +99,9 @@ const view = () => {
 }
 
 const salvar = () => {
-    if (postits.length > 0) {
+    if (project.postits.length > 0) {
         let a = document.createElement("a");
-        a.href = "data:," + JSON.stringify(postits);
+        a.href = "data:," + JSON.stringify(project);
         a.download = "canvas.json";
         a.click();
         alert("Canvas salvo na pasta padrão de downloads do seu computador");
@@ -112,7 +115,7 @@ document.getElementById("abrir").addEventListener("change", (e) => {
     let reader = new FileReader();
     reader.readAsText(file);
     reader.onload = function () {
-        window.localStorage.setItem("postits", reader.result);
+        window.localStorage.setItem("project", reader.result);
         window.location.reload();
     };
 });
