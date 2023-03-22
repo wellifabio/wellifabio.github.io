@@ -30,7 +30,7 @@ const load = () => {
             `<figure class="ptitfull"><img src="${params.postit[e.cor]}" style="transform: rotate(${g}deg);" onclick="updte('${i}')"><figcaption style = "font-size:${ftSize}px;cursor:pointer;" onclick="updte('${i}')">${e.texto}</figcaption></figure>`;
     });
     document.getElementById("titulo").value = window.localStorage.getItem("titulo");
-    document.querySelector("#tit").innerHTML = "Projeto: " + document.getElementById("titulo").value
+    document.querySelector("#tit").innerHTML = "Projeto: " + window.localStorage.getItem("titulo");
 }
 
 const addPostit = (where) => {
@@ -89,6 +89,7 @@ const view = () => {
     } else {
         document.querySelector("#style").setAttribute("href", "print.css");
         document.querySelector("#btLimpar").setAttribute("style", "display:none;");
+        document.querySelector("#tit").innerHTML = "Projeto: " + document.getElementById("titulo").value
         document.querySelector("#btView").innerHTML = "Cancelar";
         document.querySelector("#header").innerHTML += `<button onclick="window.print();">Imprimir PDF</button>`;
     }
