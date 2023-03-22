@@ -15,7 +15,7 @@ function getInicialConfig() {
     modal.setAttribute("style", "display:flex;")
 }
 
-//Função que cria a estrutura básica do crinograma
+//Função que cria a estrutura básica do cronograma
 function criarCronograma() {
     if (prazo.value !== '' && prazo.value > 0) {
         if (prazo.value > 31) {
