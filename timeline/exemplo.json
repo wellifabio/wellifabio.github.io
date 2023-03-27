@@ -1,0 +1,131 @@
+[
+	{
+		"projeto": "Gestão de Frotas"
+	},
+	{
+		"descricao": "Planejamento: Documento do projeto e cronograma inicial",
+		"responsavel": "Reenyee",
+		"inicio": "1",
+		"duracao": "1",
+		"status": "Finished"
+	},
+	{
+		"descricao": "EAP - Elencar as regras de negócio RN",
+		"responsavel": "Reenyee",
+		"inicio": "1",
+		"duracao": "2",
+		"status": "Finished"
+	},
+	{
+		"descricao": "EAP - Análise de Requisitos Funcionais e não funcionais",
+		"responsavel": "Wellington",
+		"inicio": "2",
+		"duracao": "2",
+		"status": "Finished"
+	},
+	{
+		"descricao": "MER",
+		"responsavel": " DER (Modelo Conceitual)",
+		"inicio": "Wellington",
+		"duracao": "3",
+		"status": "1"
+	},
+	{
+		"descricao": "UML DC (Diagrama de Classes)",
+		"responsavel": "Wellington",
+		"inicio": "3",
+		"duracao": "1",
+		"status": "Finished"
+	},
+	{
+		"descricao": "Desenvolvimento Back-End",
+		"responsavel": "Wellington",
+		"inicio": "3",
+		"duracao": "3",
+		"status": "Finished"
+	},
+	{
+		"descricao": "Back-End - Testes unitários e de integração (Insomnia)",
+		"responsavel": "Wellington",
+		"inicio": "3",
+		"duracao": "3",
+		"status": "Finished"
+	},
+	{
+		"descricao": "Back-End - Correção de erros e ajustes",
+		"responsavel": "Wellington",
+		"inicio": "6",
+		"duracao": "5",
+		"status": "Overdue"
+	},
+	{
+		"descricao": "Desenvolvimento Front-End",
+		"responsavel": "Reenye",
+		"inicio": "6",
+		"duracao": "10",
+		"status": "Finished"
+	},
+	{
+		"descricao": "Front-End - Testes unitários e integração",
+		"responsavel": "Wellington",
+		"inicio": "11",
+		"duracao": "5",
+		"status": "Overdue"
+	},
+	{
+		"descricao": "Front-End - Teste ponto a ponto (selenium)",
+		"responsavel": "Wellington",
+		"inicio": "15",
+		"duracao": "1",
+		"status": "Finished"
+	},
+	{
+		"descricao": "Front-End - Correção de erros e ajustes",
+		"responsavel": "Reenye",
+		"inicio": "15",
+		"duracao": "7",
+		"status": "Finished"
+	},
+	{
+		"descricao": "Front-End - Teste ponto a ponto (selenium)",
+		"responsavel": "Wellington",
+		"inicio": "21",
+		"duracao": "1",
+		"status": "Finished"
+	},
+	{
+		"descricao": "Desenvolvimento Mobile",
+		"responsavel": "Reenye",
+		"inicio": "21",
+		"duracao": "8",
+		"status": "Running"
+	},
+	{
+		"descricao": "Back-End - Correção de erros e ajustes",
+		"responsavel": "Wellington",
+		"inicio": "21",
+		"duracao": "3",
+		"status": "Running"
+	},
+	{
+		"descricao": "Relatório de testes",
+		"responsavel": "Wellington",
+		"inicio": "28",
+		"duracao": "2",
+		"status": "Running"
+	},
+	{
+		"descricao": "Concluir documento do projeto",
+		"responsavel": "Reenye e Wellington",
+		"inicio": "28",
+		"duracao": "3",
+		"status": "Finished"
+	},
+	{
+		"descricao": "Apresentação do projeto",
+		"responsavel": "Reenye e Wellington",
+		"inicio": "30",
+		"duracao": "1",
+		"status": "Overdue"
+	}
+]
