@@ -1,6 +1,8 @@
 [
 	{
-		"projeto": "Gestão de Frotas"
+		"projeto": "Gestão de Frotas",
+		"tipo": 0,
+		"duracao": 30
 	},
 	{
 		"descricao": "Planejamento: Documento do projeto e cronograma inicial",
