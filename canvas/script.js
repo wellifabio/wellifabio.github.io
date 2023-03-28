@@ -1,4 +1,4 @@
-const project = window.localStorage.getItem("project") == null ? { titulo: null, postits: []} : JSON.parse(window.localStorage.getItem("project"));
+const project = window.localStorage.getItem("project") == null ? { titulo: null, postits: [] } : JSON.parse(window.localStorage.getItem("project"));
 const params = {
     onde: undefined,
     cor: 0,
@@ -93,9 +93,18 @@ const view = () => {
         document.querySelector("#style").setAttribute("href", "print.css");
         document.querySelector("#btLimpar").setAttribute("style", "display:none;");
         document.querySelector("#tit").innerHTML = "Projeto: " + document.getElementById("titulo").value
+        document.querySelector("#btEx").remove();
         document.querySelector("#btView").innerHTML = "Cancelar";
         document.querySelector("#header").innerHTML += `<button onclick="window.print();">Imprimir PDF</button>`;
     }
+}
+
+const exemplo = async () => {
+    let resp = await fetch("exemplo.json")
+    let json = await resp.json()
+    console.log(json);
+    window.localStorage.setItem("project", JSON.stringify(json));
+    window.location.reload();
 }
 
 const salvar = () => {
