@@ -12,7 +12,23 @@
     <header></header>
     <main></main>
     <footer></footer>
-    <div class="modal" id="modal"></div> 
+    <div class="modal oculto" id="modal">
+        <form id="add">
+            <input type="text" id="descricao" placeholder="Digite a descrição da tarefa" required>
+            <input type="text" id="recurso" placeholder="Pessoa ou equipe responsável" required>
+            <label for="inicio">Início:</label>
+            <input type="number" id="inicio" required>
+            <label for="duracao">Duração</label>
+            <input type="number" id="duracao" required>
+            <select id="status">
+                <option value="Planejado">Planejado</option>
+                <option value="Atrasado">Atrasado</option>
+                <option value="Execução">Execução</option>
+                <option value="Concluído">Concluído</option>
+            </select>
+            <input type="submit" id="submit" value="Adicionar">
+        </form>
+    </div> 
 </body>
 <script src="script.js"></script>
 </html>
