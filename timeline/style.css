@@ -12,17 +12,29 @@ h1 {
 }
 
 body {
+    background: url("../assets/back.png") repeat-x fixed;
+    background-size: contain;
+    background-color: #aba;
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
     line-height: 1.5;
     color: #333;
-    background: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header {
+    background-color: #ffe;
+    width: 100%;
+    max-width: 1200px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 main {
+    width: 100%;
     max-width: 1200px;
     display: flex;
     flex-direction: column;
@@ -30,7 +42,7 @@ main {
 }
 
 footer {
-    margin-top: 20px;
+    background-color: #ffe;
     font-size: 12px;
     width: 100%;
     max-width: 1200px;
@@ -39,26 +51,6 @@ footer {
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-}
-
-input[type="date"] {
-    border: none;
-    border-bottom: 1px solid #ccc;
-    padding: 0 10px;
-    margin: 10px;
-    font-size: 14px;
-    font-weight: bold;
-}
-
-button {
-    background-color: #f1bd4c;
-    border: none;
-    cursor: pointer;
-    box-shadow: 1px 1px 3px #333;
-    padding: 5px 10px;
-    font-size: 14px;
-    font-weight: bold;
-    color: #333;
 }
 
 table {
@@ -74,15 +66,36 @@ td {
     border: 1px solid #ccc;
     padding: 0px;
     margin: 0px;
+    background-color: #fff;
 }
 
 .btn {
     width: 15px;
-    height: 15px;
+    height: 18px;
     border: none;
     cursor: pointer;
     margin: 0px;
     background: none;
+}
+
+button {
+    background-color: #f1bd4c;
+    border: none;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px #333;
+    padding: 5px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="date"] {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    padding: 0 10px;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .modal {
@@ -102,14 +115,16 @@ td {
     top: 100px;
     width: 100%;
     max-width: 500px;
-    background-color: #f1bd4c;
+    background-color: #ffe;
     box-shadow: 1px 1px 3px #333;
     padding: 10px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 150px 350px;
 }
 
-form input, label, select {
+form input,
+label,
+select {
     margin: 5px;
     padding: 5px;
     border: none;
@@ -118,7 +133,8 @@ form input, label, select {
     font-weight: bold;
 }
 
-input[type="submit"] {
+input[type="submit"],
+input[type="button"] {
     background-color: #f1bd4c;
     border: none;
     cursor: pointer;

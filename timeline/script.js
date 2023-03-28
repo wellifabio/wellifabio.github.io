@@ -1,47 +1,79 @@
-const body = document.querySelector("#body");
-const header = body.childNodes[1];
-const main = body.childNodes[3];
-const footer = body.childNodes[5];
-const modal = body.childNodes[7];
-const add = document.querySelector("#add");
+const body = document.querySelector("#body")
+const header = body.childNodes[1]
+const main = body.childNodes[3]
+const footer = body.childNodes[5]
+const modal = body.childNodes[7]
+const add = document.querySelector("#add")
 
 const cores = {
-    "Planejado" : "rgb(24, 154, 225);",
-    "Atrasado" : "rgb(238, 190, 0);",
-    "Execução" : "rgb(202, 52, 32);",
-    "Concluído" : "rgb(8, 75, 33);",
+    "Planejado": "rgb(24, 154, 225);",
+    "Atrasado": "rgb(238, 190, 0);",
+    "Execução": "rgb(202, 52, 32);",
+    "Concluído": "rgb(8, 75, 33);",
 }
-var dados = [];
+var dados = []
 
 
-const carregaArquivo = (json) => {
-    fetch(json)
+const iniciar = () => {
+    fetch("exemplo.json")
         .then(resp => resp.json())
         .then(
             resp => {
-                dados = resp;
-                cabecalho();
-                principal();
-                rodape();
+                dados = resp
+                cabecalho()
+                principal()
+                rodape()
             }
         )
 };
 
 add.addEventListener("submit", (e) => {
-    e.preventDefault();
-    modal.classList.toggle("oculto");
+    e.preventDefault()
+    modal.classList.toggle("oculto")
+    let tarefa = {}
+    tarefa.descricao = add.descricao.value
+    tarefa.responsavel = add.responsavel.value
+    tarefa.inicio = parseInt(add.inicio.value)
+    tarefa.duracao = parseInt(add.duracao.value)
+    tarefa.status = add.status.value
+    dados.push(tarefa)
+    principal()
 })
 
 const cabecalho = () => {
-    header.innerHTML = "<h1>Projeto " + dados[0].projeto + "</h1>";
+    header.innerHTML = "<h1>Projeto " + dados[0].projeto + "</h1>"
 }
 
 const rodape = () => {
-    footer.innerHTML = "<h3>Início do projéto em: </h3> <input type='date' value='" + dados[0].inicio + "'/>";
-    footer.innerHTML += `<button onclick='modal.classList.toggle("oculto");'>Adicionar tarefa</button>`;
+    footer.innerHTML = "<h3>Início do projéto em: </h3> <input type='date' value='" + dados[0].inicio + "'/>"
+    footer.innerHTML += `<button onclick='carregarExemplo()'>Carregar Exemplo</button>`
+    footer.innerHTML += `<button onclick='redefinir()'>Limpar tudo</button>`
+    footer.innerHTML += `<button onclick='modal.classList.toggle("oculto");'>Adicionar tarefa</button>`
+}
+
+const redefinir = async () => {
+    let projeto = {
+        projeto: "",
+        tipo: 0,
+        duracao: 30,
+        inicio: ""
+    }
+    dados = []
+    dados.push(projeto)
+    cabecalho()
+    principal()
+}
+
+const carregarExemplo = async () => {
+    let resp = await fetch("exemplo.json")
+    let json = await resp.json()
+    dados = json
+    cabecalho()
+    principal()
 }
 
 const principal = async () => {
+    main.innerHTML = ""
     let tabela = document.createElement("table")
     tabela.appendChild(thead())
     tabela.appendChild(tbody())
