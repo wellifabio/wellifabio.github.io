@@ -1,10 +1,5 @@
 const aulas = [
 	{
-		href: "https://forms.office.com/r/bt7KtQhVsK",
-		target: "_blank",
-		text: "PESQUISA DIMENSÃO 360"
-	},
-	{
 		href: "./canvas",
 		target: "_blank",
 		text: "JavaScript - Canvas Frame Maker"
