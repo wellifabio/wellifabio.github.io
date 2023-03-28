@@ -168,7 +168,7 @@ const alt = (i) => {
 }
 
 const del = (indice) => {
-    dados.splice(indice, 0)
+    dados.splice(indice, 1)
     window.localStorage.setItem("dados", JSON.stringify(dados))
     window.location.reload()
 }
