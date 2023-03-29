@@ -2,7 +2,7 @@ const aulas = [
 	{
 		href: "./canvas",
 		target: "_blank",
-		text: "JavaScript - Canvas Frame Maker"
+		text: "JavaScript - Canvas Frame Maker (pt-br)"
 	},
 	{
 		href: "./gantt",
@@ -17,7 +17,7 @@ const aulas = [
 	{
 		href: "./bitola",
 		target: "_blank",
-		text: "JavaScript - Cálculo de Bitola p/ Cabo de Cobre"
+		text: "JavaScript: Cálc. Bitola p/ Cabo de Cobre (pt-br)"
 	},
 	{
 		href: "./clima",
