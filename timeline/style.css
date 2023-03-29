@@ -148,3 +148,22 @@ input[type="button"] {
 .oculto {
     display: none;
 }
+
+@media print {
+    @page {
+        size: landscape, A4;
+    }
+
+    @media print {
+
+        footer button,
+        input[type="file"],
+        input[type="button"] {
+            display: none;
+        }
+
+        body, header, footer {
+            background: none;
+        }
+    }
+}

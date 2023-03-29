@@ -6,18 +6,25 @@ const task = body.childNodes[7]
 const nProj = body.childNodes[9]
 const add = document.querySelector("#add")
 const set = document.querySelector("#proj")
-var dados = window.localStorage.getItem("dados") == null ? [] : JSON.parse(window.localStorage.getItem("dados"))
-const total = dados[0].duracao <= 45 ? dados[0].duracao : dados[0].duracao <= 315 ? parseInt(dados[0].duracao / 7) : parseInt(dados[0].duracao / 30)
-const grandeza = dados[0].duracao <= 45 ? "Dias" : dados[0].duracao <= 315 ? "Semanas" : "Mêses"
-
-add.childNodes[13].innerHTML = "Duração em " + grandeza
-
 const cores = {
     "Planejado": "rgb(24, 154, 225);",
     "Atrasado": "rgb(238, 190, 0);",
     "Execução": "rgb(202, 52, 32);",
     "Concluído": "rgb(8, 75, 33);",
 }
+
+var grandeza = "Dias"
+var total = 30
+var dados = []
+
+if (window.localStorage.getItem("dados") != null) {
+    dados = JSON.parse(window.localStorage.getItem("dados"))
+    total = dados[0].duracao <= 45 ? dados[0].duracao : dados[0].duracao <= 315 ? parseInt(dados[0].duracao / 7) : parseInt(dados[0].duracao / 30)
+    grandeza = dados[0].duracao <= 45 ? "Dias" : dados[0].duracao <= 315 ? "Semanas" : "Mêses"
+}
+
+add.childNodes[13].innerHTML = "Duração em " + grandeza
+
 
 const iniciar = () => {
     if (dados.length == 0) {
@@ -54,7 +61,7 @@ add.addEventListener("submit", (e) => {
             dados[acao] = tarefa
         window.localStorage.setItem("dados", JSON.stringify(dados))
     } else {
-        alert("Data de início inválida")
+        alert("Início e duração da tarefa devem estar dentro do cronograma")
     }
     window.location.reload()
 })
@@ -62,11 +69,11 @@ add.addEventListener("submit", (e) => {
 set.addEventListener("submit", (e) => {
     e.preventDefault()
     nProj.classList.toggle("oculto")
-    let duracao = parseInt(set.duracao.value)
-    if (duracao >= 15 && duracao <= 1350) {
+    let dur = parseInt(set.duracao.value)
+    if (dur >= 15 && dur <= 1350) {
         let projeto = {
             projeto: set.nome.value,
-            duracao: duracao,
+            duracao: dur,
             inicio: set.inicio.value
         }
         dados = []
@@ -83,12 +90,15 @@ const cabecalho = () => {
 }
 
 const rodape = () => {
-    footer.innerHTML = "<h3>Início do projéto em: </h3> <input type='date' value='" + dados[0].inicio + "'/>"
+    footer.innerHTML = "<h3>Início do projéto em: </h3> <input type='date' id='iniProj' value='" + dados[0].inicio + "'/>"
     footer.innerHTML += `<button onclick="salvar()">Salvar</button>`
     footer.innerHTML += `<input type="file" id="abrir" accept=".json"/>`
     footer.innerHTML += `<button onclick='carregarExemplo()'>Carregar Exemplo</button>`
-    footer.innerHTML += `<button onclick='nProj.classList.toggle("oculto");'>Limpar e cria novo</button>`
-    footer.innerHTML += `<button onclick='task.classList.toggle("oculto");'> + tarefa</button>`
+    footer.innerHTML += `<button onclick='titulo();'>Novo Título</button>`
+    footer.innerHTML += `<button onclick='duracao();'>Nova Duração</button>`
+    footer.innerHTML += `<button onclick='nProj.classList.toggle("oculto");'>Novo Projeto</button>`
+    footer.innerHTML += `<button onclick='window.print();'>Imprimir</button>`
+    footer.innerHTML += `<button onclick='task.classList.toggle("oculto");'> + Tarefa</button>`
     document.getElementById("abrir").addEventListener("change", (e) => {
         let file = e.target.files[0]
         let reader = new FileReader()
@@ -98,9 +108,14 @@ const rodape = () => {
             window.location.reload()
         }
     })
+    document.querySelector("#iniProj").addEventListener("change", (e) => {
+        dados[0].inicio = e.target.value
+        window.localStorage.setItem("dados", JSON.stringify(dados))
+        window.location.reload()
+    })
 }
 
-const principal = async () => {
+const principal = () => {
     main.innerHTML = ""
     let tabela = document.createElement("table")
     tabela.appendChild(thead())
@@ -153,9 +168,10 @@ const bts = (inicio, duracao, l, indice) => {
 }
 
 const alt = (i) => {
-    let del = document.createElement("button")
-    del.setAttribute("onclick", `del('${i}')`)
-    del.innerHTML = "Excluir tarefa"
+    let del = document.createElement("input")
+    del.setAttribute("type", `button`)
+    del.setAttribute("onclick", `remover('${i}')`)
+    del.setAttribute("value", "Excluir tarefa")
     add.childNodes[3].value = dados[i].descricao
     add.childNodes[7].value = dados[i].responsavel
     add.childNodes[11].value = dados[i].inicio
@@ -167,11 +183,12 @@ const alt = (i) => {
     task.classList.toggle("oculto");
 }
 
-const del = (indice) => {
-    dados.splice(indice, 1)
+const remover = (indice) => {
+    dados.splice(parseInt(indice), 1)
     window.localStorage.setItem("dados", JSON.stringify(dados))
     window.location.reload()
 }
+
 const carregarExemplo = async () => {
     let resp = await fetch("exemplo.json")
     let json = await resp.json()
@@ -189,5 +206,28 @@ const salvar = () => {
         alert("Gráfico salvo na pasta padrão de downloads do seu computador")
     } else {
         alert("Não há dados serem salvos.")
+    }
+}
+
+const titulo = () => {
+    let titulo = prompt("Digite o novo título do projeto:")
+    if (titulo != null && titulo != "") {
+        dados[0].projeto = titulo
+        window.localStorage.setItem("dados", JSON.stringify(dados))
+        window.location.reload()
+    }
+}
+
+const duracao = () => {
+    let dur = prompt("Digite a nova duração do projeto:")
+    if (dur != null && dur != "") {
+        let intDur = parseInt(dur)
+        if (intDur > dados[0].duracao && intDur < 1350) {
+            dados[0].duracao = intDur
+            window.localStorage.setItem("dados", JSON.stringify(dados))
+            window.location.reload()
+        }else{
+            alert("Duração não pode ser menor que a duração atual nem maior que 1350 dias.")
+        }
     }
 }
