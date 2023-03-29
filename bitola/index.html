@@ -12,13 +12,13 @@
 <body>
     <header>
         <h1>Calculadora de Bitola(mm2)</h1>
-        <h2>Elétrica residencial</h2>
+        <h2>Elétrica residencial cabos de cobre</h2>
     </header>
     <main>
         <label for="l">Distancia</label><label>em</label><label>Metros:</label>
-        <input type="number" name="l" id="l" />
+        <input type="number" name="l" id="l" min="0" max="99999" value="0" step="any" />
         <label for="i">Corrente em</label><label>amperes:</label><img src="./assets/amper.png" alt="A">
-        <input type="number" name="i" id="i" />
+        <input type="number" name="i" id="i" min="0" max="99999" value="0" step="any" />
         <label for="b" style="grid-column: span 2;">A bitola recomendada para Tensão 127V:</label>
         <input type="text" name="b127" id="b1" readonly><label>mm2</label>
         <label for="b" style="grid-column: span 2;">A bitola recomendada para Tensão 220V:</label>

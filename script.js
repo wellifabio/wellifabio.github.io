@@ -15,6 +15,11 @@ const aulas = [
 		text: "JavaScript - Gantt chart generator"
 	},
 	{
+		href: "./bitola",
+		target: "_blank",
+		text: "JavaScript - Cálculo de Bitola p/ Cabo de Cobre"
+	},
+	{
 		href: "./clima",
 		target: "_blank",
 		text: "JavaScript - Learning ChartJS"
