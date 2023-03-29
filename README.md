@@ -6,10 +6,11 @@
 - ./chat - Sala de bate papo
 - ./clima - ChartsJS (Aula demonstração)
 - ./delivery - Aula demonstração App de pedidos online (Aula demonstração)
+- ./gantt - App Gráfico de Gantt - Faça o cronograma de um projeto.
 - ./hash - Jogo da velha desenvolvido com JavaScript e HTML Canvas (Aula demonstração)
 - ./loto - Preenchedor de jogos ou aleatórios JavaScript (Aula demonstração)
 - ./memoria - Jogo da memória desenvolvido com JavaScript (Aula demonstração)
 - ./outros - Imagens ou Scrits aleatórios
 - ./rand - Gerador de dados aleatórios (Telefones, CPF, Nomes, Endereços na região de SP,  Placas de automóveis Mercosul)
 - ./sena - Preenchedor de jogos ou aleatórios JavaScript (Aula demonstração)
-- ./timeline - App Gráfico de Gantt - Faça o cronograma de um projeto.
+- ./timeline - App Gráfico de Gantt em Inglês.

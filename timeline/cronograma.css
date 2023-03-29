@@ -1,0 +1,164 @@
+body{
+    font-family: 'Courier New', Courier, monospace; 
+}
+.geral{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.faixa{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.coluna{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+label{
+    margin: 10px;
+    font-size: 12px;
+}
+
+textarea{
+    width: 220px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=text]{
+    width: 220px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=number]{
+    width: 70px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=file]{
+    width: 220px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type=button]{
+    width: 25px;
+    height: 20px;
+    margin: 1px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #b30;
+    color: #fff;
+    cursor:pointer;
+}
+
+select{
+    width: 140px;
+    height: 30px;
+    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button{
+    width: 150px;
+    height: 40px;
+    border: 2px solid #ccc;
+    border-radius: 6px;
+    background-color: #b30;
+    color: #fff;
+    cursor:pointer;
+}
+
+td{
+    max-width: 300px;
+    border-bottom: 1px solid #ccc;
+}
+
+#gantt{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#modal{
+    display:none;
+    background: rgba(0,0,0,0.8);
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+}
+
+#modal-box{
+    width: 400px;
+    height: 180px;
+    left: 50%;
+    top: 50%;
+    margin-left: -15%;
+    margin-top: -15%;
+    box-shadow: 3px 3px 6px 3px #666666;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+}
+
+.acoes{
+    width: 20px;
+    background-color: #fff;
+    display: inline;
+}
+.tdbranco{
+    width: 20px;
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+}
+.Planned{
+    width: 20px;
+    background-color: rgb(24, 154, 225);
+    border: 1px solid #003;
+}
+.Running{
+    width: 20px;
+    background-color: rgb(238, 190, 0);
+    border: 2px solid #996;
+}
+.Overdue{
+    width: 20px;
+    background-color: rgb(202, 52, 32);
+    border: 2px solid #600;
+}
+.Finished{
+    width: 20px;
+    background-color: rgb(8, 75, 33);
+}
+
+@media print{
+    @page {size: landscape}
+    @media print {
+        h4, button, label, input, textarea, select {display:none;}
+    }
+}

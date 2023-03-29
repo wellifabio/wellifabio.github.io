@@ -5,6 +5,11 @@ const aulas = [
 		text: "JavaScript - Canvas Frame Maker"
 	},
 	{
+		href: "./gantt",
+		target: "_blank",
+		text: "JavaScript - Gantt chart generator (pt-br)"
+	},
+	{
 		href: "./timeline",
 		target: "_blank",
 		text: "JavaScript - Gantt chart generator"

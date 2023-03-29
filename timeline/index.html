@@ -3,56 +3,68 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="./icone.png">
-    <title>Gráfico Gant</title>
+    <link rel="shortcut icon" href="icone.png">
+    <link rel="stylesheet" type="text/css" href="cronograma.css" />
+    <title>Timeline Generator (Gantt chart)</title>
 </head>
 
-<body id="body" onload="iniciar()">
-    <header></header>
-    <main></main>
-    <footer></footer>
-    <div class="modal oculto" id="task">
-        <form id="add">
-            <label for="descricao">Descrição:</label>
-            <input type="text" id="descricao" placeholder="Digite a descrição da tarefa" required>
-            <label for="responsavel">Responsável:</label>
-            <input type="text" id="responsavel" placeholder="Pessoa ou equipe responsável" required>
-            <label for="inicio">Início:</label>
-            <input type="number" id="inicio" required>
-            <label for="duracao">Duração:</label>
-            <input type="number" id="duracao" required>
-            <label for="status">Status:</label>
-            <select id="status">
-                <option value="Planejado">Planejado</option>
-                <option value="Atrasado">Atrasado</option>
-                <option value="Execução">Execução</option>
-                <option value="Concluído">Concluído</option>
-            </select>
-            <div style="grid-column: span 2;">
-                <input type="button" id="cancelar" onclick="window.location.reload();" value="Cancelar">
-                <input type="submit" id="submit" value="Adicionar">
-                <input type="hidden" id="action" value="0">
+<body onload="getInicialConfig()">
+    <div class="geral">
+        <h4>Create your schedule by adding your activities (Gantt Chart)</h4>
+        <div class='faixa'>
+            <div class='faixa'>
+                <div class='campo'>
+                    <label>Brief description of the activity:</label>
+                    <textarea id="atividade" placeholder="Brief description of the activity"></textarea>
+                </div>
+                <div class='campo'>
+                    <label>Responsible resource:</label>
+                    <textarea id="recurso" placeholder="Responsible resource"></textarea>
+                </div>
+                <div class='campo'>
+                    <label>Start:</label>
+                    <input type="number" id="inicio"/>
+                </div>
+                <div class='campo'>
+                    <label>Duration:</label>
+                    <input type="number" id="duracao"/>
+                </div>
+                <div class='campo'>
+                    <label>Status:</label>
+                    <select id="status">
+                        <option value="Planned">Planned</option>
+                        <option value="Running">Running</option>
+                        <option value="Overdue">Overdue</option>
+                        <option value="Finished">Finished</option>
+                    </select>
+                </div>
             </div>
-        </form>
-    </div>
-    <div class="modal oculto" id="nProj">
-        <form id="proj">
-            <label for="nome">Nome do Projeto:</label>
-            <input type="text" id="nome" placeholder="Digite o nome do projeto" required>
-            <label for="inicio">Data de início:</label>
-            <input type="date" id="inicio" required>
-            <label for="duracao">Duração em dias:</label>
-            <input type="number" id="duracao" required>
-            <div style="grid-column: span 2;">
-                <input type="button" id="cancelar" onclick="nProj.classList.toggle('oculto');" value="Cancelar">
-                <input type="submit" id="submit" value="Iniciar">
+            <div class='coluna'>
+                <button id="adicionar" onclick="adicionar()">Add Activity</button>
             </div>
-        </form>
+        </div>
+        <div id="gantt">
+        </div>
     </div>
+    <div id="modal">
+        <div id="modal-box">
+            <div class='faixa' style="padding:10px;">
+                <label>Project Title:</label>
+                <input type="text" id="titulo" placeholder="Project Title:" />
+            </div>            
+            <div class='faixa' style="padding-left:10px;padding-right:10px;">
+                <label>Project Duration:</label>
+                <input type="number" id="prazo" placeholder="in days" />
+                <button id="configurar" onclick="criarCronograma()">To set up</button>
+            </div>
+            <div class='faixa' style="padding:10px;">
+                <input type="file" id="abrir" accept=".txt,.csv"/>
+                <button id="carregar" onclick="carregarCSV()">Load CSV</button>
+            </div>
+        </div>
+    </div>
+    <script src="cronograma.js"></script>
 </body>
-<script src="script.js"></script>
 
 </html>
