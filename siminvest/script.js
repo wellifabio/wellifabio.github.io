@@ -55,7 +55,7 @@ const calcular = () => {
     }
     const resultado = document.querySelector("#result2");
     resultado.value = va.toFixed(2);
-    alert('O retorno acumulado será de R$' + va.toFixed(2)+'\n Confira mês a mês na tabela')
+    alert('O retorno acumulado será de R$ ' + va.toFixed(2)+'\nGanho real de R$ '+(va - valor.value * n).toFixed(2)+'\nConfira mês a mês na tabela')
 };
 
 
