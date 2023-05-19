@@ -20,6 +20,11 @@ const aulas = [
 		text: "JavaScript: Cálc. Bitola p/ Cabo de Cobre (pt-br)"
 	},
 	{
+		href: "./siminvest",
+		target: "_blank",
+		text: "JavaScript: Simulador de Investimentos (pt-br)"
+	},	
+	{
 		href: "./clima",
 		target: "_blank",
 		text: "JavaScript - Learning ChartJS"
