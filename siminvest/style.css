@@ -10,6 +10,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 header{
@@ -21,47 +22,62 @@ header{
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 0 30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 section{
     width: 100%;
-    height: 33vh;
+    height: 24vh;
     max-width: 600px;
-    margin-top: 10px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
-    overflow-y: auto;
 }
 
 main{
     width: 100%;
-    height: 50vh;
-    max-width: 1200px;
-    margin-top: 10px;
+    height: 56vh;
     display: flex;
+    margin: 10px;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 30px;
     overflow-y: auto;
 }
 
 footer {
     width: 100%;
-    height: 8vh;
+    height: 6vh;
     background-color: #fff;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    padding: 0 30px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+footer label{
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin: 5px;
+}
+
+footer input{
+    font-weight: bold;
+    max-width: 200px;
+    height: 25px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+input[type=number]{
+    text-align: right;
 }
 
 h1{
@@ -72,39 +88,54 @@ h1{
 
 .formHeader{
     width: 100%;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
+    text-align: center;
 }
+
+.input{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 5px;
+}
+
 .formHeader label{
     font-size: 14px;
     color: #333;
+    margin: 5px;
 }
 
 .formHeader input{
-    width: 100%;
-    height: 20px;
+    max-width: 100px;
+    height: 25px;
     border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 5px;
     padding: 0 10px;
 }
 
 .formHeader button{
+    background-color: #333;
+    color: #fff;
     width: 100%;
     height: 30px;
     border: 0;
     border-radius: 5px;
-    background-color: #333;
-    color: #fff;
     font-weight: bold;
     margin: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
     cursor: pointer;
 }
 
 
 table{
     width: 100%;
+    max-width: 600px;
     background-color: #fff;
     border-collapse: collapse;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -115,8 +146,6 @@ thead{
     color: #fff;
 }
 
-/* deixar linha escuro e claro */
-
 tbody tr:nth-child(even){
     background-color: #f5f5f5;
 }
@@ -126,7 +155,7 @@ tbody tr:hover{
 }
 
 th, td{
-    padding: 10px 15px;
-    text-align: left;
+    padding: 10px;
+    text-align: center;
     font-size: 14px;
 }

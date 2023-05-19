@@ -16,17 +16,25 @@
     </header>
     <section>
         <div class="formHeader">
-            <label for="valor">Valor que pretende aplicar mensalmente:</label>
-            <input type="number" id="valor">
-            <label for="meses">Por quantos mêses pretende aplicar este valor</label>
-            <input type="number" id="meses">
-            <label for="taxa">Qual a taxa de juros mensal?</label>
-            <label for="taxa">O CDI mensal hoje, calculado com base na média dos últimos 12 meses é:</label>
-            <input type="number" id="taxa">
-            <label for="result1">O montante sem rendimentos é: </label>
-            <input type="number" id="result1" disabled>
+            <div class="input">
+                <label for="valor">Valor que pretende aplicar mensalmente:</label>
+                <input type="bumber" id="valor">
+            </div>
+            <div class="input">
+                <label for="meses">Número de mêses da aplicação:</label>
+                <input type="number" id="meses">
+            </div>
+            <div class="input">
+                <label for="taxa">Taxa de juros ao mês:</label>
+                <input type="number" id="taxa">
+            </div>
+            <label>Sujestão, 100% do CDI, média dos últimos 12 meses:</label>
+            <div class="input">
+                <label for="result1">O montante sem rendimentos seria: </label>
+                <input type="number" id="result1" disabled>
+            </div>
             <button onclick="calcular()">Calcular</button>
-        </div>
+
     </section>
     <main>
         <table>
@@ -42,10 +50,8 @@
         </table>
     </main>
     <footer>
-        <div class="formHeader">
-            <label for="result2">O montante com 100% do CDI é: </label>
-            <input type="number" id="result2" disabled>
-        </div>
+        <label for="result2">O montante com 100% do CDI é: </label>
+        <input type="number" id="result2" disabled>
     </footer>
 </body>
 <script src="script.js"></script>
