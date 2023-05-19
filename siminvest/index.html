@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="icone.png" type="image/x-icon">
+    <title>Simulador de Investimentos</title>
+</head>
+
+<body>
+    <header>
+        <h1>Simulador de Investimentos</h1>
+    </header>
+    <section>
+        <div class="formHeader">
+            <label for="valor">Valor que pretende aplicar mensalmente:</label>
+            <input type="number" id="valor">
+            <label for="meses">Por quantos mêses pretende aplicar este valor</label>
+            <input type="number" id="meses">
+            <label for="taxa">Qual a taxa de juros mensal?</label>
+            <label for="taxa">O CDI mensal hoje, calculado com base na média dos últimos 12 meses é:</label>
+            <input type="number" id="taxa">
+            <label for="result1">O montante sem rendimentos é: </label>
+            <input type="number" id="result1" disabled>
+            <button onclick="calcular()">Calcular</button>
+        </div>
+    </section>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th>Mês</th>
+                    <th>Valor</th>
+                    <th>Juros</th>
+                    <th>Valor Acumulado</th>
+                </tr>
+            </thead>
+            <tbody id="tbody"></tbody>
+        </table>
+    </main>
+    <footer>
+        <div class="formHeader">
+            <label for="result2">O montante com 100% do CDI é: </label>
+            <input type="number" id="result2" disabled>
+        </div>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

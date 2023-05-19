@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-size: medium;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header{
+    width: 100%;
+    height: 8vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+section{
+    width: 100%;
+    height: 30vh;
+    max-width: 600px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    overflow-y: auto;
+}
+
+main{
+    width: 100%;
+    height: 52vh;
+    max-width: 1200px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    overflow-y: auto;
+}
+
+footer {
+    width: 100%;
+    height: 8vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    padding: 0 30px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1{
+    font-size: 25px;
+    color: #333;
+    margin-top: 15px;
+}
+
+.formHeader{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.formHeader label{
+    font-size: 14px;
+    color: #333;
+}
+
+.formHeader input{
+    width: 100%;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.formHeader button{
+    width: 100%;
+    height: 30px;
+    border: 0;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+table{
+    width: 100%;
+    background-color: #fff;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+thead{
+    background-color: #333;
+    color: #fff;
+}
+
+/* deixar linha escuro e claro */
+
+tbody tr:nth-child(even){
+    background-color: #f5f5f5;
+}
+
+tbody tr:hover{
+    background-color: #e0e0e0;
+}
+
+th, td{
+    padding: 10px 15px;
+    text-align: left;
+}
