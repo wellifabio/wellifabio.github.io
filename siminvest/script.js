@@ -18,8 +18,6 @@ const mediaUltimos12Meses = (json) => {
 document.querySelector("#taxa").value = mediaUltimos12Meses(getCDI()).toFixed(2);
 
 const meses = document.querySelector("#meses");
-const taxa = Number(document.querySelector("#taxa").value);
-
 meses.addEventListener("keyup", () => {
     const valor = document.querySelector("#valor").value;
     const resultado = document.querySelector("#result1");
@@ -27,6 +25,7 @@ meses.addEventListener("keyup", () => {
 });
 
 const calcular = () => {
+    const taxa = Number(document.querySelector("#taxa").value);
     const valor = document.querySelector("#valor");
     const n = document.querySelector("#meses").value;
     const body = document.querySelector("#tbody");
