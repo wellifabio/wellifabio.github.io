@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,14 +9,23 @@
     <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
     <title>Cardapio</title>
 </head>
+
 <body onload="abrirDados()">
     <header>
-        <h1>Pizzas</h1>
-    </header>
+        <h1>Cardápio de Pizzas</h1>
+    </header>´
+    <nav>
+        <ul>
+            <li><a href="../carrinho"><img src="../assets/carrinho.png" alt="Carrinho">Carrinho</a></li>
+            <li><a href="../cardapio"><img src="../assets/cardapio.png" alt="Cardapio">Cardapio</a></li>
+            <li><a href="../pedidos"><img src="../assets/pedido.png" alt="Pedidos">Pedidos</a></li>
+        </ul>
+    </nav>
     <main>
         <table>
             <thead>
                 <tr>
+                    <th></th>
                     <th>Id</th>
                     <th>Nome</th>
                     <th>Preço</th>
@@ -31,13 +41,19 @@
     </footer>
     <div id="detalhes" class="modal oculto">
         <div class="corpoModal">
-            <h1>Detalhes</h1>
-            <button id="btFechar">Fechar</button>
-            <input type="text" id="id">
-            <input type="text" id="nome">
-            <button id="btCadastrar" onclick="cadastarLocal()">Cadastrar</button>
+            <div class="modalHeader">
+                <h1>Detalhes</h1>
+                <button id="btFechar">X</button>
+            </div>
+            <input type="text" id="id" disabled>
+            <input type="text" id="nome" disabled>
+            <img alt="Imagem meramente ilustrativa" id="img">
+            <textarea id="descricao" rows="5" disabled></textarea>
+            <input type="number" id="preco">
+            <button id="btCadastrar" onclick="salvarLocalmente()">Adicionar ao Carrinho</button>
         </div>
     </div>
 </body>
 <script src="script.js"></script>
+
 </html>

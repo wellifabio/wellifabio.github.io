@@ -12,10 +12,11 @@ body{
 }
 header{
     width: 100%;
-    height: 10vh;
+    height: 6vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
     border-bottom: 1px solid #000;
 }
 main{
@@ -24,6 +25,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow: auto;
 }
 footer{
     width: 100%;
@@ -32,6 +34,30 @@ footer{
     flex-direction: column;
     align-items: center;
     border-top: 1px solid #000;
+}
+
+nav{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    display: flex;
+    flex-direction: column;
+    align-self: baseline;
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+li img{
+    width: 50px;
+    cursor: pointer;
 }
 
 .modal{
@@ -45,19 +71,56 @@ footer{
     flex-direction: column;
     align-items: center;
 }
+.modalHeader{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+}
 
 .corpoModal{
     position: relative;
     border: 1px solid #000;
     top: 20vh;
-    width: 50vw;
-    height: 50vh;
+    width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #fff;
 }
 
+.corpoModal img, textarea, input{
+    width: 90%;
+    border: 0;
+}
+
+.corpoModal button{
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    height: 40px;
+    margin-bottom: 20px;
+}
+
 .oculto{
     display: none;
+}
+
+table tbody img{
+    width: 100px;
+}
+
+@media(max-width:700px) {
+    nav{
+        width: 200px;
+        background-color: #fff;
+        box-shadow: 1px 1px 5px #000;
+        left: 0px;
+        top: 50px;
+    }
+    ul{
+        flex-direction: column;
+    }
 }
