@@ -23,11 +23,11 @@ const aulas = [
 		href: "./siminvest",
 		target: "_blank",
 		text: "JavaScript: Simulador de Investimentos (pt-br)"
-	},	
+	},
 	{
-		href: "./clima",
+		href: "./pizzaria/carrinho",
 		target: "_blank",
-		text: "JavaScript - Learning ChartJS"
+		text: "JavaScript - Pizzaria Modelo (pt-br)"
 	},
 	{
 		href: "./delivery/delivery.html",
@@ -38,6 +38,11 @@ const aulas = [
 		href: "./memoria",
 		target: "_blank",
 		text: "JavaScript - Memory Game (pt - br)"
+	},
+	{
+		href: "./clima",
+		target: "_blank",
+		text: "JavaScript - Learning ChartJS"
 	},
 	{
 		href: "./sena/bilhete.html",
