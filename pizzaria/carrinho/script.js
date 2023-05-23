@@ -4,10 +4,6 @@ const tcorpo = document.querySelector("#tcorpo");
 
 const itens = JSON.parse(window.localStorage.getItem("itens")) || []
 
-btFechar.addEventListener('click', () => {
-    detalhes.classList.toggle("oculto");
-})
-
 function preecherTabela() {
     itens.forEach((e, i) => {
         const linha = document.createElement("tr");
@@ -42,11 +38,24 @@ function excluir(i) {
     window.location.reload();
 }
 
-function limparDados(){
+function limparDados() {
     window.localStorage.removeItem("itens");
     window.location.reload();
 }
 
-function switchMenu(){
-    document.querySelector("#menu").classList.toggle("oculto");
+function switchMenu() {
+    document.querySelector("#menuh").classList.toggle("oculto");
+}
+
+function enviarPedido() {
+    const pedido = {
+        data: new Date(),
+        itens: itens
+    }
+
+    const pedidos = JSON.parse(window.localStorage.getItem("pedidos")) || []
+    pedidos.push(pedido)
+    window.localStorage.setItem("pedidos", JSON.stringify(pedidos))
+    window.localStorage.removeItem("itens")
+    window.location.href = "../pedidos"
 }

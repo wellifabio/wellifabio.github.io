@@ -12,11 +12,16 @@
 
 <body onload="abrirDados()">
     <header>
-        <img src="../assets/menu.png" alt="Menu" id="sandwich" onclick="switchMenu()">
         <h1>Cardápio</h1>
     </header>´
-    <nav id="menu">
-        <ul>
+    <nav>
+        <img src="../assets/menu.png" alt="Menu" id="sandwich" onclick="switchMenu()">
+        <ul id="menuw">
+            <li><a href="../carrinho"><img src="../assets/carrinho.png" alt="Carrinho">Carrinho</a></li>
+            <li><a href="../cardapio"><img src="../assets/cardapio.png" alt="Cardapio">Cardapio</a></li>
+            <li><a href="../pedidos"><img src="../assets/pedido.png" alt="Pedidos">Pedidos</a></li>
+        </ul>
+        <ul id="menuh" class="oculto">
             <li><a href="../carrinho"><img src="../assets/carrinho.png" alt="Carrinho">Carrinho</a></li>
             <li><a href="../cardapio"><img src="../assets/cardapio.png" alt="Cardapio">Cardapio</a></li>
             <li><a href="../pedidos"><img src="../assets/pedido.png" alt="Pedidos">Pedidos</a></li>

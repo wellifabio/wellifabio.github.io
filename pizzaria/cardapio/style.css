@@ -20,6 +20,14 @@ header {
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid #000;
+    background-color: #fcdb89;
+}
+
+nav {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    right: 0px;
 }
 
 main {
@@ -38,15 +46,7 @@ footer {
     flex-direction: column;
     align-items: center;
     border-top: 1px solid #000;
-}
-
-nav {
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    display: flex;
-    flex-direction: column;
-    align-self: baseline;
+    background-color: #fcdb89;
 }
 
 a {
@@ -58,16 +58,11 @@ a:hover {
     font-weight: bold;
 }
 
-ul {
-    display: flex;
-    flex-direction: row;
-    list-style: none;
-}
-
 li img {
     margin-left: 10px;
     width: 40px;
     cursor: pointer;
+    margin: 10px;
 }
 
 li img:hover {
@@ -121,26 +116,62 @@ input {
     margin-bottom: 20px;
 }
 
-.oculto {
-    display: none;
-}
-
-#sandwich {
-    display: none;
-}
-
-button{
+button {
     border-radius: 6px;
     border: none;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     cursor: pointer;
+    background-color: #fcbf24;
 }
 
 table tbody img {
     width: 80px;
 }
 
+th {
+    text-align: left;
+    padding: 10px;
+    background-color: #000;
+    color: #fff;
+}
+
+#sandwich {
+    display: none;
+}
+
+#menuw {
+    position: relative;
+    top: 10px;
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 10px;
+}
+
+#menuh {
+    position: relative;
+    left: 0px;
+    top: 68px;
+    width: 160px;
+    flex-direction: column;
+    list-style: none;
+    background-color: #fff;
+    box-shadow: 1px 1px 5px #000;
+    transition: all 0.5s;
+}
+
+.oculto {
+    display: none;
+}
+
 @media(max-width:900px) {
+
+    .oculto {
+        display: none;
+    }
+
     #sandwich {
         display: block;
         position: absolute;
@@ -154,20 +185,8 @@ table tbody img {
         width: 60px;
     }
 
-    nav {
-        width: 160px;
-        background-color: #fff;
-        box-shadow: 1px 1px 5px #000;
-        left: 0px;
-        top: 68px;
-        transition: all 0.5s;
+    #menuw {
+        display: none;
     }
 
-    ul {
-        flex-direction: column;
-    }
-
-    li {
-        margin: 10px;
-    }
 }

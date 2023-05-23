@@ -110,13 +110,12 @@ button {
     background-color: #fcbf24;
 }
 
-table tbody img {
-    width: 80px;
+table {
+    width: 100%;
 }
 
-td {
-    align-items: center;
-    text-align: center;
+table tbody img {
+    width: 80px;
 }
 
 th {
@@ -124,6 +123,25 @@ th {
     padding: 10px;
     background-color: #000;
     color: #fff;
+}
+
+td {
+    align-items: center;
+    text-align: center;
+}
+
+h3 {
+    width: 100%;
+}
+
+.pedido {
+    width: 100%;
+    max-width: 500px;
+    margin: 10px;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 @media(max-width:900px) {

@@ -4,13 +4,13 @@ const tcorpo = document.querySelector("#tcorpo");
 
 var dados = [];
 
-function abrirDados(){
+function abrirDados() {
     fetch("../mocks/pizzas.js")
-    .then(result => result.json())
-    .then(result => {
-        dados = result;
-        preecherTabela();
-    })
+        .then(result => result.json())
+        .then(result => {
+            dados = result;
+            preecherTabela();
+        })
 }
 
 btFechar.addEventListener('click', () => {
@@ -58,6 +58,6 @@ function salvarLocalmente(i) {
     window.location.reload()
 }
 
-function switchMenu(){
-    document.querySelector("#menu").classList.toggle("oculto");
+function switchMenu() {
+    document.querySelector("#menuh").classList.toggle("oculto");
 }

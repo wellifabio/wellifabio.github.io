@@ -6,12 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Pizzaria</title>
+    <title>Acompanhe seus Pedidos</title>
 </head>
 
 <body onload="preecherTabela()">
     <header>
-        <h1>Carriho</h1>
+        <h1>Pedidos</h1>
     </header>
     <nav>
         <img src="../assets/menu.png" alt="Menu" id="sandwich" onclick="switchMenu()">
@@ -26,26 +26,10 @@
             <li><a href="../pedidos"><img src="../assets/pedido.png" alt="Pedidos">Pedidos</a></li>
         </ul>
     </nav>
-    <main>
-        <table>
-            <thead>
-                <tr>
-                    <th></th>
-                    <th>Id</th>
-                    <th>Nome</th>
-                    <th>Preço</th>
-                    <th>Qtd.</th>
-                    <th>Total</th>
-                    <th></th>
-                </tr>
-            </thead>
-            <tbody id="tcorpo">
-            </tbody>
-        </table>
+    <main id="corpo">
     </main>
     <footer>
-        <button onclick="limparDados()">Limpar<br>Carrinho</button>
-        <button onclick="enviarPedido()">Enviar<br>Pedido</button>
+        <button onclick="limparDados()">Limpar Pedidos</button>
     </footer>
 </body>
 <script src="script.js"></script>
