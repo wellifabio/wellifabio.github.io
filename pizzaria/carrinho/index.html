@@ -1,20 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="../assets/icon.png" type="image/x-icon">
-    <title>Cardapio</title>
+    <title>Pizzaria</title>
 </head>
-
-<body onload="abrirDados()">
+<body onload="preecherTabela()">
     <header>
         <img src="../assets/menu.png" alt="Menu" id="sandwich" onclick="switchMenu()">
-        <h1>Cardápio</h1>
-    </header>´
+        <h1>Carriho</h1>
+    </header>
     <nav id="menu">
         <ul>
             <li><a href="../carrinho"><img src="../assets/carrinho.png" alt="Carrinho">Carrinho</a></li>
@@ -30,7 +27,9 @@
                     <th>Id</th>
                     <th>Nome</th>
                     <th>Preço</th>
-                    <th></th>
+                    <th>Qtdade</th>
+                    <th>Subtotal</th>
+                    <th>Excluir</th>
                 </tr>
             </thead>
             <tbody id="tcorpo">
@@ -38,31 +37,16 @@
         </table>
     </main>
     <footer>
-        <h2>Pizzaria Modelo</h2>
+        <button onclick="limparDados()">Limpar<br>Dados</button>
     </footer>
     <div id="detalhes" class="modal oculto">
         <div class="corpoModal">
-            <div class="modalHeader">
-                <h1>Detalhes</h1>
-                <button id="btFechar">X</button>
-            </div>
-            <input type="hidden" id="indice">
-            <input type="text" id="id" disabled>
-            <input type="text" id="nome" disabled>
-            <img alt="Imagem meramente ilustrativa" id="img">
-            <textarea id="descricao" rows="5" disabled></textarea>
-            <div class="modalHeader">
-                <label for="preco">Preço_R$</label>
-                <input type="number" id="preco" style="text-align: right;" Disabled>
-            </div>
-            <div class="modalHeader">
-                <label for="quantidade">Quantidade</label>
-                <input type="number" id="quantidade" value="1" style="text-align: right;">
-            </div>
-            <button id="btCadastrar" onclick="salvarLocalmente(indice.value)">Adicionar ao Carrinho</button>
+            <h1>Detalhes</h1>
+            <input type="text" id="id">
+            <input type="text" id="nome">
+            <button id="btFechar">Fechar</button>
         </div>
     </div>
 </body>
 <script src="script.js"></script>
-
 </html>

@@ -42,26 +42,22 @@ function preecherTabela() {
 
 function abrirModal(i) {
     detalhes.classList.toggle("oculto");
+    document.querySelector("#indice").value = i;
     document.querySelector("#id").value = dados[i].id;
     document.querySelector("#nome").value = dados[i].nome;
     document.querySelector("#img").src = dados[i].img;
     document.querySelector("#descricao").value = dados[i].descricao;
-    document.querySelector("#nome").value = dados[i].nome;
+    document.querySelector("#preco").value = dados[i].preco;
 }
 
-function salvarLocalmente() {
-    const item = {
-        id: document.querySelector("#id").value,
-        nome: document.querySelector("#nome").value
-    }
-
-    //Abrir ou iniciar a lista de itens
+function salvarLocalmente(i) {
+    dados[i].quantidade = document.querySelector("#quantidade").value;
     const itens = JSON.parse(window.localStorage.getItem("itens")) || []
-    //Acrescentar o novo item na lista
-    itens.push(item)
-    //Salvar a lista no armazenamento local
+    itens.push(dados[i])
     window.localStorage.setItem("itens", JSON.stringify(itens))
-
-    //Recarregar a página
     window.location.reload()
+}
+
+function switchMenu(){
+    document.querySelector("#menu").classList.toggle("oculto");
 }

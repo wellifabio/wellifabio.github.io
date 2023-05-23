@@ -140,6 +140,11 @@ table tbody img {
     width: 80px;
 }
 
+td{
+    align-items: center;
+    text-align: center;
+}
+
 @media(max-width:900px) {
     #sandwich {
         display: block;
