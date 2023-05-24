@@ -48,14 +48,17 @@ function switchMenu() {
 }
 
 function enviarPedido() {
-    const pedido = {
-        data: new Date(),
-        itens: itens
+    if (itens.length > 0) {
+        const pedido = {
+            data: new Date(),
+            itens: itens
+        }
+        const pedidos = JSON.parse(window.localStorage.getItem("pedidos")) || []
+        pedidos.push(pedido)
+        window.localStorage.setItem("pedidos", JSON.stringify(pedidos))
+        window.localStorage.removeItem("itens")
+        window.location.href = "../pedidos"
+    }else{
+        document.querySelector("#msgs").innerHTML = "Seu pedido está vazio, acrescente itens."
     }
-
-    const pedidos = JSON.parse(window.localStorage.getItem("pedidos")) || []
-    pedidos.push(pedido)
-    window.localStorage.setItem("pedidos", JSON.stringify(pedidos))
-    window.localStorage.removeItem("itens")
-    window.location.href = "../pedidos"
 }

@@ -50,12 +50,12 @@ function abrirModal(i) {
     document.querySelector("#preco").value = dados[i].preco;
 }
 
-function salvarLocalmente(i) {
+function addAoCarrinho(i) {
     dados[i].quantidade = document.querySelector("#quantidade").value;
     const itens = JSON.parse(window.localStorage.getItem("itens")) || []
     itens.push(dados[i])
     window.localStorage.setItem("itens", JSON.stringify(itens))
-    window.location.reload()
+    window.location.href = "../carrinho"
 }
 
 function switchMenu() {
