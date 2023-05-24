@@ -5,7 +5,7 @@ const tcorpo = document.querySelector("#tcorpo");
 var dados = [];
 
 function abrirDados() {
-    fetch("../mocks/pizzas.js")
+    fetch("../mocks/pizzas.json")
         .then(result => result.json())
         .then(result => {
             dados = result;
