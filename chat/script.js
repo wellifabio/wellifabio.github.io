@@ -1,4 +1,4 @@
-const socket = io("https://chatwfom.herokuapp.com/");
+const socket = io("http://localhost:3000");
 const envia = document.querySelector("#envia");
 const recebe = document.querySelector("#recebe");
 var nick = null;
@@ -12,11 +12,11 @@ const cores = {
 }
 
 const emogis = {
-    0: "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/dog-face_1f436.png",
-    1: "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/cat-face_1f431.png",
-    2: "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/mouse-face_1f42d.png",
-    3: "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/panda_1f43c.png",
-    4: "https://emojipedia-us.s3.amazonaws.com/source/microsoft-teams/337/orangutan_1f9a7.png"
+    0: "https://editablegifs.com/gifs/gifs/sunglasses-emoji/thumbnail.gif",
+    1: "https://cliply.co/wp-content/uploads/2021/07/392107260_SUNGLASSES_EMOJI_400px.gif",
+    2: "https://custom-doodle.com/wp-content/uploads/doodle/exploding-head-emoji/exploding-head-emoji-doodle.gif",
+    3: "https://www.eventstodayz.com/wp-content/uploads/2020/03/lauging-gif-emoji.gif",
+    4: "https://i.pinimg.com/originals/bf/c9/55/bfc95517952d2719d6887175fa7aeb34.gif"
 }
 
 function enviar() {
@@ -53,5 +53,5 @@ const nickname = () => {
     nick = prompt("Digite um nickname/apelido");
     cor = parseInt(Math.random() * 5);
     document.querySelector("#nick").innerHTML = nick;
-    document.querySelector("#emogi").src=emogis[cor];
+    document.querySelector("#emogi").src = emogis[cor];
 }
