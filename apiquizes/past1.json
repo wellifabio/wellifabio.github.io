@@ -1,0 +1,178 @@
+[
+    {
+        "pergunta": "She _____ to the party last night.",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "go",
+                "status": false
+            },
+            {
+                "resposta": "goes",
+                "status": false
+            },
+            {
+                "resposta": "went",
+                "status": true
+            },
+            {
+                "resposta": "going",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "They _____ a great time on their vacation.",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "has",
+                "status": false
+            },
+            {
+                "resposta": "have",
+                "status": false
+            },
+            {
+                "resposta": "had",
+                "status": true
+            },
+            {
+                "resposta": "having",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "I _____ a delicious cake for my birthday.",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "bake",
+                "status": false
+            },
+            {
+                "resposta": "bakes",
+                "status": false
+            },
+            {
+                "resposta": "baked",
+                "status": true
+            },
+            {
+                "resposta": "baking",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "He _____ a book from the library.",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "borrow",
+                "status": false
+            },
+            {
+                "resposta": "borrows",
+                "status": false
+            },
+            {
+                "resposta": "borrowed",
+                "status": true
+            },
+            {
+                "resposta": "borrowing",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "We _____ a lot of fun at the amusement park.",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "has",
+                "status": false
+            },
+            {
+                "resposta": "have",
+                "status": false
+            },
+            {
+                "resposta": "had",
+                "status": true
+            },
+            {
+                "resposta": "having",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "The students _____ the exam last week.",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "pass",
+                "status": false
+            },
+            {
+                "resposta": "passes",
+                "status": false
+            },
+            {
+                "resposta": "passed",
+                "status": true
+            },
+            {
+                "resposta": "passing",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "She _____ her grandmother yesterday.",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "visits",
+                "status": false
+            },
+            {
+                "resposta": "visited",
+                "status": true
+            },
+            {
+                "resposta": "visit",
+                "status": false
+            },
+            {
+                "resposta": "visiting",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "They _____ their friends at the restaurant.",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "meet",
+                "status": false
+            },
+            {
+                "resposta": "meets",
+                "status": false
+            },
+            {
+                "resposta": "met",
+                "status": true
+            },
+            {
+                "resposta": "meeting",
+                "status": false
+            }
+        ]
+    }
+]

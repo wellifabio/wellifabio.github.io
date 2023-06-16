@@ -1,0 +1,222 @@
+[
+    {
+        "pergunta": "_______ any one here now?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "There is",
+                "status": true
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            },
+            {
+                "resposta": "There",
+                "status": false
+            },
+            {
+                "resposta": "There aren't",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "_______ a cat in the garden?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "Is there",
+                "status": true
+            },
+            {
+                "resposta": "Are there",
+                "status": false
+            },
+            {
+                "resposta": "There is",
+                "status": false
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "_______ any books on the shelf?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "Are there",
+                "status": true
+            },
+            {
+                "resposta": "Is there",
+                "status": false
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            },
+            {
+                "resposta": "There is",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "_______ a party tonight?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "Is there",
+                "status": true
+            },
+            {
+                "resposta": "Are there",
+                "status": false
+            },
+            {
+                "resposta": "There is",
+                "status": false
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "_______ many people in the room?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "Are there",
+                "status": true
+            },
+            {
+                "resposta": "Is there",
+                "status": false
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            },
+            {
+                "resposta": "There is",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "_______ a swimming pool in the backyard?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "Is there",
+                "status": true
+            },
+            {
+                "resposta": "Are there",
+                "status": false
+            },
+            {
+                "resposta": "There is",
+                "status": false
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "_______ any apples in the fridge?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "Are there",
+                "status": true
+            },
+            {
+                "resposta": "Is there",
+                "status": false
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            },
+            {
+                "resposta": "There is",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "_______ a car in front of the house?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "Is there",
+                "status": true
+            },
+            {
+                "resposta": "Are there",
+                "status": false
+            },
+            {
+                "resposta": "There is",
+                "status": false
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "_______ any flowers in the garden?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "Are there",
+                "status": true
+            },
+            {
+                "resposta": "Is there",
+                "status": false
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            },
+            {
+                "resposta": "There is",
+                "status": false
+            }
+        ]
+    },
+    {
+        "pergunta": "_______ a movie on TV tonight?",
+        "img": "https://cdn-icons-png.flaticon.com/512/8224/8224639.png",
+        "respostas": [
+            {
+                "resposta": "Is there",
+                "status": true
+            },
+            {
+                "resposta": "Are there",
+                "status": false
+            },
+            {
+                "resposta": "There is",
+                "status": false
+            },
+            {
+                "resposta": "There are",
+                "status": false
+            }
+        ]
+    }
+]
