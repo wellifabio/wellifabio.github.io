@@ -1,14 +1,14 @@
 [
 	{
-		"nome": "To be",
-		"arquivo": "tobe.json"
+		"label": "To be",
+		"value": "tobe.json"
 	},
 	{
-		"nome": "There is/are",
-		"arquivo": "there.json"
+		"label": "There is/are",
+		"value": "there.json"
 	},
 	{
-		"nome": "Simple Past",
-		"arquivo": "past1.json"
+		"label": "Simple Past",
+		"value": "past1.json"
 	}
 ]
