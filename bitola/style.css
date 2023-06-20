@@ -30,7 +30,6 @@ h2 {
 
 header {
     width: 100vw;
-    max-width: 500px;
     background-color: #a38d12;
     box-shadow: 1px 1px 2px #333;
     display: flex;
@@ -40,7 +39,8 @@ header {
 
 main {
     width: 100vw;
-    max-width: 500px;
+    max-width: 400px;
+    margin-top: 10px;
     display: grid;
     grid-template-columns: 30% 70%;
     align-items: center;
@@ -55,13 +55,21 @@ main img {
 main label,
 input {
     margin: 5px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
 }
 
 main input[type="text"] {
-    margin: 5px;
     background: none;
     border: none;
     box-shadow: 1px 1px 2px #333;
+}
+
+main input[type="number"] {
+    border: none;
+    box-shadow: 1px 1px 2px #333;
+    text-align: right;
 }
 
 #b1, #b2{
