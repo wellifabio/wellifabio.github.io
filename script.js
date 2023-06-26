@@ -25,6 +25,11 @@ const aulas = [
 		text: "JavaScript: Simulador de Investimentos (pt-br)"
 	},
 	{
+		href: "./gadgets",
+		target: "_blank",
+		text: "JavaScript - Gadgets"
+	},
+	{
 		href: "./pizzaria/carrinho",
 		target: "_blank",
 		text: "JavaScript - Pizzaria Modelo (pt-br)"
