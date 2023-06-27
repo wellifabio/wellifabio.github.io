@@ -84,11 +84,11 @@ body.dark .txt {
         0 0 5px #fff,
         0 0 10px #fff,
         0 0 20px #fff,
-        0 0 40px rgb(251, 255, 3),
-        0 0 80px rgb(251, 255, 3),
-        0 0 90px rgb(251, 255, 3),
+        0 0 40px rgb(255, 3, 3),
+        0 0 80px rgb(163, 0, 0),
+        0 0 90px rgb(233, 105, 0),
         0 0 100px rgb(251, 255, 3),
-        0 0 150px rgb(251, 255, 3);
+        0 0 150px rgb(9, 255, 0);
 }
 
 body.dark h2 {
@@ -102,14 +102,14 @@ body.dark hr {
 }
 
 body.dark #btn_dm {
-    background-color: rgb(216, 194, 27);
+    background-color: rgb(255, 0, 0);
 }
 
 body.dark #btn_dm:before {
     left: 25px;
     background-color: #222;
     box-shadow: 0 0 20px #000,
-        inset 2px 10px 10px rgba(240, 247, 34, 0.5);
+        inset 2px 10px 10px rgba(255, 0, 0, 0.5);
 }
 
 #btn_dm {
@@ -136,7 +136,7 @@ body.dark #btn_dm:before {
     background-color: #f5f5f5;
     border-radius: 50px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, .4),
-        inset 0 15px 10px rgb(236, 213, 81);
+        inset 0 15px 10px rgb(255, 0, 0);
     transition: .5s;
     transform: scale(1.1);
 }
@@ -257,10 +257,10 @@ body.dark #btn_dm:before {
 /*Estilo do Relógio Analógico*/
 .containerClock {
     position: relative;
-    background: #2f363e;
+    background: #333;
     border-radius: 20px;
-    border-top-left-radius: 225px;
-    border-top-right-radius: 225px;
+    border-top-left-radius: 200px;
+    border-top-right-radius: 200px;
     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.75),
         10px 10px 70px rgba(0, 0, 0, 0.25),
         inset 5px 5px 10px rgba(0, 0, 0, 0.5),
@@ -271,13 +271,14 @@ body.dark #btn_dm:before {
     align-items: center;
     flex-direction: column;
     margin: 20px;
+    padding: 20px;
 }
 
 .clock {
     position: relative;
     width: 300px;
     height: 300px;
-    background: #2f363e;
+    background: #333;
     border-radius: 50%;
     box-shadow: 10px 50px 70px rgba(0, 0, 0, 0.25),
         inset 5px 5px 10px rgba(0, 0, 0, 0.5),
@@ -286,14 +287,14 @@ body.dark #btn_dm:before {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .clock::before {
     content: '';
     position: absolute;
-    width: 8px;
-    height: 8px;
+    width: 10px;
+    height: 10px;
     background: #2f363e;
     border: 3px solid #fff;
     border-radius: 50%;
@@ -302,7 +303,7 @@ body.dark #btn_dm:before {
 
 .clock span {
     position: absolute;
-    inset: 0px;
+    inset: 5px;
     color: #fff;
     text-align: center;
     transform: rotate(calc(30deg * var(--i)));
@@ -318,8 +319,8 @@ body.dark #btn_dm:before {
 
 .circle {
     position: absolute;
-    width: 300px;
-    height: 300px;
+    width: 240px;
+    height: 240px;
     border: 2px solid rgba(0, 0, 0, 0.25);
     border-radius: 50%;
     display: flex;
@@ -329,14 +330,14 @@ body.dark #btn_dm:before {
 }
 
 .circle2 {
-    width: 240px;
-    height: 240px;
+    width: 200px;
+    height: 200px;
     z-index: 9;
 }
 
 .circle3 {
-    width: 180px;
-    height: 180px;
+    width: 160px;
+    height: 160px;
     z-index: 8;
 }
 
