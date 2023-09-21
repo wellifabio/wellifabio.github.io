@@ -79,3 +79,7 @@ td{
     text-align: center;
     height: 50px;
 }
+
+td img{
+    max-width: 100px;
+}
