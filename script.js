@@ -145,3 +145,13 @@ const load = () => {
 		prjts.innerHTML += `<a href="${projeto.href}" target="${projeto.target}" class="postitred">${projeto.text}</a>`;
 	});
 }
+
+//Função para calcular idade
+function calcularIdade(nascimento) {
+	var nascimento = new Date(nascimento);
+	var diferenca = Date.now() - nascimento.getTime();
+	var idade = new Date(diferenca);
+	return Math.abs(idade.getUTCFullYear() - 1970);
+}
+
+document.querySelector("#idade").innerHTML = calcularIdade("1980/09/08");
