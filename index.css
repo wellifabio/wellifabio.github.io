@@ -125,10 +125,11 @@ footer a {
     text-decoration: none;
     margin-top: 30px;
     font-size: 22px;
-    border: 1px solid gray;
     border-radius: 40px;
     padding: 10px;
     background-color: white;
+    box-shadow: 1px 1px 5px #000;
+    text-shadow: 1px -1px 3px #999;
 }
 
 @media(max-width:700px) {
@@ -153,9 +154,10 @@ footer a {
         text-align: center;
         padding-left: 20px;
     }
+
     .menu {
         flex-wrap: wrap;
         align-items: center;
-        height: 150px;        
+        height: 150px;
     }
 }
