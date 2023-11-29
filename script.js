@@ -75,6 +75,11 @@ const aulas = [
 		text: "Randomizer data/Gerador de dados aleatórios (pt - br)"
 	},
 	{
+		href: "./petshop",
+		target: "_blank",
+		text: "PetShop App Basic/PetShop básico Arquivos Locais (pt - br)"
+	},
+	{
 		href: "https://receitaswell.azurewebsites.net/",
 		target: "_blank",
 		text: "Cookbook blog (Blog de Receitas) (pt - br)"

@@ -31,7 +31,7 @@
             "nome": "Banho",
             "descricao": "Banho com shampu neutro e ecovação",
             "tipo": "Serviço",
-            "img": "banho.png",
+            "img": "../assets/banho.png",
             "preco": 29.9
         },
         {
@@ -39,7 +39,7 @@
             "nome": "Tosa",
             "descricao": "Corte do pelo e escovação",
             "tipo": "Serviço",
-            "img": "tosa.png",
+            "img": "../assets/tosa.png",
             "preco": 49.9
         },
         {
@@ -47,7 +47,7 @@
             "nome": "Hospedagem",
             "descricao": "Diária com alimentação e cuidados especiais",
             "tipo": "Serviço",
-            "img": "hospedagem.png",
+            "img": "../assets/hospedagem.png",
             "preco": 49.9
         },
         {
@@ -55,7 +55,7 @@
             "nome": "Coleira pequena",
             "descricao": "Coleira de couro para cachorro pequeno",
             "tipo": "Produto",
-            "img": "coleira.png",
+            "img": "../assets/coleira.png",
             "preco": 19.9
         },
         {
@@ -63,7 +63,7 @@
             "nome": "Coleira média",
             "descricao": "Coleira de couro para cachorro de porte médio",
             "tipo": "Produto",
-            "img": "coleira.png",
+            "img": "../assets/coleira.png",
             "preco": 24.9
         },
         {
@@ -71,7 +71,7 @@
             "nome": "Casa de transporte de gato",
             "descricao": "Casa fechada para transporte de gatos",
             "tipo": "Produto",
-            "img": "casa_gato.png",
+            "img": "../assets/casa_gato.png",
             "preco": 159.9
         },
         {
@@ -79,7 +79,7 @@
             "nome": "Casa de cachorro médio",
             "descricao": "Casinha feita de material reciclado para cães de médio porte",
             "tipo": "Produto",
-            "img": "casa_cachorro.png",
+            "img": "../assets/casa_cachorro.png",
             "preco": 59.9
         }
     ],
@@ -90,7 +90,7 @@
             "usuario": 2,
             "item": 1,
             "quantidade": 1,
-            "valorUnitario":29.9
+            "valorUnitario": 29.9
         },
         {
             "id": 2,
@@ -98,7 +98,7 @@
             "usuario": 2,
             "item": 2,
             "quantidade": 1,
-            "valorUnitario":49.9
+            "valorUnitario": 49.9
         },
         {
             "id": 3,
@@ -106,7 +106,7 @@
             "usuario": 2,
             "item": 3,
             "quantidade": 1,
-            "valorUnitario":49.9
+            "valorUnitario": 49.9
         },
         {
             "id": 4,
@@ -114,7 +114,7 @@
             "usuario": 2,
             "item": 6,
             "quantidade": 1,
-            "valorUnitario":159.9
+            "valorUnitario": 159.9
         },
         {
             "id": 5,
@@ -122,7 +122,7 @@
             "usuario": 3,
             "item": 5,
             "quantidade": 2,
-            "valorUnitario":24.9
+            "valorUnitario": 24.9
         },
         {
             "id": 6,
@@ -130,7 +130,7 @@
             "usuario": 3,
             "item": 4,
             "quantidade": 1,
-            "valorUnitario":19.9
+            "valorUnitario": 19.9
         },
         {
             "id": 7,
@@ -138,7 +138,7 @@
             "usuario": 3,
             "item": 4,
             "quantidade": 2,
-            "valorUnitario":19.9
+            "valorUnitario": 19.9
         },
         {
             "id": 8,
@@ -146,7 +146,7 @@
             "usuario": 2,
             "item": 6,
             "quantidade": 1,
-            "valorUnitario":159.9
+            "valorUnitario": 159.9
         },
         {
             "id": 9,
@@ -154,7 +154,7 @@
             "usuario": 2,
             "item": 7,
             "quantidade": 1,
-            "valorUnitario":59.9
+            "valorUnitario": 59.9
         },
         {
             "id": 10,
@@ -162,7 +162,7 @@
             "usuario": 2,
             "item": 2,
             "quantidade": 1,
-            "valorUnitario":49.9
+            "valorUnitario": 49.9
         },
         {
             "id": 11,
@@ -170,7 +170,7 @@
             "usuario": 3,
             "item": 1,
             "quantidade": 2,
-            "valorUnitario":29.9
+            "valorUnitario": 29.9
         },
         {
             "id": 12,
@@ -178,7 +178,7 @@
             "usuario": 1,
             "item": 3,
             "quantidade": 1,
-            "valorUnitario":49.9
+            "valorUnitario": 49.9
         },
         {
             "id": 13,
@@ -186,7 +186,7 @@
             "usuario": 1,
             "item": 4,
             "quantidade": 1,
-            "valorUnitario":19.9
+            "valorUnitario": 19.9
         },
         {
             "id": 14,
@@ -194,7 +194,7 @@
             "usuario": 2,
             "item": 5,
             "quantidade": 1,
-            "valorUnitario":24.9
+            "valorUnitario": 24.9
         },
         {
             "id": 15,
@@ -202,7 +202,7 @@
             "usuario": 1,
             "item": 6,
             "quantidade": 1,
-            "valorUnitario":159.9
+            "valorUnitario": 159.9
         },
         {
             "id": 16,
@@ -210,7 +210,7 @@
             "usuario": 1,
             "item": 7,
             "quantidade": 1,
-            "valorUnitario":59.9
+            "valorUnitario": 59.9
         }
     ]
 }
