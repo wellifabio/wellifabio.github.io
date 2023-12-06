@@ -152,7 +152,7 @@ formVender.addEventListener("submit", e => {
 function preencherVendas() {
     vendas.innerHTML = "";
     //Listar vendas de hoje
-    const hoje = new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"});
+    const hoje = new Date();
     const dia = hoje.getDate();
     const mes = hoje.getMonth() + 1;
     const ano = hoje.getFullYear();
