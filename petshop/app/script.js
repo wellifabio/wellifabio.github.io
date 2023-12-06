@@ -137,7 +137,7 @@ formVender.addEventListener("submit", e => {
     e.preventDefault();
     const venda = {
         id: dados.vendas[dados.vendas.length - 1].id + 1,
-        data: (new Date()).toISOString(),
+        data: (new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})).toISOString(),
         usuario: usuario.id,
         item: parseInt(formVender.id.value),
         quantidade: parseInt(formVender.quantidade.value),
@@ -152,7 +152,7 @@ formVender.addEventListener("submit", e => {
 function preencherVendas() {
     vendas.innerHTML = "";
     //Listar vendas de hoje
-    const hoje = new Date();
+    const hoje = new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"});
     const dia = hoje.getDate();
     const mes = hoje.getMonth() + 1;
     const ano = hoje.getFullYear();
