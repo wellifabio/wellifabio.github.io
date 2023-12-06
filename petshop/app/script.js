@@ -137,7 +137,7 @@ formVender.addEventListener("submit", e => {
     e.preventDefault();
     const venda = {
         id: dados.vendas[dados.vendas.length - 1].id + 1,
-        data: (new Date().toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"})).toISOString(),
+        data: (new Date()).toLocaleString("pt-BR", {timeZone: "America/Sao_Paulo"}),
         usuario: usuario.id,
         item: parseInt(formVender.id.value),
         quantidade: parseInt(formVender.quantidade.value),
