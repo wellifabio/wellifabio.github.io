@@ -4,23 +4,120 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Avaliação MSEP</title>
 </head>
 
 <body>
     <header>
-        <h1>INSTRUMENTO DE REGISTRO DE AUTOAVALIAÇÃO</h1>
-        <div id="inputAlunos">
-            <label for="alunos">Carregue os alunos:</label>
-            <input type="file" name="alunos" id="alunos">
-        </div>
-        <div id="inputCriterios">
-            <label for="criterios">Carregue os critérios:</label>
-            <input type="file" name="criterios" id="criterios">
-        </div>
+        <h1 id="titulo"></h1>
+        <h1 id="turma"></h1>
+        <h1 id="componente"></h1>
+        <h1 id="instrutor"></h1>
+        <h1 id="data"></h1>
+        <nav>
+            <button id="formativa" type="button" onclick="novaFormativa()">Nova Formativa</button>
+            <button id="somativa" type="button" onclick="novaSomativa()">Nova Somativa</button>
+            <button id="autoavaliacao" type="button" onclick="novaAutoavalicao()">Nova Autoavaliação</button>
+            <div id="inputAvaliacao">
+                <label for="avaliacao">Carregue uma avaliação:</label>
+                <input type="file" name="avaliacao" id="fileAvaliacao">
+            </div>
+            <div id="inputAlunos" class="oculto">
+                <label for="alunos">Carregue os alunos:</label>
+                <input type="file" name="alunos" id="fileAlunos">
+            </div>
+            <div id="inputCriterios" class="oculto">
+                <label for="criterios">Carregue os critérios:</label>
+                <input type="file" name="criterios" id="fileCriterios">
+            </div>
+        </nav>
     </header>
-    <main></main>
-    <footer></footer>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="tv" rowspan="2">Natureza dos<br>Critérios</th>
+                    <th rowspan="2">Fundamentos Técnicos e<br>Científicos ou<br>Capacidades Técnicas</th>
+                    <th rowspan="2">Critérios de avaliação
+                        <table class="minTable">
+                            <thead>
+                                <tr>
+                                    <th class="bgcrit">&nbsp;</th>
+                                    <th>Crítico</th>
+                                    <th class="bgdesej">&nbsp;</th>
+                                    <th>Desejável</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0</td>
+                                    <td>Não Atingiu</td>
+                                    <td>1</td>
+                                    <td>Atingiu</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>Formativa</td>
+                                    <td>S</td>
+                                    <td>Somativa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </th>
+                    <th>Alunos</th>
+                </tr>
+                <tr>
+                    <th>
+                        <table>
+                            <tbody>
+                                <tr id="alunos"></tr>
+                            </tbody>
+                        </table>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th class="tv">Competências Técnicas</th>
+                    <td colspan="2">
+                        <table class="minTable">
+                            <tbody id="criteriosTecnicos">
+                            </tbody>
+                        </table>
+                    </td>
+                    <td id="matrizT"></td>
+                </tr>
+                <tr>
+                    <th class="tv">Competências de Gestão</th>
+                    <td  colspan="2">
+                        <table class="minTable">
+                            <tbody id="criteriosGestao">
+                            </tbody>
+                        </table>
+                    </td>
+                    <td id="matrizG"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        Nível de Desempenho
+                    </td>
+                    <td id="nivel"></td>
+                </tr>
+                <tr>
+                    <td colspan="3">
+                        Nota
+                    </td>
+                    <td id="notas"></td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+    <footer>
+        <button id="reiniciar" type="button" onclick="reiniciar()" class="oculto">Reiniciar</button>
+        <button id="salvar" type="button" onclick="salvar()" class="oculto">Salvar</button>
+    </footer>
 </body>
+<script src="script.js"></script>
 
 </html>
