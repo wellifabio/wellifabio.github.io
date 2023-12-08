@@ -4,20 +4,128 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Avaliação MSEP</title>
 </head>
 
 <body>
     <header>
+        <h1 id="titulo" contenteditable="true"></h1>
+        <h1 id="turma" contenteditable="true"></h1>
+        <h1 id="componente" contenteditable="true"></h1>
+        <h1 id="instrutor" contenteditable="true"></h1>
+        <h1 id="data" contenteditable="true"></h1>
         <nav>
-            <button type="button">Cadastrar Alunos</button>
-            <button type="button">Cadastrar Critérios</button>
-            <button type="button" onclick="window.location.href='./relatorio'">Avaliação</button>
+            <button id="formativa" type="button" onclick="novaFormativa()">Nova Formativa</button>
+            <button id="somativa" type="button" onclick="novaSomativa()">Nova Somativa</button>
+            <button id="autoavaliacao" type="button" onclick="novaAutoavalicao()">Nova Autoavaliação</button>
+            <div id="inputAvaliacao">
+                <label for="fileAvaliacao">Carregue uma avaliação:</label>
+                <input type="file" id="fileAvaliacao">
+            </div>
+            <div id="inputAlunos" class="oculto">
+                <label for="fileAlunos">Carregue os alunos:</label>
+                <input type="file" id="fileAlunos">
+            </div>
+            <div id="inputCriterios" class="oculto">
+                <label for="fileCriterios">Carregue os critérios:</label>
+                <input type="file" id="fileCriterios">
+            </div>
         </nav>
     </header>
-    <main></main>
+    <main>
+        <table>
+            <thead>
+                <tr>
+                    <th class="tv" rowspan="2">Natureza dos<br>Critérios</th>
+                    <th rowspan="2" style="width: 400px;">Fundamentos Técnicos e<br>Científicos ou<br>Capacidades Técnicas</th>
+                    <th rowspan="2" style="width: 400px;">Critérios de avaliação
+                        <table class="minTable">
+                            <thead>
+                                <tr>
+                                    <th class="bgcrit">&nbsp;</th>
+                                    <th>Crítico</th>
+                                    <th class="bgdesej">&nbsp;</th>
+                                    <th>Desejável</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>0</td>
+                                    <td>Não Atingiu</td>
+                                    <td>1</td>
+                                    <td>Atingiu</td>
+                                </tr>
+                                <tr>
+                                    <td>F</td>
+                                    <td>Formativa</td>
+                                    <td>S</td>
+                                    <td>Somativa</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </th>
+                    <th>Alunos</th>
+                </tr>
+                <tr>
+                    <th>
+                        <table>
+                            <tbody>
+                                <tr id="alunos"></tr>
+                            </tbody>
+                        </table>
+                    </th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+            <tfoot>
+                <tr>
+                    <th colspan="3">
+                        Nível de Desempenho
+                    </th>
+                    <td id="nivel"></td>
+                </tr>
+                <tr>
+                    <th colspan="3">
+                        Nota
+                    </th>
+                    <td id="nota"></td>
+                </tr>
+            </tfoot>
+        </table>
     </main>
-    <footer></footer>
+    <footer>
+        <button id="reiniciar" type="button" onclick="reiniciar()" class="oculto">Reiniciar</button>
+        <button id="niveis" type="button" onclick="mostrarNiveis()" class="oculto">Níveis de desempenho</button>
+        <button id="imprimir" type="button" onclick="window.print();" class="oculto">Imprimir</button>
+        <button id="salvar" type="button" onclick="salvar()" class="oculto">Salvar</button>
+    </footer>
+    <div id="modalNiveis" class="modal oculto">
+        <div class="area">
+            <table class="tableNiveis">
+                <thead>
+                    <tr>
+                        <th>NÍVEIS DE DESEMPENHO</th>
+                        <th>NÍVEIS</th>
+                        <th>NOTA</th>
+                    </tr>
+                </thead>
+                <tbody id="bodyNiveis">
+                </tbody>
+            </table>
+            <table class="tableNiveis">
+                <thead>
+                    <tr>
+                        <th>NÍVEL MÍNIMO DE DESEMPENHO ESPERADO</th>
+                        <th id="nivelMinimo" class="nivelMinimo"></th>
+                    </tr>
+                </thead>
+            </table>
+            <button type="button" onclick="modalNiveis.classList.add('oculto')">Cancelar</button>
+        </div>
+    </div>
 </body>
+<script src="script.js"></script>
 
 </html>

@@ -10,6 +10,8 @@ var avaliacao = {
 }
 
 var notas = [], niveis = [], desempenho = [];
+var nivelMinimo = 0;
+var totNiveis = 0;
 
 const fileAvaliacao = document.getElementById("fileAvaliacao");
 const inputAvaliacao = document.getElementById("inputAvaliacao");
@@ -216,6 +218,7 @@ function montarAvaliacao() {
         criteriosMatriz("T");
         criteriosMatriz("G");
         calculaDesempenho();
+        notasMatriz();
     }
 }
 
@@ -226,6 +229,7 @@ function calculaDesempenho() {
         if (cri.criticidade != '1') nDesejaveis++;
         else nCriticos++;
     });
+    totNiveis = nCriticos + nDesejaveis;
     let decMais50 = Math.floor(50 / nDesejaveis);
     let decMenos50 = Math.floor(50 / nCriticos);
     let not = 100;
@@ -235,12 +239,74 @@ function calculaDesempenho() {
         desempenho.push({ "descricao": `Atingiu todos os critérios críticos e ${nDesejaveis - i} desejáveis`, "nivel": i + 1, "nota": not });
     }
     not=50;
+    nivelMinimo = desempenho.length;
     desempenho.push({ "descricao": "Atingiu todos os critérios críticos", "nivel": nDesejaveis + 1, "nota": not });
     for (let i = 1; i < nCriticos; i++) {
         not -= decMenos50;
         desempenho.push({ "descricao": `Atingiu ${nCriticos - i} critérios críticos`, "nivel": nDesejaveis + i + 1, "nota": not });
     }
-    console.table(desempenho);
-    console.log(nCriticos);
-    console.log(nDesejaveis);
+    document.getElementById("niveis").classList.remove("oculto");
+    document.getElementById("imprimir").classList.remove("oculto");
+    for(let i=0;i<avaliacao.alunos.length;i++){
+        let notaCritica = 0;
+        let notaDesejavel = 0;
+        avaliacao.matriz.forEach((linha, j) => {
+            if (avaliacao.criterios[j].criticidade == 1) notaCritica += linha[i];
+            else notaDesejavel += linha[i];
+        });
+        if(notaCritica < nCriticos) notaCritica = notas.push(notaCritica);
+        else notas.push(notaCritica + notaDesejavel);
+    }
+}
+
+function notasMatriz(){
+    const nivel = document.getElementById("nivel");
+    const nota = document.getElementById("nota");
+
+    let tabNiveis = document.createElement("table");
+    let tabTr = document.createElement("tr");
+    tabNiveis.appendChild(tabTr);
+    
+    let tabNotas = document.createElement("table");
+    let tabTrn = document.createElement("tr");
+    tabNotas.appendChild(tabTrn);
+    
+    notas.forEach((linha) => {
+        let td1 = document.createElement("td");
+        td1.setAttribute("style", "width:30px;height:100%;border-bottom:none;margin:0;padding:0;text-align:center;");
+        td1.innerHTML = linha;
+        tabTr.appendChild(td1);
+        let td2 = document.createElement("td");
+        td2.setAttribute("style", "width:30px;height:100%;border-bottom:none;margin:0;padding:0;text-align:center;");
+        td2.innerHTML = totNiveis - linha - 1;
+        tabTrn.appendChild(td2);
+    });
+
+    nivel.setAttribute("style", "margin:0;padding:0;");
+    nivel.appendChild(tabNiveis);
+    
+    nota.setAttribute("style", "margin:0;padding:0;");
+    nota.appendChild(tabNotas);
+}
+
+function mostrarNiveis(){
+    document.getElementById("modalNiveis").classList.remove("oculto");
+    document.getElementById("bodyNiveis").innerHTML="";
+    desempenho.forEach(nivel => {
+        let tr = document.createElement("tr");
+        if(nivel.nivel==nivelMinimo + 1) tr.classList.add("nivelMinimo");
+        let td = document.createElement("td");
+        td.innerHTML = nivel.descricao;
+        tr.appendChild(td);
+        td = document.createElement("td");
+        td.setAttribute("style", "text-align:center;");
+        td.innerHTML = nivel.nivel;
+        tr.appendChild(td);
+        td = document.createElement("td");
+        td.setAttribute("style", "text-align:center;");
+        td.innerHTML = nivel.nota;
+        tr.appendChild(td);
+        document.getElementById("bodyNiveis").appendChild(tr);
+    });
+    document.getElementById("nivelMinimo").innerHTML = desempenho[nivelMinimo].nivel;
 }
