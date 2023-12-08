@@ -10,26 +10,26 @@
 
 <body>
     <header>
-        <h1 id="titulo"></h1>
-        <h1 id="turma"></h1>
-        <h1 id="componente"></h1>
-        <h1 id="instrutor"></h1>
-        <h1 id="data"></h1>
+        <h1 id="titulo" contenteditable="true"></h1>
+        <h1 id="turma" contenteditable="true"></h1>
+        <h1 id="componente" contenteditable="true"></h1>
+        <h1 id="instrutor" contenteditable="true"></h1>
+        <h1 id="data" contenteditable="true"></h1>
         <nav>
             <button id="formativa" type="button" onclick="novaFormativa()">Nova Formativa</button>
             <button id="somativa" type="button" onclick="novaSomativa()">Nova Somativa</button>
             <button id="autoavaliacao" type="button" onclick="novaAutoavalicao()">Nova Autoavaliação</button>
             <div id="inputAvaliacao">
-                <label for="avaliacao">Carregue uma avaliação:</label>
-                <input type="file" name="avaliacao" id="fileAvaliacao">
+                <label for="fileAvaliacao">Carregue uma avaliação:</label>
+                <input type="file" id="fileAvaliacao">
             </div>
             <div id="inputAlunos" class="oculto">
-                <label for="alunos">Carregue os alunos:</label>
-                <input type="file" name="alunos" id="fileAlunos">
+                <label for="fileAlunos">Carregue os alunos:</label>
+                <input type="file" id="fileAlunos">
             </div>
             <div id="inputCriterios" class="oculto">
-                <label for="criterios">Carregue os critérios:</label>
-                <input type="file" name="criterios" id="fileCriterios">
+                <label for="fileCriterios">Carregue os critérios:</label>
+                <input type="file" id="fileCriterios">
             </div>
         </nav>
     </header>
@@ -77,40 +77,22 @@
                     </th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody id="tbody">
+            </tbody>
+            <tfoot>
                 <tr>
-                    <th class="tv">Competências Técnicas</th>
-                    <td colspan="2">
-                        <table class="minTable">
-                            <tbody id="criteriosTecnicos">
-                            </tbody>
-                        </table>
-                    </td>
-                    <td id="matrizT"></td>
-                </tr>
-                <tr>
-                    <th class="tv">Competências de Gestão</th>
-                    <td  colspan="2">
-                        <table class="minTable">
-                            <tbody id="criteriosGestao">
-                            </tbody>
-                        </table>
-                    </td>
-                    <td id="matrizG"></td>
-                </tr>
-                <tr>
-                    <td colspan="3">
+                    <th colspan="3">
                         Nível de Desempenho
-                    </td>
+                    </th>
                     <td id="nivel"></td>
                 </tr>
                 <tr>
-                    <td colspan="3">
+                    <th colspan="3">
                         Nota
-                    </td>
+                    </th>
                     <td id="notas"></td>
                 </tr>
-            </tbody>
+            </tfoot>
         </table>
     </main>
     <footer>
