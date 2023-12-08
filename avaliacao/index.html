@@ -23,12 +23,14 @@
                 <label for="fileAvaliacao">Carregue uma avaliação:</label>
                 <input type="file" id="fileAvaliacao">
             </div>
+            <button id="novosAlunos" type="button" onclick="modalAlunos.classList.remove('oculto')" class="oculto">Adicione</button>
             <div id="inputAlunos" class="oculto">
-                <label for="fileAlunos">Carregue os alunos:</label>
+                <label for="fileAlunos">ou carregue os alunos:</label>
                 <input type="file" id="fileAlunos">
             </div>
+            <button id="novosCriterios" type="button" onclick="modalCriterios.classList.remove('oculto')" class="oculto">Configure</button>
             <div id="inputCriterios" class="oculto">
-                <label for="fileCriterios">Carregue os critérios:</label>
+                <label for="fileCriterios">ou arregue os critérios:</label>
                 <input type="file" id="fileCriterios">
             </div>
         </nav>
@@ -97,9 +99,12 @@
     </main>
     <footer>
         <button id="reiniciar" type="button" onclick="reiniciar()" class="oculto">Reiniciar</button>
+        <button id="compTec" type="button" onclick="addCompTec()" class="oculto">Add Comp. Técnica</button>
+        <button id="compGes" type="button" onclick="addCompGes()" class="oculto">Add Comp. Gestão</button>
         <button id="niveis" type="button" onclick="mostrarNiveis()" class="oculto">Níveis de desempenho</button>
         <button id="imprimir" type="button" onclick="window.print();" class="oculto">Imprimir</button>
         <button id="salvar" type="button" onclick="salvar()" class="oculto">Salvar</button>
+        <button id="download" type="button" onclick="download()" class="oculto">Download</button>
     </footer>
     <div id="modalNiveis" class="modal oculto">
         <div class="area">
@@ -123,6 +128,33 @@
                 </thead>
             </table>
             <button type="button" onclick="modalNiveis.classList.add('oculto')">Cancelar</button>
+        </div>
+    </div>
+    <div id="modalAlunos" class="modal oculto">
+        <div class="area">
+            <form id="formAlunos">
+                <label for="inpAlunos">Cole a lista de alunos uma abaixo do outro:</label>
+                <textarea name="inpAlunos" id="inpAlunos" cols="100" rows="30" required></textarea>
+                <button type="button" onclick="modalAlunos.classList.add('oculto')">Cancelar</button>
+                <button type="submit">Adicionar</button>
+            </form>
+        </div>
+    </div>
+    <div id="modalCriterios" class="modal oculto">
+        <div class="area">
+            <h1>Configure as competências técnicas e de Gestão</h1>
+            <form id="formCriterios" class="formBasico">
+                <label for="inpTecnico">Total de competências Técnicas Desejáveis:</label>
+                <input type="number" id="inpTecnico" name="inpTecnico" min="1" value="3" required/>
+                <label for="inpTecnicoCri">Total de competências Técnicas Críticas:</label>
+                <input type="number" id="inpTecnicoCri" name="inpTecnicoCri" min="1" value="1" required/>
+                <label for="inpGestao">Total de competências de Gestão Desejáveis:</label>
+                <input type="number" id="inpGestao" name="inpGestao" min="1" value="3" required/>
+                <label for="inpGestaoCri">Total de competências de Gestão:</label>
+                <input type="number" id="inpGestaoCri" name="inpGestaoCri" min="0" value="0" required/>
+                <button type="button" onclick="modalCriterios.classList.add('oculto')">Cancelar</button>
+                <button type="submit">Adicionar</button>
+            </form>
         </div>
     </div>
 </body>

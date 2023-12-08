@@ -14,7 +14,7 @@ header {
     border-bottom: 1px solid #999;
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -109,34 +109,58 @@ footer button {
     cursor: pointer;
 }
 
-.fundamentos{
+.notaFinal {
+    width: 30px;
+    height: 100%;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: bold;
+}
+
+.nivelFinal {
+    width: 30px;
+    height: 100%;
+    border-bottom: none;
+    margin: 0;
+    padding: 0;
     text-align: center;
 }
 
-.critico{
+.fundamentos {
     text-align: center;
-    color:#e42;
 }
 
-.desejavel{
+.critico {
     text-align: center;
-    color:#03a;
+    color: #e42;
 }
 
-.modal{
+.desejavel {
+    text-align: center;
+    color: #03a;
+}
+
+.destacado {
+    color: #e42;
+}
+
+.modal {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background:#00000099;
+    background: #00000099;
     display: flex;
     justify-content: center;
     align-items: center;
     z-index: 1000;
 }
 
-.area{
+.area {
     background-color: #fff;
     width: 90%;
     max-width: 800px;
@@ -148,7 +172,7 @@ footer button {
     align-items: center;
 }
 
-.area button{
+.area button {
     margin-top: 10px;
     padding: 10px 20px;
     font-size: 1rem;
@@ -158,21 +182,34 @@ footer button {
     cursor: pointer;
 }
 
-.tableNiveis{
+.tableNiveis {
     width: 100%;
     border-collapse: collapse;
     margin: 10px;
 }
 
-.tableNiveis th, td{
+.tableNiveis th,
+td {
     padding: 10px;
     text-align: left;
     border: 1px solid #999;
 }
 
-.nivelMinimo{
+.nivelMinimo {
     color: #e42;
     font-weight: bold;
+}
+
+.formBasico {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.formBasico label, input, button {
+    margin: 10px;
+    border: none;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
 }
 
 .oculto {
@@ -184,9 +221,10 @@ footer button {
         size: a4 landscape;
         scale: 0.7;
         margin: 10px;
-        margin-top: 100px;
+        margin-top: 30px;
     }
-    button{
+
+    button {
         display: none;
     }
 }

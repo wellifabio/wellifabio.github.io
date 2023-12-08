@@ -13,13 +13,6 @@ var notas = [], niveis = [], desempenho = [];
 var nivelMinimo = 0;
 var totNiveis = 0;
 
-const fileAvaliacao = document.getElementById("fileAvaliacao");
-const inputAvaliacao = document.getElementById("inputAvaliacao");
-const fileAlunos = document.getElementById("fileAlunos");
-const inputAlunos = document.getElementById("inputAlunos");
-const fileCriterios = document.getElementById("fileCriterios");
-const inputCriterios = document.getElementById("inputCriterios");
-
 const local = JSON.parse(localStorage.getItem("avaliacao"));
 if (local) {
     avaliacao = local;
@@ -52,9 +45,47 @@ fileAlunos.addEventListener("change", (e) => {
     reader.onload = () => {
         avaliacao.alunos = JSON.parse(reader.result);
         inputAlunos.classList.add("oculto");
+        novosAlunos.classList.add("oculto");
         localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
         montarAvaliacao();
     }
+});
+
+formCriterios.addEventListener("submit", (e) => {
+    e.preventDefault();
+    for (let i = 0; i < formCriterios.inpTecnico.value; i++) {
+        novoCriterio("T", 0);
+    }
+    for (let i = 0; i < formCriterios.inpGestao.value; i++) {
+        novoCriterio("G", 0);
+    }
+    for (let i = 0; i < formCriterios.inpTecnicoCri.value; i++) {
+        novoCriterio("T", 1);
+    }
+    for (let i = 0; i < formCriterios.inpGestaoCri.value; i++) {
+        novoCriterio("G", 1);
+    }
+    window.localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
+    montarMatriz();
+    window.location.reload();
+});
+
+function novoCriterio(tg, criticidade) {
+    avaliacao.criterios.push({
+        "tg": tg,
+        "fundamento": "Copie do plano de curso",
+        "criterio": "Descreva os indicadoes de desempenho, conforme a avaliação aplicada",
+        "criticidade": criticidade
+    });
+}
+
+formAlunos.addEventListener("submit", (e) => {
+    e.preventDefault();
+    formAlunos.inpAlunos.value.split("\n").forEach(aluno => {
+        avaliacao.alunos.push({ "aluno": aluno });
+    });
+    window.localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
+    window.location.reload();
 });
 
 fileCriterios.addEventListener("change", (e) => {
@@ -70,6 +101,26 @@ fileCriterios.addEventListener("change", (e) => {
 });
 
 function salvar() {
+    avaliacao.titulo = document.getElementById("titulo").innerHTML;
+    avaliacao.turma = document.getElementById("turma").innerHTML.split(": ")[1];
+    avaliacao.componente =document.getElementById("componente").innerHTML.split(": ")[1];
+    avaliacao.instrutor = document.getElementById("instrutor").innerHTML.split(": ")[1];
+    avaliacao.data = document.getElementById("data").innerHTML.split(": ")[1];
+    let nomes = document.querySelectorAll(".tv2");
+    let funds = document.querySelectorAll(".fundamentos");
+    let cris = document.querySelectorAll(".criterios");
+    for(let i = 0; i < nomes.length; i++){
+        avaliacao.alunos[i].aluno = nomes[i].innerHTML;
+    }
+    for(let i = 0; i < funds.length; i++){
+        avaliacao.criterios[i].fundamento = funds[i].innerHTML;
+        avaliacao.criterios[i].criterio = cris[i].innerHTML;
+    }
+    window.localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
+    window.location.reload();
+}
+
+function download() {
     if (avaliacao.alunos.length > 0 && avaliacao.criterios.length > 0) {
         let a = document.createElement("a")
         a.href = "data:," + JSON.stringify(avaliacao)
@@ -142,6 +193,7 @@ function criteriosMatriz(tg) {
         let criterio = document.createElement("td");
         let notas = document.createElement("td");
         fundamento.classList.add("fundamentos");
+        criterio.classList.add("criterios");
         if (cri.criticidade == 1) criterio.classList.add("critico");
         else criterio.classList.add("desejavel");
         fundamento.setAttribute("contentEditable", "true");
@@ -167,7 +219,6 @@ function criteriosMatriz(tg) {
             tabNotas.appendChild(tabBody);
             avaliacao.matriz[i].forEach((linha, j) => {
                 let td = document.createElement("td");
-                td.setAttribute("style", "height:100%;border-bottom:none;margin:0;padding:0;");
                 let inp = document.createElement("input");
                 inp.id = i + "_" + j;
                 inp.setAttribute("onclick", "nota(this.id)");
@@ -208,17 +259,23 @@ function montarAvaliacao() {
     document.getElementById("autoavaliacao").classList.add("oculto");
     document.getElementById("inputAvaliacao").classList.add("oculto");
     document.getElementById("reiniciar").classList.remove("oculto");
-    document.getElementById("salvar").classList.remove("oculto");
-    if (avaliacao.alunos.length == 0)
-        document.getElementById("inputAlunos").classList.remove("oculto");
-    else if (avaliacao.criterios.length == 0)
-        document.getElementById("inputCriterios").classList.remove("oculto");
-    else {
+    if (avaliacao.alunos.length == 0) {
+        inputAlunos.classList.remove("oculto");
+        novosAlunos.classList.remove("oculto");
+    } else if (avaliacao.criterios.length == 0) {
+        inputCriterios.classList.remove("oculto");
+        novosCriterios.classList.remove("oculto");
+        alunosMatriz();
+    } else {
         alunosMatriz();
         criteriosMatriz("T");
         criteriosMatriz("G");
         calculaDesempenho();
         notasMatriz();
+        document.getElementById("salvar").classList.remove("oculto");
+        document.getElementById("download").classList.remove("oculto");
+        compTec.classList.remove("oculto");
+        compGes.classList.remove("oculto");
     }
 }
 
@@ -238,7 +295,7 @@ function calculaDesempenho() {
         not -= decMais50;
         desempenho.push({ "descricao": `Atingiu todos os critérios críticos e ${nDesejaveis - i} desejáveis`, "nivel": i + 1, "nota": not });
     }
-    not=50;
+    not = 50;
     nivelMinimo = desempenho.length;
     desempenho.push({ "descricao": "Atingiu todos os critérios críticos", "nivel": nDesejaveis + 1, "nota": not });
     for (let i = 1; i < nCriticos; i++) {
@@ -247,54 +304,60 @@ function calculaDesempenho() {
     }
     document.getElementById("niveis").classList.remove("oculto");
     document.getElementById("imprimir").classList.remove("oculto");
-    for(let i=0;i<avaliacao.alunos.length;i++){
+    for (let i = 0; i < avaliacao.alunos.length; i++) {
         let notaCritica = 0;
         let notaDesejavel = 0;
         avaliacao.matriz.forEach((linha, j) => {
             if (avaliacao.criterios[j].criticidade == 1) notaCritica += linha[i];
             else notaDesejavel += linha[i];
         });
-        if(notaCritica < nCriticos) notaCritica = notas.push(notaCritica);
+        if (notaCritica < nCriticos) notaCritica = notas.push(notaCritica);
         else notas.push(notaCritica + notaDesejavel);
     }
 }
 
-function notasMatriz(){
+function notasMatriz() {
     const nivel = document.getElementById("nivel");
     const nota = document.getElementById("nota");
 
     let tabNiveis = document.createElement("table");
     let tabTr = document.createElement("tr");
     tabNiveis.appendChild(tabTr);
-    
+
     let tabNotas = document.createElement("table");
     let tabTrn = document.createElement("tr");
     tabNotas.appendChild(tabTrn);
-    
-    notas.forEach((linha) => {
+
+    notas.forEach((linha, i) => {
         let td1 = document.createElement("td");
-        td1.setAttribute("style", "width:30px;height:100%;border-bottom:none;margin:0;padding:0;text-align:center;");
+        td1.classList.add("nivelFinal");
         td1.innerHTML = linha;
         tabTr.appendChild(td1);
         let td2 = document.createElement("td");
-        td2.setAttribute("style", "width:30px;height:100%;border-bottom:none;margin:0;padding:0;text-align:center;");
-        td2.innerHTML = totNiveis - linha - 1;
+        td2.classList.add("notaFinal");
+        let nt = totNiveis - linha == totNiveis ? 0 : desempenho[totNiveis - linha].nota;
+        if (nt < 50) {
+            td1.classList.add("destacado");
+            td2.classList.add("destacado");
+            document.getElementById("alunos").childNodes[i].classList.add("destacado");
+        }
+        td2.innerHTML = nt;
         tabTrn.appendChild(td2);
     });
 
     nivel.setAttribute("style", "margin:0;padding:0;");
     nivel.appendChild(tabNiveis);
-    
+
     nota.setAttribute("style", "margin:0;padding:0;");
     nota.appendChild(tabNotas);
 }
 
-function mostrarNiveis(){
+function mostrarNiveis() {
     document.getElementById("modalNiveis").classList.remove("oculto");
-    document.getElementById("bodyNiveis").innerHTML="";
+    document.getElementById("bodyNiveis").innerHTML = "";
     desempenho.forEach(nivel => {
         let tr = document.createElement("tr");
-        if(nivel.nivel==nivelMinimo + 1) tr.classList.add("nivelMinimo");
+        if (nivel.nivel == nivelMinimo + 1) tr.classList.add("nivelMinimo");
         let td = document.createElement("td");
         td.innerHTML = nivel.descricao;
         tr.appendChild(td);
