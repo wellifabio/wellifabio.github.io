@@ -63,7 +63,7 @@ fileCriterios.addEventListener("change", (e) => {
     reader.onload = () => {
         let crits = reader.result.split("\n");
         crits.forEach((cri, i) => {
-            if (cri.split(";").length == 4 && i > 0) {
+            if (cri.split(";").length == 4) {
                 avaliacao.criterios.push({ "tg": cri.split(";")[2], "fundamento": cri.split(";")[0], "criterio": cri.split(";")[1], "criticidade": cri.split(";")[3].slice(0, 1) });
             }
         });
@@ -268,7 +268,9 @@ function criteriosMatriz(tg) {
         fundamento.classList.add("fundamentos");
         criterio.classList.add("criterios");
         acoes.classList.add("acoes");
-        acoes.innerHTML = `${avaliacao.tipo}<button type="button" onclick="altCrit(${i})"class="${cri.criticidade == 1 ? 'btcri' : 'btdes'}">&nbsp;</button><button type="button" class="btdel" onclick="del(${i})">X</button>`;
+        acoes.innerHTML = `${avaliacao.tipo}
+            <button type="button" onclick="altCrit(${i})"class="${cri.criticidade == 1 ? 'btcri' : 'btdes'}">&nbsp;</button>
+            <button type="button" class="btdel" onclick="del(${i})">X</button>`;
         if (cri.criticidade == 1) criterio.classList.add("critico");
         else criterio.classList.add("desejavel");
         fundamento.setAttribute("contentEditable", "true");
