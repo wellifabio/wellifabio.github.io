@@ -45,11 +45,33 @@ fileAlunos.addEventListener("change", (e) => {
     let reader = new FileReader()
     reader.readAsText(file)
     reader.onload = () => {
-        avaliacao.alunos = JSON.parse(reader.result);
+        let alunos = reader.result.split("\n");
+        alunos.forEach(aluno => {
+            avaliacao.alunos.push({ "aluno": aluno });
+        });
         inputAlunos.classList.add("oculto");
         novosAlunos.classList.add("oculto");
         localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
         montarAvaliacao();
+    }
+});
+
+fileCriterios.addEventListener("change", (e) => {
+    let file = e.target.files[0]
+    let reader = new FileReader()
+    reader.readAsText(file)
+    reader.onload = () => {
+        let crits = reader.result.split("\n");
+        crits.forEach((cri, i) => {
+            if (cri.split(";").length == 4 && i > 0) {
+                avaliacao.criterios.push({ "tg": cri.split(";")[2], "fundamento": cri.split(";")[0], "criterio": cri.split(";")[1], "criticidade": cri.split(";")[3].slice(0, 1) });
+            }
+        });
+        localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
+        inputCriterios.classList.add("oculto");
+        novosCriterios.classList.add("oculto");
+        montarMatriz();
+        window.location.reload();
     }
 });
 
@@ -67,12 +89,29 @@ formCriterios.addEventListener("submit", (e) => {
 });
 
 function novoCriterio(tg, criticidade) {
-    avaliacao.criterios.push({
-        "tg": tg,
-        "fundamento": "Copie do plano de curso",
-        "criterio": "Descreva os indicadoes de desempenho, conforme a avaliação aplicada",
-        "criticidade": criticidade
-    });
+    if (tg == "G")
+        avaliacao.criterios.push({
+            "tg": tg,
+            "fundamento": "Copie do plano de curso",
+            "criterio": "Descreva os indicadoes de desempenho, conforme a avaliação aplicada",
+            "criticidade": criticidade
+        });
+    else {
+        let backup = avaliacao.criterios;
+        avaliacao.criterios = [];
+        backup.forEach(cri => {
+            if (cri.tg == "T") avaliacao.criterios.push(cri);
+        });
+        avaliacao.criterios.push({
+            "tg": tg,
+            "fundamento": "Copie do plano de curso",
+            "criterio": "Descreva os indicadoes de desempenho, conforme a avaliação aplicada",
+            "criticidade": criticidade
+        });
+        backup.forEach(cri => {
+            if (cri.tg == "G") avaliacao.criterios.push(cri);
+        });
+    }
 }
 
 function addCompTec() {
@@ -94,18 +133,6 @@ formAlunos.addEventListener("submit", (e) => {
     });
     window.localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
     window.location.reload();
-});
-
-fileCriterios.addEventListener("change", (e) => {
-    let file = e.target.files[0]
-    let reader = new FileReader()
-    reader.readAsText(file)
-    reader.onload = () => {
-        avaliacao.criterios = JSON.parse(reader.result);
-        inputCriterios.classList.add("oculto");
-        montarMatriz();
-        montarAvaliacao();
-    }
 });
 
 function salvar() {
@@ -241,7 +268,7 @@ function criteriosMatriz(tg) {
         fundamento.classList.add("fundamentos");
         criterio.classList.add("criterios");
         acoes.classList.add("acoes");
-        acoes.innerHTML = `${avaliacao.tipo}<button type="button" onclick="altCrit(${i})"class="${cri.criticidade == 1 ? 'btcri' : 'btdes'}">&nbsp;</button>`;
+        acoes.innerHTML = `${avaliacao.tipo}<button type="button" onclick="altCrit(${i})"class="${cri.criticidade == 1 ? 'btcri' : 'btdes'}">&nbsp;</button><button type="button" class="btdel" onclick="del(${i})">X</button>`;
         if (cri.criticidade == 1) criterio.classList.add("critico");
         else criterio.classList.add("desejavel");
         fundamento.setAttribute("contentEditable", "true");
@@ -432,4 +459,13 @@ function mostrarNiveis() {
         document.getElementById("bodyNiveis").appendChild(tr);
     });
     document.getElementById("nivelMinimo").innerHTML = desempenho[nivelMinimo].nivel;
+}
+
+function del(i) {
+    if (confirm("Deseja realmente excluir o critério?")) {
+        avaliacao.criterios.splice(i, 1);
+        montarMatriz();
+        window.localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
+        window.location.reload();
+    }
 }
