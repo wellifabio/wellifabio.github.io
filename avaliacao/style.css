@@ -316,7 +316,7 @@ button {
 
 @media print {
     @page {
-        size: a4 landscape;
+        size: a4 portable;
         scale: 0.7;
         margin: 10px;
         margin-top: 30px;
