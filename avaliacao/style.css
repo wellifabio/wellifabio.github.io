@@ -213,11 +213,24 @@ button {
     text-align: center;
 }
 
+.criteriosc {
+    max-width: 300px;
+    width: 300px;
+    text-align: center;
+}
+
 .fundamentos {
     max-width: 300px;
     width: 300px;
     text-align: center;
 }
+
+.fundamentosc {
+    max-width: 300px;
+    width: 300px;
+    text-align: center;
+}
+
 
 .modal {
     position: fixed;
