@@ -61,12 +61,6 @@ formCriterios.addEventListener("submit", (e) => {
     for (let i = 0; i < formCriterios.inpGestao.value; i++) {
         novoCriterio("G", 0);
     }
-    for (let i = 0; i < formCriterios.inpTecnicoCri.value; i++) {
-        novoCriterio("T", 1);
-    }
-    for (let i = 0; i < formCriterios.inpGestaoCri.value; i++) {
-        novoCriterio("G", 1);
-    }
     montarMatriz();
     window.localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
     window.location.reload();
@@ -307,10 +301,7 @@ function altCrit(i) {
     if (confirm("Deseja realmente alterar a criticidade do critério?")) {
         if (avaliacao.criterios[i].criticidade == 0) avaliacao.criterios[i].criticidade = 1;
         else avaliacao.criterios[i].criticidade = 0;
-        localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
-        document.getElementById("tbody").innerHTML = "";
-        criteriosMatriz("T");
-        criteriosMatriz("G");
+        salvar();
     }
 }
 
