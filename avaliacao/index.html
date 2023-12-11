@@ -23,12 +23,14 @@
                 <label for="fileAvaliacao">Carregue uma avaliação:</label>
                 <input type="file" id="fileAvaliacao">
             </div>
-            <button id="novosAlunos" type="button" onclick="modalAlunos.classList.remove('oculto')" class="oculto">Adicione</button>
+            <button id="novosAlunos" type="button" onclick="modalAlunos.classList.remove('oculto')"
+                class="oculto">Adicione</button>
             <div id="inputAlunos" class="oculto">
                 <label for="fileAlunos">ou carregue os alunos:</label>
                 <input type="file" id="fileAlunos">
             </div>
-            <button id="novosCriterios" type="button" onclick="modalCriterios.classList.remove('oculto')" class="oculto">Configure</button>
+            <button id="novosCriterios" type="button" onclick="modalCriterios.classList.remove('oculto')"
+                class="oculto">Configure</button>
             <div id="inputCriterios" class="oculto">
                 <label for="fileCriterios">ou arregue os critérios:</label>
                 <input type="file" id="fileCriterios">
@@ -40,8 +42,9 @@
             <thead>
                 <tr>
                     <th class="tv" rowspan="2">Natureza dos<br>Critérios</th>
-                    <th rowspan="2" style="width: 400px;">Fundamentos Técnicos e<br>Científicos ou<br>Capacidades Técnicas</th>
-                    <th rowspan="2" style="width: 400px;">Critérios de avaliação
+                    <th rowspan="2" style="width: 400px;">Fundamentos Técnicos e<br>Científicos ou<br>Capacidades
+                        Técnicas</th>
+                    <th rowspan="2" colspan="2" style="width: 400px;">Critérios de avaliação
                         <table class="minTable">
                             <thead>
                                 <tr>
@@ -83,13 +86,13 @@
             </tbody>
             <tfoot>
                 <tr>
-                    <th colspan="3">
+                    <th colspan="4">
                         Nível de Desempenho
                     </th>
                     <td id="nivel"></td>
                 </tr>
                 <tr>
-                    <th colspan="3">
+                    <th colspan="4">
                         Nota
                     </th>
                     <td id="nota"></td>
@@ -146,13 +149,13 @@
             <h1>Configure as competências técnicas e de Gestão</h1>
             <form id="formCriterios" class="formBasico">
                 <label for="inpTecnico">Total de competências Técnicas Desejáveis:</label>
-                <input type="number" id="inpTecnico" name="inpTecnico" min="1" value="3" required/>
+                <input type="number" id="inpTecnico" name="inpTecnico" min="1" value="3" required />
                 <label for="inpTecnicoCri">Total de competências Técnicas Críticas:</label>
-                <input type="number" id="inpTecnicoCri" name="inpTecnicoCri" min="1" value="1" required/>
+                <input type="number" id="inpTecnicoCri" name="inpTecnicoCri" min="1" value="1" required />
                 <label for="inpGestao">Total de competências de Gestão Desejáveis:</label>
-                <input type="number" id="inpGestao" name="inpGestao" min="1" value="3" required/>
+                <input type="number" id="inpGestao" name="inpGestao" min="1" value="3" required />
                 <label for="inpGestaoCri">Total de competências de Gestão:</label>
-                <input type="number" id="inpGestaoCri" name="inpGestaoCri" min="0" value="0" required/>
+                <input type="number" id="inpGestaoCri" name="inpGestaoCri" min="0" value="0" required />
                 <button type="button" onclick="modalCriterios.classList.add('oculto')">Cancelar</button>
                 <button type="submit">Adicionar</button>
             </form>

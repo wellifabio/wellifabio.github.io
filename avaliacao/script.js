@@ -4,6 +4,7 @@ var avaliacao = {
     instrutor: "",
     componente: "",
     data: "",
+    tipo: "",
     alunos: [],
     criterios: [],
     matriz: []
@@ -65,8 +66,8 @@ formCriterios.addEventListener("submit", (e) => {
     for (let i = 0; i < formCriterios.inpGestaoCri.value; i++) {
         novoCriterio("G", 1);
     }
-    window.localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
     montarMatriz();
+    window.localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
     window.location.reload();
 });
 
@@ -77,6 +78,18 @@ function novoCriterio(tg, criticidade) {
         "criterio": "Descreva os indicadoes de desempenho, conforme a avaliação aplicada",
         "criticidade": criticidade
     });
+}
+
+function addCompTec() {
+    novoCriterio("T", 0);
+    montarMatriz();
+    window.location.reload();
+}
+
+function addCompGes() {
+    novoCriterio("G", 0);
+    montarMatriz();
+    window.location.reload();
 }
 
 formAlunos.addEventListener("submit", (e) => {
@@ -103,16 +116,16 @@ fileCriterios.addEventListener("change", (e) => {
 function salvar() {
     avaliacao.titulo = document.getElementById("titulo").innerHTML;
     avaliacao.turma = document.getElementById("turma").innerHTML.split(": ")[1];
-    avaliacao.componente =document.getElementById("componente").innerHTML.split(": ")[1];
+    avaliacao.componente = document.getElementById("componente").innerHTML.split(": ")[1];
     avaliacao.instrutor = document.getElementById("instrutor").innerHTML.split(": ")[1];
     avaliacao.data = document.getElementById("data").innerHTML.split(": ")[1];
     let nomes = document.querySelectorAll(".tv2");
     let funds = document.querySelectorAll(".fundamentos");
     let cris = document.querySelectorAll(".criterios");
-    for(let i = 0; i < nomes.length; i++){
+    for (let i = 0; i < nomes.length; i++) {
         avaliacao.alunos[i].aluno = nomes[i].innerHTML;
     }
-    for(let i = 0; i < funds.length; i++){
+    for (let i = 0; i < funds.length; i++) {
         avaliacao.criterios[i].fundamento = funds[i].innerHTML;
         avaliacao.criterios[i].criterio = cris[i].innerHTML;
     }
@@ -134,14 +147,17 @@ function download() {
 
 function novaFormativa() {
     avaliacao.titulo = "INSTRUMENTO DE REGISTRO DE AVALIAÇÃO FORMATIVA";
+    avaliacao.tipo = "F";
     obterDadosIniciais();
 }
 function novaSomativa() {
     avaliacao.titulo = "INSTRUMENTO DE REGISTRO DE AVALIAÇÃO SOMATIVA";
+    avaliacao.tipo = "S";
     obterDadosIniciais();
 }
 function novaAutoavalicao() {
     avaliacao.titulo = "INSTRUMENTO DE REGISTRO DE AUTOAVALIAÇÃO";
+    avaliacao.tipo = "A";
     obterDadosIniciais();
 }
 
@@ -155,6 +171,7 @@ function obterDadosIniciais() {
 }
 
 function montarMatriz() {
+    avaliacao.matriz = [];
     for (let i = 0; i < avaliacao.criterios.length; i++) {
         let linha = [];
         for (let j = 0; j < avaliacao.alunos.length; j++) {
@@ -191,9 +208,12 @@ function criteriosMatriz(tg) {
         let tr = document.createElement("tr");
         let fundamento = document.createElement("td");
         let criterio = document.createElement("td");
+        let acoes = document.createElement("td");
         let notas = document.createElement("td");
         fundamento.classList.add("fundamentos");
         criterio.classList.add("criterios");
+        acoes.classList.add("acoes");
+        acoes.innerHTML = `${avaliacao.tipo}<button type="button" onclick="altCrit(${i})"class="${cri.criticidade == 1 ? 'btcri' : 'btdes'}">&nbsp;</button>`;
         if (cri.criticidade == 1) criterio.classList.add("critico");
         else criterio.classList.add("desejavel");
         fundamento.setAttribute("contentEditable", "true");
@@ -211,6 +231,7 @@ function criteriosMatriz(tg) {
             }
             tr.appendChild(fundamento);
             tr.appendChild(criterio);
+            tr.appendChild(acoes);
             let tabNotas = document.createElement("table");
             tabNotas.classList.add("tabNotas");
             let tabBody = document.createElement("tbody");
@@ -246,6 +267,17 @@ function nota(id) {
     document.getElementById("tbody").innerHTML = "";
     criteriosMatriz("T");
     criteriosMatriz("G");
+}
+
+function altCrit(i) {
+    if (confirm("Deseja realmente alterar a criticidade do critério?")) {
+        if (avaliacao.criterios[i].criticidade == 0) avaliacao.criterios[i].criticidade = 1;
+        else avaliacao.criterios[i].criticidade = 0;
+        localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
+        document.getElementById("tbody").innerHTML = "";
+        criteriosMatriz("T");
+        criteriosMatriz("G");
+    }
 }
 
 function montarAvaliacao() {
