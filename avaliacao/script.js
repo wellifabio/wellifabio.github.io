@@ -13,6 +13,7 @@ var avaliacao = {
 var notas = [], niveis = [], desempenho = [];
 var nivelMinimo = 0;
 var totNiveis = 0;
+var verNotas = true;
 
 const local = JSON.parse(localStorage.getItem("avaliacao"));
 if (local) {
@@ -193,17 +194,50 @@ function alunosMatriz() {
     });
 }
 
+function ocultar() {
+    let nts = document.querySelectorAll(".nota");
+    let nvs = document.querySelectorAll(".nivelFinal");
+    let ntf = document.querySelectorAll(".notaFinal");
+    let dest = document.querySelectorAll(".destacado");
+    if (verNotas) {
+        nts.forEach(nt => {
+            nt.classList.add("oculto");
+        });
+        nvs.forEach(nt => {
+            nt.innerHTML = "";
+        });
+        ntf.forEach(nt => {
+            nt.innerHTML = "";
+        });
+        dest.forEach(d => {
+            d.classList.remove("destacado");
+        });
+        document.getElementById("ocultar").innerHTML = "Mostrar notas";
+        verNotas = false;
+    } else {
+        window.location.reload();
+    }
+}
+
 function criteriosMatriz(tg) {
     const tbody = document.getElementById("tbody");
     let nT = 0;
     let mesclar = 0;
-    let competencias = "Competências de Gestão";
+    let competencias = "Competências<br>de Gestão";
+
     avaliacao.criterios.forEach(cri => {
         if (cri.tg == "T") nT++;
     });
+
     let nG = avaliacao.criterios.length - nT;
-    if (tg == "T") { mesclar = nT; competencias = "Competências Técnicas"; } else mesclar = nG;
+
+    if (tg == "T") {
+        mesclar = nT;
+        competencias = "Competências<br>Técnicas";
+    } else mesclar = nG;
+
     let primeiraLinha = true;
+
     avaliacao.criterios.forEach((cri, i) => {
         let tr = document.createElement("tr");
         let fundamento = document.createElement("td");
@@ -249,7 +283,7 @@ function criteriosMatriz(tg) {
                 td.appendChild(inp);
                 tabTr.appendChild(td);
             });
-            notas.setAttribute("style", "margin:0;padding:0;");
+            notas.classList.add("notas");
             notas.appendChild(tabNotas);
             tr.appendChild(notas);
             tbody.appendChild(tr);
@@ -336,6 +370,7 @@ function calculaDesempenho() {
     }
     document.getElementById("niveis").classList.remove("oculto");
     document.getElementById("imprimir").classList.remove("oculto");
+    document.getElementById("ocultar").classList.remove("oculto");
     for (let i = 0; i < avaliacao.alunos.length; i++) {
         let notaCritica = 0;
         let notaDesejavel = 0;
@@ -353,10 +388,12 @@ function notasMatriz() {
     const nota = document.getElementById("nota");
 
     let tabNiveis = document.createElement("table");
+    tabNiveis.classList.add("tabNiveis");
     let tabTr = document.createElement("tr");
     tabNiveis.appendChild(tabTr);
 
     let tabNotas = document.createElement("table");
+    tabNotas.classList.add("tabNiveis");
     let tabTrn = document.createElement("tr");
     tabNotas.appendChild(tabTrn);
 

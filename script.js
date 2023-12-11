@@ -10,6 +10,11 @@ const aulas = [
 		text: "JavaScript - Gantt chart generator (pt-br)"
 	},
 	{
+		href: "./avaliacao",
+		target: "_blank",
+		text: "JS - SENAI standard assessment generator (pt-br)"
+	},
+	{
 		href: "./timeline",
 		target: "_blank",
 		text: "JavaScript - Gantt chart generator"
