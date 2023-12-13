@@ -144,8 +144,80 @@ const projetos = [
 	},
 ]
 
+const ports = [
+	{
+		"Nome": "Andre Fernandes Izidro",
+		"link": "https://aizidro.github.io"
+	},
+	{
+		"Nome": "Lucas Almeida Camacho",
+		"link": "https://lcscamacho.github.io/"
+	},
+	{
+		"Nome": "Ana Clara Ortiz Ochner",
+		"link": "https://anyocher.github.io"
+	},
+	{
+		"Nome": "Bruno OtÃ¡vio da Silva Ramos",
+		"link": "https://bruno-otavio.github.io/"
+	},
+	{
+		"Nome": "Carla Carota Mozena",
+		"link": "https://carla-coder.github.io/"
+	},
+	{
+		"Nome": "Carlos Augusto Rodrigues",
+		"link": "https://carlosaugustorodrigues.github.io"
+	},
+	{
+		"Nome": "Carlos Henrique de Oliveira Siqueira",
+		"link": "https://carloshosiqueira.github.io"
+	},
+	{
+		"Nome": "Cicero Ruan Soares Barbosa ",
+		"link": "https://portfoliocisenai.netlify.app/"
+	},
+	{
+		"Nome": "Gabriella Godoi Avila",
+		"link": "https://avilagabriella.github.io"
+	},
+	{
+		"Nome": "Guilherme Carvalho De Oliveira",
+		"link": "https://caroliflow.000webhostapp.com"
+	},
+	{
+		"Nome": "Igor Henrique GonÃ§alves",
+		"link": "https://igorhenriqueg.github.io"
+	},
+	{
+		"Nome": "Jaqueline Rodrigues",
+		"link": "https://JaqueJak.github.io"
+	},
+	{
+		"Nome": "João Victor Colosso",
+		"link": "https://JvColosso.github.io"
+	},
+	{
+		"Nome": "João Vitor Castro Viana Marques",
+		"link": "https://JMarques12.github.io"
+	},
+	{
+		"Nome": "Leticia Aparecida Hofman de Souza",
+		"link": "https://lehhofman.github.io/"
+	},
+	{
+		"Nome": "Otavio Bassi de freitas",
+		"link": "https://freitas7portfolio.netlify.app/"
+	},
+	{
+		"Nome": "Vinícius Manzano dos Santos",
+		"link": "https://vinimanzano.github.io/vinimanzano.io/"
+	}
+];
+
 const als = document.querySelector("#aulas");
 const prjts = document.querySelector("#projetos");
+const portfolios = document.querySelector("#portLink");
 
 const load = () => {
 	aulas.forEach(aula => {
@@ -153,6 +225,9 @@ const load = () => {
 	});
 	projetos.forEach(projeto => {
 		prjts.innerHTML += `<a href="${projeto.href}" target="${projeto.target}" class="postitred">${projeto.text}</a>`;
+	});
+	ports.forEach(pt => {
+		portfolios.innerHTML += `<a href="${pt.link}" target="_blank" class="postitgreen">${pt.Nome}</a>`;
 	});
 }
 

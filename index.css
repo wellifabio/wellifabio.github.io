@@ -112,6 +112,10 @@ footer a {
     background-image: url("./assets/postitred.png");
 }
 
+.postitgreen {
+    background-image: url("./assets/postitgreen.png");
+}
+
 .menu {
     width: 100%;
     display: flex;
