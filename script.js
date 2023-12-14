@@ -146,12 +146,16 @@ const projetos = [
 
 const ports = [
 	{
+		"Nome":"Matheus Pignata",
+		"link":"https://matheuspignata.github.io"
+	},
+	{
 		"Nome": "Andre Fernandes Izidro",
 		"link": "https://aizidro.github.io"
 	},
 	{
 		"Nome": "Lucas Almeida Camacho",
-		"link": "https://lcscamacho.github.io/"
+		"link": "https://lcscamacho.github.io"
 	},
 	{
 		"Nome": "Ana Clara Ortiz Ochner",
@@ -159,11 +163,11 @@ const ports = [
 	},
 	{
 		"Nome": "Bruno OtÃ¡vio da Silva Ramos",
-		"link": "https://bruno-otavio.github.io/"
+		"link": "https://bruno-otavio.github.io"
 	},
 	{
 		"Nome": "Carla Carota Mozena",
-		"link": "https://carla-coder.github.io/"
+		"link": "https://carla-coder.github.io"
 	},
 	{
 		"Nome": "Carlos Augusto Rodrigues",
@@ -203,15 +207,15 @@ const ports = [
 	},
 	{
 		"Nome": "Leticia Aparecida Hofman de Souza",
-		"link": "https://lehhofman.github.io/"
+		"link": "https://lehhofman.github.io"
 	},
 	{
 		"Nome": "Otavio Bassi de freitas",
-		"link": "https://freitas7portfolio.netlify.app/"
+		"link": "https://freitas7portfolio.netlify.app"
 	},
 	{
 		"Nome": "Vinícius Manzano dos Santos",
-		"link": "https://vinimanzano.github.io/vinimanzano.io/"
+		"link": "https://vinimanzano.github.io/vinimanzano.io"
 	}
 ];
 
