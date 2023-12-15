@@ -127,13 +127,18 @@ footer a {
 .ancora {
     color: black;
     text-decoration: none;
-    margin-top: 30px;
+    margin: 10px;
     font-size: 22px;
     border-radius: 40px;
     padding: 10px;
-    background-color: white;
+    background: rgba(255, 212, 17, 1);
+    background: linear-gradient(180deg, rgba(208, 173, 19, 1) 0%, rgb(224, 194, 110) 25%);
     box-shadow: 1px 1px 5px #000;
     text-shadow: 1px -1px 3px #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 150px;
 }
 
 @media(max-width:700px) {
