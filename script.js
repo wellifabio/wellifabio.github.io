@@ -163,6 +163,14 @@ const ports = [
 		"link": "https://lcscamacho.github.io"
 	},
 	{
+		"Nome": "Vinicius Vieira de Souza",
+		"link": "https://vinisouza001.github.io/"
+	},
+	{
+		"Nome": "Yukina Madum Shinhama",
+		"link": "https://portfolio-2023-delta-sable.vercel.app/"
+	},
+	{
 		"Nome": "Ana Clara Ortiz Ochner",
 		"link": "https://anyocher.github.io"
 	},
@@ -221,6 +229,22 @@ const ports = [
 	{
 		"Nome": "Vinícius Manzano dos Santos",
 		"link": "https://vinimanzano.github.io/vinimanzano.io"
+	},
+	{
+		"Nome": "Alefe de Magalhães Vigatto",
+		"link": "https://vinimanzano.github.io/vinimanzano.io"
+	},
+	{
+		"Nome": "Camilla Piva Da Silva",
+		"link": "https://Camispiva.github.io"
+	},
+	{
+		"Nome": "Maria Fernanda Mattoso Oliveira Rello",
+		"link": "https://fefemattoso.github.io"
+	},
+	{
+		"Nome": "Erick da Silva de Jesus",
+		"link": "https://ericksilva232323.github.io/"
 	}
 ];
 
