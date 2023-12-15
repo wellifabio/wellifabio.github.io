@@ -204,7 +204,7 @@ const ports = [
 	},
 	{
 		"Nome": "João Victor Colosso",
-		"link": "https://JvColosso.github.io"
+		"link": "https://portfoliocolosso.netlify.app"
 	},
 	{
 		"Nome": "João Vitor Castro Viana Marques",
