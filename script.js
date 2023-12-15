@@ -245,6 +245,10 @@ const ports = [
 	{
 		"Nome": "Erick da Silva de Jesus",
 		"link": "https://ericksilva232323.github.io/"
+	},
+	{
+		"Nome": "Richard Matheus Pinesi",
+		"link": "https://richardpnsportfolio.netlify.app"
 	}
 ];
 
