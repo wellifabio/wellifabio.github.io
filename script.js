@@ -2,57 +2,62 @@ const aulas = [
 	{
 		href: "./canvas",
 		target: "_blank",
-		text: "JavaScript - Canvas Frame Maker (pt-br)"
+		text: "JS: Canvas Frame Maker (pt-br)"
 	},
 	{
 		href: "./gantt",
 		target: "_blank",
-		text: "JavaScript - Gantt chart generator (pt-br)"
+		text: "JS: Gantt chart generator (pt-br)"
 	},
 	{
 		href: "./avaliacao",
 		target: "_blank",
-		text: "JS - SENAI standard assessment generator (pt-br)"
+		text: "JS: SENAI standard assessment generator (pt-br)"
 	},
 	{
 		href: "./timeline",
 		target: "_blank",
-		text: "JavaScript - Gantt chart generator"
+		text: "JS: Gantt chart generator"
+	},
+	{
+		href: "./notasparciais",
+		target: "_blank",
+		text: "JS: SENAI students partial results (pt-br)"
 	},
 	{
 		href: "./bitola",
 		target: "_blank",
-		text: "JavaScript: Cálc. Bitola p/ Cabo de Cobre (pt-br)"
+		text: "JS: Cálc. Bitola p/ Cabo de Cobre (pt-br)"
 	},
 	{
 		href: "./siminvest",
 		target: "_blank",
-		text: "JavaScript: Simulador de Investimentos (pt-br)"
+		text: "JS: Simulador de Investimentos (pt-br)"
 	},
 	{
 		href: "./gadgets",
 		target: "_blank",
-		text: "JavaScript - Gadgets"
+		text: "JS - Gadgets"
 	},
 	{
 		href: "./pizzaria/carrinho",
 		target: "_blank",
-		text: "JavaScript - Pizzaria Modelo (pt-br)"
+		text: "JS - Pizzaria Modelo (pt-br)"
 	},
 	{
 		href: "./delivery/delivery.html",
 		target: "_blank",
-		text: "JavaScript - Delivery Manager (pt-br)"
+		text: "JS - Delivery Manager (pt-br)"
 	},
 	{
 		href: "./memoria",
 		target: "_blank",
-		text: "JavaScript - Memory Game (pt - br)"
+		text: "JS - Memory Game (pt - br)"
 	},
 	{
 		href: "./clima",
 		target: "_blank",
-		text: "JavaScript - Learning ChartJS"
+		text: "JS - Learning ChartJS"
 	},
 	{
 		href: "./sena/bilhete.html",
@@ -67,7 +72,7 @@ const aulas = [
 	{
 		href: "./hash",
 		target: "_blank",
-		text: "JavaScript - Hash Game"
+		text: "JS - Hash Game"
 	},
 	{
 		href: "./chat",

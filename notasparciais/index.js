@@ -1,4 +1,4 @@
-const uri = "http://localhost:3000";
+const uri = "http://10.87.202.140:3000";
 
 const formNotas = document.querySelector('#formNotas');
 
