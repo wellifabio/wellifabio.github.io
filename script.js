@@ -20,7 +20,7 @@ const aulas = [
 		text: "JS: Gantt chart generator"
 	},
 	{
-		href: "./notasparciais",
+		href: "http://10.87.202.140:5501/frontalunos/",
 		target: "_blank",
 		text: "JS: SENAI students partial results (pt-br)"
 	},
