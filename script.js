@@ -232,7 +232,7 @@ const ports = [
 	},
 	{
 		"Nome": "Alefe de Magalhães Vigatto",
-		"link": "https://vinimanzano.github.io/vinimanzano.io"
+		"link": "https://alefedem.000webhostapp.com/"
 	},
 	{
 		"Nome": "Camilla Piva Da Silva",
