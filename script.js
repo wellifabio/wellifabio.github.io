@@ -175,7 +175,7 @@ const ports = [
 		"link": "https://anyocher.github.io"
 	},
 	{
-		"Nome": "Bruno OtÃ¡vio da Silva Ramos",
+		"Nome": "Bruno Otávio da Silva Ramos",
 		"link": "https://bruno-otavio.github.io"
 	},
 	{
@@ -249,6 +249,14 @@ const ports = [
 	{
 		"Nome": "Richard Matheus Pinesi",
 		"link": "https://richardpnsportfolio.netlify.app"
+	},
+	{
+		"Nome": "Otavio Bueno",
+		"link": "https://buenootavio.github.io/"
+	},
+		{
+		"Nome": "Bryan Beckham",
+		"link": "https://bryanbeckham06.github.io/"
 	}
 ];
 
