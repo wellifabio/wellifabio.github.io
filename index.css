@@ -63,10 +63,12 @@ footer a {
     box-shadow: 0 0 10px #000;
 }
 
+#principal{
+    margin: 30px;
+}
+
 .qr {
     width: 250px;
-    margin: 30px;
-    margin-top: 50px;
 }
 
 .about {
