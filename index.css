@@ -63,7 +63,7 @@ footer a {
     box-shadow: 0 0 10px #000;
 }
 
-#principal{
+#principal {
     margin: 30px;
 }
 
@@ -145,6 +145,10 @@ footer a {
 }
 
 @media(max-width:700px) {
+    #principal {
+        margin-top: 70px;
+    }
+
     .content {
         display: contents;
     }
