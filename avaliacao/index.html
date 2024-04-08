@@ -119,6 +119,10 @@
         <button
             onclick="window.location.href='https://senaiweb.fieb.org.br/areadocente/assets/Midia/2019/Livro_Msep_2019.pdf'">
             MSEP 2019 pags. 125 a 133</button>
+        <br>Taxonomias de Objetivos Educacionais:
+        <button onclick="modalCognitivo.classList.remove('oculto')">Cognitivas</button>
+        <button onclick="modalPsicomotor.classList.remove('oculto')">Psicomotoras</button>
+        <button onclick="modalAfetivo.classList.remove('oculto')">Afetivas</button>
     </div>
     <div id="modalNiveis" class="modal oculto">
         <div class="area">
@@ -165,6 +169,21 @@
                 <button type="button" onclick="modalCriterios.classList.add('oculto')">Cancelar</button>
                 <button type="submit">Adicionar</button>
             </form>
+        </div>
+    </div>
+    <div id="modalCognitivo" class="modal oculto">
+        <div onclick="modalCognitivo.classList.add('oculto')" style="cursor: pointer;">
+            <img src="./cognitivo.png" alt="Cognitivo">
+        </div>
+    </div>
+    <div id="modalPsicomotor" class="modal oculto">
+        <div onclick="modalPsicomotor.classList.add('oculto')" style="cursor: pointer;">
+            <img src="./psicomotor.png" alt="Psicomotor">
+        </div>
+    </div>
+    <div id="modalAfetivo" class="modal oculto">
+        <div onclick="modalAfetivo.classList.add('oculto')" style="cursor: pointer;">
+            <img src="./afetivo.png" alt="Afetivo">
         </div>
     </div>
 </body>
