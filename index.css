@@ -121,10 +121,10 @@ footer a {
 
 .menu {
     width: 100%;
-    display: grid;
-    grid-template-columns: 50% 50%;
+    display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    text-align: center;
+    justify-content: center;
 }
 
 .ancora {
@@ -148,7 +148,6 @@ footer a {
     #principal {
         margin-top: 70px;
     }
-
     .content {
         display: contents;
     }
@@ -175,5 +174,8 @@ footer a {
         flex-wrap: wrap;
         align-items: center;
         height: 150px;
+    }
+    nav{
+        display: none;
     }
 }
