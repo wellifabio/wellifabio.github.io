@@ -145,19 +145,22 @@ footer a {
 }
 
 @media(max-width:700px) {
-    #principal {
-        margin-top: 70px;
+
+    body, header, main, section, footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
     }
+
     .content {
-        display: contents;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 5px;
     }
 
     footer {
         display: contents;
-    }
-
-    .about {
-        width: 380px;
     }
 
     div {
@@ -171,11 +174,6 @@ footer a {
     }
 
     .menu {
-        flex-wrap: wrap;
-        align-items: center;
-        height: 150px;
-    }
-    nav{
         display: none;
     }
 }
