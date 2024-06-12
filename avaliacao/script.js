@@ -64,7 +64,7 @@ fileCriterios.addEventListener("change", (e) => {
         let crits = reader.result.split("\n");
         crits.forEach((cri, i) => {
             if (cri.split(";").length == 4) {
-                avaliacao.criterios.push({ "tg": cri.split(";")[2], "fundamento": cri.split(";")[0], "criterio": cri.split(";")[1], "criticidade": cri.split(";")[3].slice(0, 1) });
+                avaliacao.criterios.push({ "tg": cri.split(";")[0], "fundamento": cri.split(";")[1], "criterio": cri.split(";")[2], "criticidade": parseInt(cri.split(";")[3].slice(0, 1)) });
             }
         });
         localStorage.setItem("avaliacao", JSON.stringify(avaliacao));
