@@ -59,6 +59,7 @@ footer button {
     border: none;
     font-weight: bold;
     margin: 5px;
+    border-radius: 25px;
 }
 
 button {
@@ -310,7 +311,13 @@ button {
     border-bottom: 1px solid #ccc;
 }
 
-button {
+.subrodape {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.subrodape button {
     box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.5);
     padding: 10px;
     border: none;
@@ -334,7 +341,8 @@ button {
     button {
         display: none;
     }
-    .links {
+
+    .subrodape {
         display: none;
     }
 }
