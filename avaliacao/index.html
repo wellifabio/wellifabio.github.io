@@ -112,17 +112,21 @@
         <button id="salvar" type="button" onclick="salvar()" class="oculto">Salvar</button>
         <button id="download" type="button" onclick="download()" class="oculto">Download</button>
     </footer>
-    <div>
-        <button
-            onclick="window.location.href='https://www.oitcinterfor.org/sites/default/files/file_publicacion/MSEP_Documento.pdf'">Fonte:
-            MSEP (Metodologia SENAI de Educação Profissional) 2013 pag. 191</button>
-        <button
-            onclick="window.location.href='https://senaiweb.fieb.org.br/areadocente/assets/Midia/2019/Livro_Msep_2019.pdf'">
-            MSEP 2019 pags. 125 a 133</button>
-        <br>Taxonomias de Objetivos Educacionais:
-        <button onclick="modalCognitivo.classList.remove('oculto')">Cognitivas</button>
-        <button onclick="modalPsicomotor.classList.remove('oculto')">Psicomotoras</button>
-        <button onclick="modalAfetivo.classList.remove('oculto')">Afetivas</button>
+    <div style="display:flex; flex-direction: column; align-items: center;">
+        <div>
+            <button
+                onclick="window.location.href='https://www.oitcinterfor.org/sites/default/files/file_publicacion/MSEP_Documento.pdf'">Fonte:
+                MSEP (Metodologia SENAI de Educação Profissional) 2013 pag. 191</button>
+            <button
+                onclick="window.location.href='https://senaiweb.fieb.org.br/areadocente/assets/Midia/2019/Livro_Msep_2019.pdf'">
+                MSEP 2019 pags. 125 a 133</button>
+        </div>
+        <div class="links">
+            Taxonomias de Objetivos Educacionais:
+            <button onclick="modalCognitivo.classList.remove('oculto')">Cognitivas</button>
+            <button onclick="modalPsicomotor.classList.remove('oculto')">Psicomotoras</button>
+            <button onclick="modalAfetivo.classList.remove('oculto')">Afetivas</button>
+        </div>
     </div>
     <div id="modalNiveis" class="modal oculto">
         <div class="area">

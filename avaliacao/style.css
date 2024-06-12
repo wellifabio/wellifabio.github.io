@@ -55,7 +55,7 @@ header button,
 header input,
 footer button {
     box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.5);
-    padding: 5px;
+    padding: 10px;
     border: none;
     font-weight: bold;
     margin: 5px;
@@ -310,6 +310,15 @@ button {
     border-bottom: 1px solid #ccc;
 }
 
+button {
+    box-shadow: 3px 2px 1px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border: none;
+    font-weight: bold;
+    margin: 5px;
+    border-radius: 25px;
+}
+
 .oculto {
     display: none;
 }
@@ -323,6 +332,9 @@ button {
     }
 
     button {
+        display: none;
+    }
+    .links {
         display: none;
     }
 }
