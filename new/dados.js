@@ -123,7 +123,7 @@ const portfolios = [
 		href: "https://caroliflow.000webhostapp.com"
 	},
 	{
-		text: "Igor Henrique GonÃ§alves",
+		text: "Igor Henrique Gonçalves",
 		href: "https://igorhenriqueg.github.io"
 	},
 	{
@@ -199,46 +199,46 @@ const projetos = [
 	},
 	{
 		href: "../assets/diversos/miniold.html",
-		text: "Web Site - Old<br (pt - br)"
+		text: "Web Site - Old (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/matematica.git",
-		text: "Math with Markdown<br>(pt-br)"
+		text: "Math with Markdown (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/projetofullexemplo.git",
-		text: "Full-Stack - ServiFacil - Servies Management<br>(pt-br)"
+		text: "Full-Stack - ServiFacil - Servies Management (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/escolaprismapug.git",
-		text: "School with prism and Pug<br>(pt-br)"
+		text: "School with prism and Pug (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/receitas_mongo_pug.git",
-		text: "Web Full-stack - Cookbook<br>(pt-br)"
+		text: "Web Full-stack - Cookbook (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/restaurante3des.git",
-		text: "Restaurant deliveries and location<br>(pt-br)"
+		text: "Restaurant deliveries and location (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/senai2022/blob/master/old/1des/fpoo/aula25/PetsLogin/doc/prototipo.pdf",
-		text: "Java Desktop - PetShop Solution example<br>(pt-br)"
+		text: "Java Desktop - PetShop Solution example (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/ProjetoHortelino/doc/prototipo.pdf",
-		text: "Java Desktop - Inventory and sales management<br>(pt-br)"
+		text: "Java Desktop - Inventory and sales management (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Estacionamento/docs/prototipo.pdf",
-		text: "Java Desktop - Park Solution example<br>(pt-br)"
+		text: "Java Desktop - Park Solution example (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Mapeador/docs/prototipo.pdf",
-		text: "Java Desktop - Small Nets Solution example<br>(pt-br)"
+		text: "Java Desktop - Small Nets Solution example (pt-br)"
 	},
 	{
 		href: "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Money/docs/prototipo.pdf",
-		text: "Java Desktop - Counting money Solution example<br>(pt-br)"
+		text: "Java Desktop - Counting money Solution example (pt-br)"
 	}
 ]

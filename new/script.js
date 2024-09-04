@@ -2,6 +2,7 @@ const apps = document.querySelector("#apps");
 const ports = document.querySelector("#ports");
 const projs = document.querySelector("#projs");
 const idade = document.querySelector("#idade");
+const ops = document.querySelector("nav");
 
 //Função para calcular idade
 function calcularIdade(nascimento) {
@@ -10,10 +11,13 @@ function calcularIdade(nascimento) {
 	var idade = new Date(diferenca);
 	return Math.abs(idade.getUTCFullYear() - 1970);
 }
+idade.innerHTML = calcularIdade("1980/09/08");
 
+//Função para mostrar os links
 async function getLinks(lista, alvo) {
 	await lista.forEach((app) => {
 		const div = document.createElement("div");
+		div.style.rotate = (Math.floor(Math.random() * 10) -5) + "deg";
 		const a = document.createElement("a");
 		a.href = app.href;
 		a.target = "_blank";
@@ -30,5 +34,6 @@ document.addEventListener("DOMContentLoaded", async function () {
 	await getLinks(projetos, projs);
 });
 
-
-idade.innerHTML = calcularIdade("1980/09/08");
+ops.querySelectorAll("button").forEach((op) => {
+	op.style.rotate = (Math.floor(Math.random() * 8) -3) + "deg";
+});
