@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-size: medium;
+    font-style: normal;
+}
+
+/* Variáveis para a paleta de cores*/
+:root {
+    --color-primary: #000000;
+    --color-secondary: #333;
+    --color-tertiary: #999;
+    --color-quaternary: #ccc;
+    --color-quinary: #FFF;
+    --color-transparent: rgba(20, 20, 20, 0.3);
+}
+
+body {
+    background: url("../assets/back.png") repeat-x fixed;
+    background-size: contain;
+    background-color: var(--color-secondary);
+    color: var(--color-quinary);
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.avatar {
+    background-image: url("../assets/avts/av1.webp");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    max-width: 200px;
+    max-height: 200px;
+    border-radius: 50%;
+    margin-top: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/avts/av6.webp");
+    transition: all 0.5s;
+}
+
+.avatar:active {
+    transform: scale(1);
+    background-image: url("../assets/avts/av5.webp");
+    transition: all 0.5s;
+}
+
+.avatar::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-transparent);
+    border-radius: 50%;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    text-shadow: 2px 2px 2px var(--color-quaternary);
+    transition: all 0.5s;
+}
+
+header h1:hover {
+    color: var(--color-quaternary);
+    text-shadow: 2px 2px 2px var(--color-primary);
+    font-size: 3em;
+    transition: all 0.5s;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 700px;
+}
+
+nav button{
+    width: 150px;
+    min-height: 115px;
+    background-image: url('./assets/postit.png');
+    background-size: cover;
+    background-color: none;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+    }
+
+    header h1:hover {
+        font-size: 2.5em;
+    }
+}
