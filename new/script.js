@@ -13,7 +13,7 @@ function calcularIdade(nascimento) {
 }
 idade.innerHTML = calcularIdade("1980/09/08");
 
-//Função para mostrar os links
+//Função para mostrar os links nos postits
 async function getLinks(lista, alvo) {
 	await lista.forEach((app) => {
 		const div = document.createElement("div");
