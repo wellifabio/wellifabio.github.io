@@ -1,5 +1,5 @@
 body {
-    background: url("./assets/back.png") repeat-x fixed;
+    background: url("../assets/back.png") repeat-x fixed;
     background-size: contain;
     background-color: #aba;
     padding-top: 10px;
@@ -104,19 +104,19 @@ footer a {
 }
 
 .postit {
-    background-image: url("./assets/postit.png");
+    background-image: url("../assets/postit.png");
 }
 
 .postitblue {
-    background-image: url("./assets/postitblue.png");
+    background-image: url("../assets/postitblue.png");
 }
 
 .postitred {
-    background-image: url("./assets/postitred.png");
+    background-image: url("../assets/postitred.png");
 }
 
 .postitgreen {
-    background-image: url("./assets/postitgreen.png");
+    background-image: url("../assets/postitgreen.png");
 }
 
 .menu {
