@@ -121,6 +121,45 @@ nav button:hover{
     font-size: large;
 }
 
+main{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main button{
+    width: 100%;
+    max-width: 140px;
+    min-height: 100px;
+    background-image: url('../assets/postit.png');
+    background-size: cover;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-style: italic;
+    transition: all 0.3s;
+    background-color: var(--color-secondary);
+    margin: 10px;
+}
+
+main button:hover{
+    transform: scale(1.1);
+    background-image: url('../assets/postitgreen.png');
+    transition: all 0.3s;
+    font-size: large;
+}
+
+h2{
+    font-size: 1.5em;
+    color: var(--color-primary);
+    text-shadow: 2px 2px 2px var(--color-tertiary);
+    text-align: center;
+    max-width: 500px;
+    margin: 20px;
+}
+
 #about{
     width: 100%;
     max-width: 1000px;
@@ -139,6 +178,12 @@ nav button:hover{
     font-size: 1.4em;
     color: var(--color-quaternary);
     text-shadow: 2px 2px 2px var(--color-primary);
+}
+
+#about p:hover{
+    font-size: 1.6em;
+    cursor: pointer;
+    transition: all 0.5s;
 }
 
 #about img{
