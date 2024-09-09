@@ -62,7 +62,8 @@ body {
     content: "";
     display: block;
     width: 100%;
-    height: 100%;;
+    height: 100%;
+    ;
 }
 
 header {
@@ -92,7 +93,7 @@ header h1:hover {
     transition: all 0.5s;
 }
 
-nav{
+nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -101,7 +102,7 @@ nav{
     max-width: 500px;
 }
 
-nav button{
+nav button {
     width: 130px;
     min-height: 100px;
     background-image: url('../assets/postit.png');
@@ -114,14 +115,14 @@ nav button{
     background-color: var(--color-secondary);
 }
 
-nav button:hover{
+nav button:hover {
     transform: scale(1.1);
     background-image: url('../assets/postitred.png');
     transition: all 0.3s;
     font-size: large;
 }
 
-main{
+main {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -129,7 +130,7 @@ main{
     justify-content: center;
 }
 
-main button{
+main button {
     width: 100%;
     max-width: 140px;
     min-height: 100px;
@@ -144,14 +145,14 @@ main button{
     margin: 10px;
 }
 
-main button:hover{
+main button:hover {
     transform: scale(1.1);
     background-image: url('../assets/postitgreen.png');
     transition: all 0.3s;
     font-size: large;
 }
 
-h2{
+h2 {
     font-size: 1.5em;
     color: var(--color-primary);
     text-shadow: 2px 2px 2px var(--color-tertiary);
@@ -160,7 +161,7 @@ h2{
     margin: 20px;
 }
 
-#about{
+#about {
     width: 100%;
     max-width: 1000px;
     display: flex;
@@ -169,7 +170,7 @@ h2{
     justify-content: space-around;
 }
 
-#about p{
+#about p {
     width: 100%;
     max-width: 500px;
     text-align: justify;
@@ -180,13 +181,13 @@ h2{
     text-shadow: 2px 2px 2px var(--color-primary);
 }
 
-#about p:hover{
+#about p:hover {
     font-size: 1.6em;
     cursor: pointer;
     transition: all 0.5s;
 }
 
-#about img{
+#about img {
     width: 100%;
     max-width: 200px;
     height: auto;
@@ -194,12 +195,14 @@ h2{
     transition: all 0.5s;
 }
 
-#about img:hover{
+#about img:hover {
     transform: scale(1.1);
     transition: all 0.5s;
 }
 
-#apps, #projs, #ports{
+#apps,
+#projs,
+#ports {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -209,7 +212,9 @@ h2{
     margin: 20px;
 }
 
-#apps div, #projs div, #ports div{
+#apps div,
+#projs div,
+#ports div {
     width: 180px;
     min-height: 130px;
     background-size: cover;
@@ -227,7 +232,9 @@ h2{
     transition: all 0.5s;
 }
 
-#apps a, #projs a, #ports a{
+#apps a,
+#projs a,
+#ports a {
     width: 100%;
     height: 100%;
     text-decoration: none;
@@ -237,29 +244,36 @@ h2{
     text-align: center;
 }
 
-#apps div{
+#apps div {
     background-image: url('../assets/postitgreen.png');
 }
 
-#projs div{
+#projs div {
     background-image: url('../assets/postitred.png');
 }
 
-#ports div{
+#ports div {
     background-image: url('../assets/postitblue.png');
 }
 
 @media screen and (max-width: 600px) {
-    header, #about, #apps, #projs, #ports {
+
+    header,
+    #about {
         flex-direction: column;
     }
 
-    nav{
+    header nav {
         display: none;
+    }
+
+    footer nav {
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
     }
 
     header h1:hover {
         font-size: 2.5em;
     }
-    
 }
