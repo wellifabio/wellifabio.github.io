@@ -1,0 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-size: medium;
+    font-style: normal;
+}
+
+/* Variáveis para a paleta de cores*/
+:root {
+    --color-primary: #000000;
+    --color-secondary: #333;
+    --color-tertiary: #999;
+    --color-quaternary: #ccc;
+    --color-quinary: #FFF;
+    --color-transparent: rgba(20, 20, 20, 0.3);
+}
+
+body {
+    background: url("../assets/back.png") repeat-x fixed;
+    background-size: contain;
+    background-color: var(--color-secondary);
+    color: var(--color-quinary);
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.5s;
+}
+
+.avatar {
+    background-image: url("../assets/avts/av1.webp");
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    max-width: 250px;
+    max-height: 250px;
+    border-radius: 50%;
+    margin-top: 20px;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.avatar:hover {
+    transform: scale(1.1);
+    background-image: url("../assets/avts/av6.webp");
+    background-size: cover;
+    transition: all 0.5s;
+}
+
+.avatar:active {
+    transform: scale(1.1);
+    background-image: url("../assets/avts/av5.webp");
+    transition: all 0.5s;
+}
+
+.avatar::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;;
+}
+
+header {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    text-shadow: 2px 2px 2px var(--color-quaternary);
+    text-align: center;
+    margin: 20px;
+    transition: all 0.5s;
+}
+
+header h1:hover {
+    color: var(--color-quaternary);
+    text-shadow: 2px 2px 2px var(--color-primary);
+    font-size: 3em;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 500px;
+}
+
+nav button{
+    width: 130px;
+    min-height: 100px;
+    background-image: url('../assets/postit.png');
+    background-size: cover;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-style: italic;
+    transition: all 0.3s;
+    background-color: var(--color-secondary);
+}
+
+nav button:hover{
+    transform: scale(1.1);
+    background-image: url('../assets/postitred.png');
+    transition: all 0.3s;
+    font-size: large;
+}
+
+#about{
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#about p{
+    width: 100%;
+    max-width: 500px;
+    text-align: justify;
+    margin: 10px;
+    line-height: 1.3;
+    font-size: 1.4em;
+    color: var(--color-quaternary);
+    text-shadow: 2px 2px 2px var(--color-primary);
+}
+
+#about img{
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    margin: 10px;
+    transition: all 0.5s;
+}
+
+#about img:hover{
+    transform: scale(1.1);
+    transition: all 0.5s;
+}
+
+#apps, #projs, #ports{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 20px;
+}
+
+#apps div, #projs div, #ports div{
+    width: 180px;
+    min-height: 130px;
+    background-size: cover;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    font-style: italic;
+    transition: all 0.3s;
+    background-color: var(--color-secondary);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: all 0.5s;
+}
+
+#apps a, #projs a, #ports a{
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: var(--color-secondary);
+    font-style: oblique;
+    font-size: 1.2em;
+    text-align: center;
+}
+
+#apps div{
+    background-image: url('../assets/postitgreen.png');
+}
+
+#projs div{
+    background-image: url('../assets/postitred.png');
+}
+
+#ports div{
+    background-image: url('../assets/postitblue.png');
+}
+
+@media screen and (max-width: 600px) {
+    header, #about, #apps, #projs, #ports {
+        flex-direction: column;
+    }
+
+    nav{
+        display: none;
+    }
+
+    header h1:hover {
+        font-size: 2.5em;
+    }
+    
+}

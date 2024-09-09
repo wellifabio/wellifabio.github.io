@@ -1,27 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../assets/icone.png">
-    <link rel="stylesheet" type="text/css" href="./index.css" />
-    <title>Wellington Teacher</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="../assets/icone.png">
+	<link rel="stylesheet" type="text/css" href="./style.css" />
+	<title>Wellington Teacher</title>
 </head>
-<body onload="load()">
-    <header>
-        <div>
-            <div class="eu" alt="meu avatar"></div>
-            <h1>Wellington Teacher</h1>
-        </div>
-        <nav>
-            <button>Aulas</button>
-            <button>Projetos</button>
-            <button>Portfolios</button>
-        </nav>
-    </header>
-    <main></main>
-    <footer></footer>
+
+<body>
+	<header>
+		<div class="avatar" title="Meu avatar"></div>
+		<h1>Wellington Martins</h1>
+		<nav>
+			<button onclick="window.location.href='#apps'">Aplicações</button>
+			<button onclick="window.location.href='#ports'">Portfolios</button>
+			<button onclick="window.location.href='#projs'">Projetos</button>
+		</nav>
+	</header>
+	<main>
+		<section id="about">
+			<a href="https://linktr.ee/wellifabio" target="_blank"><img src="../assets/wellifabio.png" alt="LinkTree"
+					title="LinkTree" /></a>
+			<div>
+				<p>Technicals Courses Teacher, IT Tecnologian, FullStack Developer (NodeJS, js, ts, Java Spring, JSP,
+					PHP,
+					React Native, Expo, Flutter, Dart), Azure Cloud Certified and Google Cloud Engineer.</p>
+				<p>Brazilian, married, <label id="idade"></label> years old, two children</p>
+			</div>
+		</section>
+		<section id="apps"></section>
+		<section id="ports"></section>
+		<section id="projs"></section>
+	</main>
+	<footer></footer>
 </body>
+<script src="dados.js"></script>
 <script src="script.js"></script>
+
 </html>
