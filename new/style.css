@@ -276,4 +276,11 @@ h2 {
     header h1:hover {
         font-size: 2.5em;
     }
+
+    #apps div,
+    #projs div,
+    #ports div {
+        width: 150px;
+        min-height: 110px;
+    }
 }
