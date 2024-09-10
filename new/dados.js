@@ -16,6 +16,10 @@ const aplicacoes = [
 		text: "JS: Gantt chart generator"
 	},
 	{
+		href: "https://permisso.vercel.app/",
+		text: "Blog com Firebase (pt-br)"
+	},
+	{
 		href: "../bitola",
 		text: "JS: Cálc. Bitola p/ Cabo de Cobre (pt-br)"
 	},
