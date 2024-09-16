@@ -70,7 +70,7 @@ const aplicacoes = [
 	{
 		href: "../petshop",
 		text: "PetShop App Basic/PetShop básico Arquivos Locais (pt - br)"
-	}
+	},
 	{
 		href: "https://github.com/wellifabio/matematica.git",
 		text: "Mathematical Expressions with Markdown (pt - br)"
