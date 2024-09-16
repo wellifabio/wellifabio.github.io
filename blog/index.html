@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="../assets/eu.jpg" type="image/x-icon">
+    <link rel="shortcut icon" href="./assets/icone.webp" type="image/x-icon">
+    <title>Wellington</title>
+</head>
+
+<body>
+    <header>
+        <h1>Wellington Hobbyes Home</h1>
+        <img src="../assets/eu.jpg" alt="Foto do Wellington">
+    </header>
+    <main>
+        <div class="conteudo">
+            <p id="texto">
+            </p>
+            <div class="botoes">
+                <button id="del">Delete</button>
+                <button onclick="next()">Next</button>
+            </div>
+        </div>
+        <img id="img" alt="Imagem ilustrativa carregada do banco de dados">
+    </main>
+    <footer>
+        <h3>Desenvolvido por Wellington</h3>
+        <button onclick="novo.classList.remove('oculto')">Nova postagem</button>
+    </footer>
+    <section id="novo" class="modal oculto">
+        <div class="janela">
+            <h2>Postar conteúdos</h2>
+            <form id="form">
+                <input type="text" name="img" placeholder="URL da imagem">
+                <textarea name="texto" placeholder="Texto de conteúdo"></textarea>
+                <div>
+                    <input type="reset" onclick="novo.classList.add('oculto')" value="Limpar">
+                    <input type="submit" value="Postar">
+                </div>
+            </form>
+        </div>
+    </section>
+</body>
+<script src="firebase.js"></script>
+<script src="./src/script.js"></script>
+<script type="module" src="./src/crud.js"></script>
+</script>
+
+</html>

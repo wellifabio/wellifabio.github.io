@@ -16,7 +16,7 @@ const aplicacoes = [
 		text: "JS: Gantt chart generator"
 	},
 	{
-		href: "https://permisso.vercel.app/",
+		href: "../blog/",
 		text: "Blog com Firebase (pt-br)"
 	},
 	{
