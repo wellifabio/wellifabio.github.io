@@ -222,7 +222,7 @@ const projetos = [
 		text: "School with prism and Pug (pt-br)"
 	},
 	{
-		href: "https://github.com/wellifabio/receitas_mongo_pug.git",
+		href: "https://cookwellifabio.vercel.app/",
 		text: "Web Full-stack - Cookbook (pt-br)"
 	},
 	{
