@@ -14,6 +14,7 @@
 |./assets |Imagens/Fotos diversos AutoCad-3D e Hobbies|
 |./avaliacao |Aplicação Web Front-End para montagem de critérios de avaliação MSEP|
 |./bitola |Calculadora de bitola de cabos elétricos, App Prof. Kazu|
+|./blog |Meus artigos postados como teste com **Firebase**|
 |./cantina |Dados para utilzar em aula de Excel e PowerBI|
 |./canvas |App Quadro Canvas |Preencha sua idéia de negócio|
 |./chat |Sala de bate papo|
@@ -29,6 +30,8 @@
 |./rand |Gerador de dados aleatórios (Telefones, CPF, Nomes, Endereços na região de SP,  Placas de automóveis Mercosul)|
 |./sena |Preenchedor de jogos ou aleatórios JavaScript (Aula demonstração)|
 |./timeline |App Gráfico de Gantt em Inglês.|
+|./old |Versão anterior do portfolio.|
+|./new |Versão atual do portfolio.|
 
 ## Para testar
 - 1 Baixe, instale e execute o **[Back-end](https://github.com/wellifabio/alugueiscomposite)**
