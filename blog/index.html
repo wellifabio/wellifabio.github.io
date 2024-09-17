@@ -20,6 +20,7 @@
             <p id="texto">
             </p>
             <div class="botoes">
+                <button onclick="back()">Back</button>
                 <button id="del">Delete</button>
                 <button onclick="next()">Next</button>
             </div>
@@ -28,14 +29,16 @@
     </main>
     <footer>
         <h3>Desenvolvido por Wellington</h3>
-        <button onclick="novo.classList.remove('oculto')">Nova postagem</button>
+        <button id="btNovo" onclick="novo.classList.remove('oculto')">Nova postagem</button>
+        <button id="btLogin" onclick="login.classList.remove('oculto')">Login</button>
+        <button id="btSair" onclick="sair()">Sair</button>
     </footer>
     <section id="novo" class="modal oculto">
         <div class="janela">
             <h2>Postar conteúdos</h2>
             <form id="form">
-                <input type="text" name="img" placeholder="URL da imagem">
-                <textarea name="texto" placeholder="Texto de conteúdo"></textarea>
+                <input type="text" name="img" placeholder="URL da imagem" required>
+                <textarea name="texto" placeholder="Texto de conteúdo" required></textarea>
                 <div>
                     <input type="reset" onclick="novo.classList.add('oculto')" value="Limpar">
                     <input type="submit" value="Postar">
@@ -43,18 +46,32 @@
             </form>
         </div>
     </section>
+    <section id="login" class="modal oculto">
+        <div class="janela">
+            <h2>Postar conteúdos</h2>
+            <form id="fLogin">
+                <input type="text" name="usuario" placeholder="Usuário" required>
+                <input type="password" name="senha" placeholder="Senha" required>
+                <div>
+                    <input type="reset" onclick="login.classList.add('oculto')" value="Limpar">
+                    <input type="submit" value="Login">
+                </div>
+            </form>
+        </div>
+    </section>
 </body>
 <script>
     const firebaseConfig = {
-    apiKey: "AIzaSyA7noiQG5tJPT-Ud0kmzht18FX5XBh1uIE",
-    authDomain: "permisso-82d34.firebaseapp.com",
-    projectId: "permisso-82d34",
-    storageBucket: "permisso-82d34.appspot.com",
-    messagingSenderId: "28792994396",
-    appId: "1:28792994396:web:ec91908235ceaba1118499",
-    measurementId: "G-R84ZL569JR"
-};
+        apiKey: "AIzaSyA7noiQG5tJPT-Ud0kmzht18FX5XBh1uIE",
+        authDomain: "permisso-82d34.firebaseapp.com",
+        projectId: "permisso-82d34",
+        storageBucket: "permisso-82d34.appspot.com",
+        messagingSenderId: "28792994396",
+        appId: "1:28792994396:web:ec91908235ceaba1118499",
+        measurementId: "G-R84ZL569JR"
+    };
 </script>
+<script src="../env.js"></script>
 <script src="./src/script.js"></script>
 <script type="module" src="./src/crud.js"></script>
 </script>

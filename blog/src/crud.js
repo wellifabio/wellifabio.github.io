@@ -15,7 +15,7 @@ const getConteudos = async () => {
         d.id = doc.id;
         conts.push(d);
     });
-    console.log(conts);
+    console.table(conts);
 }
 
 //Enviar novo conteúdo para o Firestore, na coleção "publicacoes"
@@ -32,8 +32,10 @@ const excluirConteudo = async (id) => {
 //Processar o clique no botão de excluir
 const excluir = document.getElementById("del");
 excluir.addEventListener("click", async () => {
-    await excluirConteudo(excluir.id);
-    window.location.reload();
+    if (confirm("Deseja realmente excluir?")) {
+        await excluirConteudo(excluir.id);
+        window.location.reload();
+    }
 });
 
 //Processar o submit do formulário
@@ -46,6 +48,22 @@ form.addEventListener("submit", async (e) => {
     }
     await enviarConteudo(conteudo);
     window.location.reload();
+});
+
+//Processar o formulario de login
+const login = document.getElementById("fLogin");
+login.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const user = {}
+    user.usuario = login.usuario.value;
+    user.senha = login.senha.value;
+    if (user.usuario === USER && user.senha === SENHA) {
+        user.senha = null;
+        window.localStorage.setItem('user', JSON.stringify(user));
+        window.location.reload();
+    } else {
+        alert("Usuário ou senha inválidos");
+    }
 });
 
 await getConteudos();
