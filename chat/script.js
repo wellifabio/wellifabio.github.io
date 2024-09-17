@@ -1,4 +1,4 @@
-const socket = io("http://localhost:3000");
+const socket = io("https://wellichatback.vercel.app/");//io("http://localhost:3000");
 const envia = document.querySelector("#envia");
 const recebe = document.querySelector("#recebe");
 var nick = null;
