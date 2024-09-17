@@ -222,10 +222,6 @@ const projetos = [
 		text: "School with prism and Pug (pt-br)"
 	},
 	{
-		href: "https://cookwellifabio.vercel.app/",
-		text: "Web Full-stack - Cookbook (pt-br)"
-	},
-	{
 		href: "https://github.com/wellifabio/restaurante3des.git",
 		text: "Restaurant deliveries and location (pt-br)"
 	},
