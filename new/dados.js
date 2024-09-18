@@ -244,5 +244,13 @@ const projetos = [
 	{
 		href: "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Money/docs/prototipo.pdf",
 		text: "Java Desktop - Counting money Solution example (pt-br)"
+	},
+	{
+		href: "../assets/fatec_artigopooe.pdf",
+		text: "Artigo - Programação Orientada a Objetos em Equipes (pt-br)"
+	},
+	{
+		href: "../assets/fatec_monografiapooe.pdf",
+		text: "Monografia - Graduação em Processamento de Dados (pt-br)"
 	}
 ]
