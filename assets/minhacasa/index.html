@@ -10,9 +10,8 @@
 </head>
 <style>
     body {
-        background: url("../back.png',") repeat-x fixed;
         background-size: contain;
-        background-color: #aba;
+        background-color: #000;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -34,10 +33,10 @@
         'fogao-2023.jpg',
         'fogao2-2023.jpg',
         'churrasqueira-2023.jpg',
-        'churrasqueira2-2023.jpg',
+        'churrasqueira02-2023.jpg',
         'lazer-2023.jpg',
-        'vista-frente-2023.jpg',
-        'vista-frente2-2023.jpg',
+        'vista-frente-2024.jpg',
+        'vista-frente2-2024.jpg',
         'gatao.jpg',
         'frente03.jpg',
         'frente01.jpg',
@@ -76,7 +75,6 @@
     ]
     files.forEach(file => {
         const img = document.createElement('img');
-        img.style.width = '800px';
         img.src = file;
         img.alt = file.split('.')[1].substring(1).toUpperCase();
         document.body.appendChild(img);

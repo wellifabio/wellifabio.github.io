@@ -10,9 +10,8 @@
 </head>
 <style>
     body {
-        background: url("../back.png") repeat-x fixed;
         background-size: contain;
-        background-color: #aba;
+        background-color: #000;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
@@ -48,7 +47,6 @@
     ]
     files.forEach(file => {
         const img = document.createElement('img');
-        img.style.width = '800px';
         img.src = file;
         img.alt = file.split('.')[1].substring(1).toUpperCase();
         document.body.appendChild(img);
