@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/ico.png" type="image/x-icon">
+    <title>Livro de Receitas</title>
+</head>
+
+<body onload="iniciar()">
+    <header>
+        <h1>Minhas Receitas</h1>
+        <div>
+            <button onclick="modalCreate.classList.remove('oculto');">Cadastrar</button>
+            <button onclick="logout()">Sair</button>
+        </div>
+    </header>
+    <main>
+        <section id="cards">
+        </section>
+        <section class="modal oculto" id="modalCreate">
+            <form class="form" action="/create" method="POST">
+                <h2>Adicionar Receita</h2>
+                <div style="justify-content: space-around;">
+                    <h3>Tipo:</h3>
+                    <select name="tipo" placeholder="Tipo">
+                        <option value="salgado">Salgada</option>
+                        <option value="doce">Doce</option>
+                    </select>
+                </div>
+                <div>
+                    <label>Nome:</label>
+                    <input type="text" name="nome" placeholder="Nome da receita" required="required" />
+                </div>
+                <div>
+                    <label>Ingredientes:</label>
+                    <textarea name="ingredientes" placeholder="Ingredientes" required="required"></textarea>
+                </div>
+                <div>
+                    <label>Modo de Preparo:</label>
+                    <textarea name="modoPreparo" placeholder="Modo de Preparo" required="required"></textarea>
+                </div>
+                <div>
+                    <label>Imagem:</label>
+                    <input type="file" onchange="prevImg('img',this)" accept="image/jpeg, image/png" />
+                    <img id="img" src="./assets/default.png" alt="Imagem" />
+                    <input type="hidden" name="foto" id="fileimg" />
+                </div>
+                <div class="botoes">
+                    <button type="submit">Adicionar</button>
+                    <button type="reset" onclick="modalCreate.classList.add('oculto');">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="./uteis.js"></script>
+<script src="./admin.js"></script>
+
+</html>

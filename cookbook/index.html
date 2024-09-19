@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./assets/ico.png" type="image/x-icon">
+    <title>Livro de Receitas</title>
+</head>
+
+<body onload="iniciar()">
+    <header>
+        <h1>Minhas Receitas</h1>
+        <div>
+            <button onclick="modalLogin.classList.remove('oculto');">Entrar</button>
+        </div>
+    </header>
+    <main>
+        <section id="cards">
+        </section>
+        <section class="modal oculto" id="modalLogin">
+            <form class="form" action="/login" id="formLogin" style="height:200px">
+                <h2>Fazer login</h2>
+                <div>
+                    <label>E-mail:</label>
+                    <input type="text" name="email" placeholder="Email" required="required" />
+                </div>
+                <div>
+                    <label>Senha:</label>
+                    <input type="password" name="senha" required="required" />
+                </div>
+                <div class="botoes">
+                    <button type="submit">Login</button>
+                    <button type="reset" onclick="modalLogin.classList.add('oculto');">Cancelar</button>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+<script src="./uteis.js"></script>
+<script src="./index.js"></script>
+
+</html>
