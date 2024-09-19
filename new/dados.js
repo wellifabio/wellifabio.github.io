@@ -246,6 +246,10 @@ const projetos = [
 		text: "Java Desktop - Counting money Solution example (pt-br)"
 	},
 	{
+		href: "../receitas",
+		text: "Cookbook (pt-br)"
+	},
+	{
 		href: "../assets/fatec_artigopooe.pdf",
 		text: "Artigo - Programação Orientada a Objetos em Equipes (pt-br)"
 	},
