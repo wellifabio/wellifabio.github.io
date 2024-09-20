@@ -246,8 +246,8 @@ const projetos = [
 		text: "Java Desktop - Counting money Solution example (pt-br)"
 	},
 	{
-		href: "../receitas",
-		text: "Cookbook (pt-br)"
+		href: "../cookbook",
+		text: "Cookbook - Web Full-stack (pt-br)"
 	},
 	{
 		href: "../assets/fatec_artigopooe.pdf",

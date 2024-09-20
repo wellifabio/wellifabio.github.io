@@ -21,10 +21,10 @@
         <section id="cards">
         </section>
         <section class="modal oculto" id="modalCreate">
-            <form class="form" action="/create" method="POST">
+            <form id="cadastro" class="form" action="/create" method="POST">
                 <h2>Adicionar Receita</h2>
-                <div style="justify-content: space-around;">
-                    <h3>Tipo:</h3>
+                <div>
+                    <b>Tipo:</b>
                     <select name="tipo" placeholder="Tipo">
                         <option value="salgado">Salgada</option>
                         <option value="doce">Doce</option>
@@ -34,23 +34,19 @@
                     <label>Nome:</label>
                     <input type="text" name="nome" placeholder="Nome da receita" required="required" />
                 </div>
-                <div>
-                    <label>Ingredientes:</label>
-                    <textarea name="ingredientes" placeholder="Ingredientes" required="required"></textarea>
-                </div>
-                <div>
-                    <label>Modo de Preparo:</label>
-                    <textarea name="modoPreparo" placeholder="Modo de Preparo" required="required"></textarea>
-                </div>
+                <label>Ingredientes:</label>
+                <textarea name="ingredientes" placeholder="Ingredientes" required="required"></textarea>
+                <label>Modo de Preparo:</label>
+                <textarea name="modoPreparo" placeholder="Modo de Preparo" required="required"></textarea>
                 <div>
                     <label>Imagem:</label>
                     <input type="file" onchange="prevImg('img',this)" accept="image/jpeg, image/png" />
-                    <img id="img" src="./assets/default.png" alt="Imagem" />
-                    <input type="hidden" name="foto" id="fileimg" />
                 </div>
+                <input type="hidden" name="foto" id="fileimg" />
+                <img id="img" src="./assets/default.png" alt="Imagem" />
                 <div class="botoes">
-                    <button type="submit">Adicionar</button>
                     <button type="reset" onclick="modalCreate.classList.add('oculto');">Cancelar</button>
+                    <button type="submit">Adicionar</button>
                 </div>
             </form>
         </section>

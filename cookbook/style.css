@@ -7,9 +7,18 @@
     font-size: medium;
 }
 
+:root {
+    --color-primary: #000000;
+    --color-secondary: #233c4c;
+    --color-tertiary: #32698f;
+    --color-quaternary: #fff8ac;
+    --color-quinary: #FFFFFF;
+    --color-transparent: rgba(26, 159, 142, 0.3);
+}
+
 body {
-    background-color: #eee;
-    color: #133;
+    background-color: var(--color-quinary);
+    color: var(--color-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,23 +28,19 @@ body {
 }
 
 header {
-    background-color: #133;
+    background-color: var(--color-secondary);
     width: 100vw;
     height: 10vh;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    box-shadow: 0 0 10px #133;
-}
-
-h1 {
-    color: #eee;
-    font-size: 30px;
+    text-align: center;
+    box-shadow: 0 0 10px var(--color-primary);
 }
 
 header button {
-    background-color: #eee;
-    color: #133;
+    background-color: var(--color-quinary);
+    color: var(--color-secondary);
     font-size: 20px;
     border: none;
     border-radius: 5px;
@@ -45,9 +50,19 @@ header button {
 }
 
 header button:hover {
-    background-color: #133;
+    background-color: var(--color-tertiary);
     box-shadow: 0 0 10px #eee;
-    color: #eee;
+    color: var(--color-quinary);
+}
+
+header div {
+    display: flex;
+    flex-direction: row;
+}
+
+h1 {
+    color: var(--color-quinary);
+    font-size: 30px;
 }
 
 main {
@@ -64,13 +79,13 @@ main::-webkit-scrollbar {
 }
 
 main::-webkit-scrollbar-track {
-    background: rgb(231, 255, 192);
+    background: var(--color-quaternary);
 }
 
 main::-webkit-scrollbar-thumb {
-    background-color:  #133;
+    background-color: #133;
     border-radius: 10px;
-    border: 1px solid rgb(231, 255, 192);
+    border: 1px solid var(--color-tertiary);
 }
 
 #cards {
@@ -80,38 +95,12 @@ main::-webkit-scrollbar-thumb {
     justify-content: center;
 }
 
-.btUpdate{
-    position: relative;
-    left: 250px;
-    top: -43px;
+.doce {
+    background-color: var(--color-quinary);
 }
 
-.card {
-    max-width: 350px;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    box-shadow: 0 0 10px #133;
-}
-
-.doce{
-    background-color: #ffe;
-}
-
-.salgado{
-    background-color: #ffec96;
-}
-
-.card_header {
-    background: #133;
-    border-radius: 5px;
-    height: 30px;
-    color: #eee;
-    padding: 3px;
+.salgado {
+    background-color: var(--color-quaternary);
 }
 
 .card div {
@@ -121,46 +110,74 @@ main::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
-.card input, select, textarea{
-    border:none;
-    box-shadow: 0 0 10px #133;
-    background:transparent;
+.card {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color-secondary);
+}
+
+.card_header {
+    background: var(--color-secondary);
+    border-radius: 5px;
+    color: #eee;
+}
+
+.card input,
+select,
+textarea {
+    border: none;
+    box-shadow: 0 0 10px var(--color-secondary);
+    background: transparent;
     padding: 5px;
     margin: 5px;
 }
 
-.card input, textarea{
+.card input,
+textarea {
     width: 100%;
 }
 
-.card textarea{
+.card textarea {
     height: 60px;
 }
 
 
 .btUpDel {
-    background-color: rgb(110, 16, 16);
-    color: #eee;
-    padding: 10px;
+    background-color: var(--color-quaternary);
+    color: var(--color-secondary);
+    padding: 5px;
     padding-left: 13px;
     padding-right: 13px;
     font-size: 20px;
     border: none;
     border-radius: 5px;
     margin-left: 5px;
-    width: 40px;
+    width: fit-content;
+    margin: 10px;
+    box-shadow: 0 0 10px var(--color-secondary);
     cursor: pointer;
 }
+
 .btUpDel:hover {
-    background-color: #eee;
-    box-shadow: 0 0 10px rgb(110, 16, 16);
-    color: rgb(110, 16, 16);
+    background-color: var(--color-primary);
+    box-shadow: 0 0 10px var(--color-quinary);
+    color: var(--color-secondary);
+}
+
+label,
+b {
+    padding: 10px;
 }
 
 .img {
     width: 100%;
-    height: 300px;
-    background-color: #eee;
+    max-width: 400px;
+    background-color: var(--color-quinary);
 }
 
 .modal {
@@ -173,42 +190,40 @@ main::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.5);
 }
 
-.form {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    height: 600px;
-    background-color: #133;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    justify-content: space-between;
-    box-shadow: 0 0 10px #eee;
-    position: relative;
-    top: 10px;
-    color: #eee;
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 10px;
+    width: 100%;
+    max-width: 600px;
+    overflow-y: auto;
+}
+
+.form {
+    background-color: var(--color-secondary);
+    border-radius: 10px;
+    box-shadow: 0 0 10px var(--color-quaternary);
+    color: var(--color-quaternary);
 }
 
 .form button {
-    background-color: rgb(110, 16, 16);
-    color: #eee;
+    background-color: var(--color-quaternary);
+    color: var(--color-secondary);
     padding: 10px;
+    margin: 5px;
     padding-left: 13px;
     padding-right: 13px;
     font-size: 20px;
     border: none;
     border-radius: 5px;
-    margin-left: 20px;
     cursor: pointer;
 }
 
 .form button:hover {
-    background-color: #eee;
-    box-shadow: 0 0 10px rgb(110, 16, 16);
-    color: rgb(110, 16, 16);
+    background-color: var(--color-secondary);
+    box-shadow: 0 0 10px var(--color-quaternary);
+    color: var(--color-quaternary);
 }
 
 .form div {
@@ -218,22 +233,15 @@ main::-webkit-scrollbar-thumb {
     align-items: center;
 }
 
-.form img {
-    width: 250px;
-    height: 180px;
-}
-
 .form input {
     width: 100%;
-    height: 30px;
     border: none;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     font-size: 15px;
 }
 
 .form select {
-    height: 40px;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -244,22 +252,21 @@ main::-webkit-scrollbar-thumb {
 .form label {
     width: 160px;
     font-size: 16px;
-    margin-bottom: 10px;
+    margin: 5px;
 }
 
 .form textarea {
-    width: 100%;
+    width: 95%;
     height: 50px;
     border: none;
     border-radius: 5px;
     padding: 10px;
     font-size: 15px;
-    margin-bottom: 10px;
     background-color: #eee;
 }
 
 .botoes {
-    max-width: 250px;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -270,44 +277,18 @@ main::-webkit-scrollbar-thumb {
 }
 
 @media(max-width:600px) {
-    .form {
-        width: 95%;
-        height: 95%;
-        margin: 0;
-        display: inline;
-        flex-wrap: wrap;
-        text-align: center;
-        position: absolute;
-    }
-
-    .form button {
-        font-size: small;
-    }
-
-    .form input {
-        font-size: small;
-        margin: 5px;
-    }
-
-    .form label {
-        display: none;
-    }
-
-    .form textarea {
-        margin: 5px;
-        height: 30px;
-    }
-
     h1 {
         font-size: medium;
     }
 
-    header buttom {
-        font-size: 14px;
+    header button {
+        font-size: 16px;
+        font-weight: bold;
+        padding: 5px;
+        margin: 3px;
     }
 
-    .form img {
-        width: 200px;
-        height: 150px;
+    form{
+        max-height: 60vh;
     }
 }
