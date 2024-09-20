@@ -201,6 +201,8 @@ form {
 }
 
 .form {
+    position: relative;
+    top: 10px;
     background-color: var(--color-secondary);
     border-radius: 10px;
     box-shadow: 0 0 10px var(--color-quaternary);
@@ -257,7 +259,7 @@ form {
 
 .form textarea {
     width: 95%;
-    height: 50px;
+    min-height: 30px;
     border: none;
     border-radius: 5px;
     padding: 10px;
@@ -288,7 +290,12 @@ form {
         margin: 3px;
     }
 
-    form{
+    form {
+        max-width: 95%;
+    }
+
+    .form {
+        max-width: 95%;
         max-height: 60vh;
     }
 }
