@@ -183,7 +183,6 @@ button {
         height: 300px;
     }
 
-    header,
     main {
         flex-direction: column-reverse;
     }
