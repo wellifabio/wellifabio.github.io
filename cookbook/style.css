@@ -103,15 +103,9 @@ main::-webkit-scrollbar-thumb {
     background-color: var(--color-quaternary);
 }
 
-.card div {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
 .card {
     width: fit-content;
+    max-width: 400px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -119,6 +113,13 @@ main::-webkit-scrollbar-thumb {
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0 0 10px var(--color-secondary);
+}
+
+.card div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .card_header {
