@@ -94,7 +94,7 @@ p {
     align-items: center;
 }
 
-button {
+button, input[type="submit"] {
     width: fit-content;
     max-width: 250px;
     padding: 10px;
