@@ -55,6 +55,9 @@ const login = document.getElementById("fLogin");
 login.addEventListener("submit", async (e) => {
     e.preventDefault();
     if (login.usuario.value === USER && login.senha.value === SENHA) {
+		const user = {
+			usuario:USER
+		}
         window.localStorage.setItem('user', JSON.stringify(user));
         window.location.reload();
     } else {
