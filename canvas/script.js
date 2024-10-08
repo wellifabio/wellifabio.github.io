@@ -29,7 +29,10 @@ const load = () => {
             let onde = document.querySelector(`#p${e.where}`);
             let ftSize = e.texto.length > 80 ? 14 : 20;
             onde.innerHTML +=
-                `<figure class="ptitfull"><img src="${params.postit[e.cor]}" style="transform: rotate(${g}deg);" onclick="updte('${i}')"><figcaption style = "font-size:${ftSize}px;cursor:pointer;" onclick="updte('${i}')">${e.texto}</figcaption></figure>`;
+                `<figure draggable="true" ondragstart="drag(event,${i})" class="ptitfull">
+                    <img src="${params.postit[e.cor]}" style="transform: rotate(${g}deg);" onclick="updte('${i}')">
+                    <figcaption style="font-size:${ftSize}px;cursor:pointer;" onclick="updte('${i}')">${e.texto}</figcaption>
+                </figure>`;
         });
         document.getElementById("titulo").value = project.titulo;
         document.querySelector("#tit").innerHTML = "Projeto: " + project.titulo;
@@ -128,3 +131,23 @@ document.getElementById("abrir").addEventListener("change", (e) => {
         window.location.reload();
     };
 });
+
+
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev, indice) {
+    ev.dataTransfer.setData("text", ev.target.id);
+    ev.dataTransfer.setData("indice", indice);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    let data = ev.dataTransfer.getData("text");
+    let indice = ev.dataTransfer.getData("indice");
+    if(ev.target.id.split("p")[1] !== undefined) project.postits[indice].where = ev.target.id.split("p")[1];
+    // alert("indice origem = "+ indice + " Destino: " + project.postits[indice].where);
+    window.localStorage.setItem("project", JSON.stringify(project));
+    window.location.reload();
+}
