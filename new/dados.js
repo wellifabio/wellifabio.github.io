@@ -78,6 +78,22 @@ const aplicacoes = [
 	{
 		href: "https://github.com/wellifabio/matematica.git",
 		text: "Mathematical Expressions with Markdown (pt - br)"
+	},
+	{
+		href: "https://wellifabio.github.io/produtos-cards/",
+		text: "Cads with Vanilla-JS Examples (pt - br)"
+	},
+	{
+		href: "https://wellifabio.github.io/produtos-modais/",
+		text: "Modais with Vanilla-JS Examples (pt - br)"
+	},
+		{
+		href: "https://wellifabio.github.io/produtos-carrinho/",
+		text: "Shopping Cart with Vanilla-JS Examples (pt - br)"
+	},
+	{
+		href: "https://github.com/wellifabio/desafioslogica.git",
+		text: "Logic challenges (pt - br)"
 	}
 ];
 
