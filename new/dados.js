@@ -4,11 +4,11 @@ const aplicacoes = [
 	// 	text: "LINK MATURIDADE DIGITAL"
 	// },
 	{
-		href: "../downloads/Vendas.xlsx",
+		href: "./downloads/Vendas.xlsx",
 		text: "Planilha de Vendas (pt-br)"
 	},
 	{
-		href: "../downloads/Supermercado.xlsx",
+		href: "./downloads/Supermercado.xlsx",
 		text: "Planilha Supermercado (pt-br)"
 	},
 	{
