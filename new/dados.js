@@ -1,5 +1,9 @@
 const aplicacoes = [
 	{
+		href: "https://wellifabio.github.io/newswfom/",
+		text: "NewsWFOM - Links e Notícias (pt-br)"
+	},
+	{
 		href: "../canvas",
 		text: "JS: Canvas Frame Maker (pt-br)"
 	},
