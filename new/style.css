@@ -88,9 +88,9 @@ h1 {
 header h1:hover {
     color: var(--color-quaternary);
     text-shadow: 2px 2px 2px var(--color-primary);
-    font-size: 3em;
     cursor: pointer;
     transition: all 0.5s;
+    transform: scale(1.5);
 }
 
 nav {
