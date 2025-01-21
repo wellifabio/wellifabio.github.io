@@ -21,7 +21,7 @@ const aplicacoes = [
 	},
 	{
 		href: "../blog/",
-		text: "Blog com Firebase (pt-br)"
+		text: "Firebase Blog (pt-br)"
 	},
 	{
 		href: "../bitola",
@@ -36,8 +36,8 @@ const aplicacoes = [
 		text: "JS - Gadgets"
 	},
 	{
-		href: "../pizzaria/carrinho",
-		text: "JS - Pizzaria Modelo (pt-br)"
+		href: "../pizzaria/cardapio",
+		text: "JS - Pizzaria(pt-br)"
 	},
 	{
 		href: "../delivery/delivery.html",
