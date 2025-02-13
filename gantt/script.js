@@ -133,6 +133,10 @@ const thead = () => {
         else th.innerHTML = i <= 10 ? "0" + (i - 1) : i - 1
         linha.appendChild(th)
     }
+    let acoes = document.createElement("th")
+    acoes.innerHTML = "Ações"
+    acoes.classList.add("acoes")
+    linha.appendChild(acoes)
     return cab.appendChild(linha)
 }
 
@@ -165,6 +169,10 @@ const bts = (inicio, duracao, l, indice) => {
         }
         l.appendChild(td)
     }
+    let ctr = document.createElement("td")
+    ctr.setAttribute("style", "text-align: center;")
+    ctr.innerHTML = `<button class="acoes" onclick="subir(${indice})">↑</button><button class="acoes" onclick="descer(${indice})">↓</button>`
+    l.appendChild(ctr)
 }
 
 const alt = (i) => {
@@ -229,5 +237,25 @@ const duracao = () => {
         }else{
             alert("Duração não pode ser menor que a duração atual nem maior que 1350 dias.")
         }
+    }
+}
+
+function subir(i) {
+    if (i > 1) {
+        let aux = dados[i]
+        dados[i] = dados[i - 1]
+        dados[i - 1] = aux
+        window.localStorage.setItem("dados", JSON.stringify(dados))
+        window.location.reload()
+    }
+}
+
+function descer(i) {
+    if (i < dados.length - 1) {
+        let aux = dados[i]
+        dados[i] = dados[i + 1]
+        dados[i + 1] = aux
+        window.localStorage.setItem("dados", JSON.stringify(dados))
+        window.location.reload()
     }
 }

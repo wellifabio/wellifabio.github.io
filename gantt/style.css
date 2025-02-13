@@ -145,6 +145,14 @@ input[type="button"] {
     color: #333;
 }
 
+.acoes {
+    background-color: #faecce;
+}
+
+.acoes:hover {
+    background-color: #f1bd4c;
+}
+
 .oculto {
     display: none;
 }
@@ -167,5 +175,9 @@ input[type="button"] {
         footer {
             background: none;
         }
+    }
+
+    .acoes {
+        display: none;
     }
 }
