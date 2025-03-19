@@ -1,5 +1,9 @@
 const aplicacoes = [
 	{
+		href:"https://sistemas.jaguariuna.sp.gov.br/portalcidadao",
+		text:"Prefeitura Jaguariúna"
+	},
+	{
 		href: "https://wellifabio.github.io/newswfom/",
 		text: "NewsWFOM - Links e Notícias (pt-br)"
 	},
