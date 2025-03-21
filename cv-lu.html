@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./assets/cv.png">
+    <link rel="shortcut icon" href="./assets/cv-lu.png">
     <title>Currículo</title>
     <style>
         body {
@@ -20,8 +20,8 @@
     <header>
         <h1 style="text-align:center;">LUCIENE BISPO CUSTÓDIO MARTINS </h1>
         <hr />
-        <p style="text-align:right;font-size: small;">Brasileira, casada, 43 anos, dois filhos<br />
-            Residente em Jaguariúna – SP – Brazil</p>
+        <p style="text-align:right;font-size: small;">Brasileira, casada, <label id="idade"></label> anos, dois filhos<br />
+            Residente em Jaguariúna – SP – Brasil</p>
         <p style="text-align:right;font-size: small;">
             <b>WhatsApp: 55 19 99280-4140</b>
             <b>Email:</b><a href="mailto:lucibcmartins@gmail.com">lucibcmartins@gmail.com</a> <br />
@@ -69,8 +69,17 @@
         <hr />
     </main>
     <footer>
-        <p style="text-align: right;"><u>Jaguariúna - SP - Brazil - 2025</u></p>
+        <p style="text-align: right;"><u>Jaguariúna - <label id="ano"></label></u></p>
     </footer>
 </body>
-
+<script>
+    function calcularIdade(nascimento) {
+        var nascimento = new Date(nascimento);
+        var diferenca = Date.now() - nascimento.getTime();
+        var idade = new Date(diferenca);
+        return Math.abs(idade.getUTCFullYear() - 1970);
+    }
+    document.querySelector('#idade').innerHTML = calcularIdade('1981/10/03');
+    document.querySelector('#ano').innerHTML = new Date().getFullYear();
+</script>
 </html>

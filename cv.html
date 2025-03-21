@@ -19,8 +19,9 @@
 <body>
     <header>
         <h1 style="text-align:center;">WELLINGTON FÁBIO DE OLIVEIRA MARTINS </h1>
-        <hr />
-        <p style="text-align:right;font-size: small;">Brazilian, married, 44 years old, two children<br />
+ 
+        <p style="text-align:right;font-size: small;">Brazilian, married, <label id="idade"></label> years old, two
+            children<br />
             Resident at Jaguariúna – SP – Brazil</p>
         <p style="text-align:right;font-size: small;">
             <b>Cell phone: 55 19 99186-6605</b>
@@ -30,7 +31,7 @@
     </header>
     <main>
         <h2>Formation:</h2>
-        <hr />
+ 
         <ul>
             <li><b>Postgraduate studies:</b>Project Management MBA<br />
                 ESAMC – Campinas – SP – Brazil, Completed December 2018 – 420 hours.<br /></li>
@@ -42,7 +43,7 @@
                 FATEC – Americana – SP - Brazil, Completed in December 2009.</li>
         </ul>
         <h2>Professional experience:</h2>
-        <hr />
+ 
         <p>
         <ul>
             <li>
@@ -64,7 +65,7 @@
                 high
                 school.<br />
                 Note: CPS is a network of several schools in Brazil, where I worked in several units in different cities
-                and with different contracts. From May 2011 to the present.
+                and with different contracts. From May 2011 to April 2024.
             </li>
             <li>
                 <b>IBM Brazil (Hortolândia - SP)</b><br />
@@ -84,25 +85,37 @@
             </li>
         </ul>
         <h2>Certificates and Additional informations</h2>
-        <hr />
+ 
         <ul>
-            <li><b>Portfolio:</b><a href="https://wellifabio.github.io/">wellifabio.github.io</a></li>
-            <li><b>GitHub:</b><a href="https://github.com/wellifabio">github.com/wellifabio</a> </li>
-            <li><b>Lattes:</b><a
+            <li><b>Linktr.ee:</b><a target="_blank" href="https://linktr.ee/wellifabio">https://linktr.ee/wellifabio</a>
+            </li>
+            <li><b>Portfolio:</b><a target="_blank" href="https://wellifabio.github.io/">wellifabio.github.io</a></li>
+            <li><b>Credly:</b><a target="_blank"
+                    href="https://www.credly.com/users/wellifabio">www.credly.com/users/wellifabio</a></li>
+            <li><b>GitHub:</b><a target="_blank" href="https://github.com/wellifabio">github.com/wellifabio</a> </li>
+            <li><b>Lattes CV:</b><a target="_blank"
                     href="http://lattes.cnpq.br/6595184559384066">http://lattes.cnpq.br/6595184559384066</a></li>
             <li><b>Language:</b>Native Brazilian Portuguese
             <li>
                 <b>Intermediary English</b> - Microlins, Americana - SP - Brazil<br />
                 Good experience on (skype) read and write, but Little experience on phone calls (IBM).
             </li>
-            </li>
-
         </ul>
-        <hr />
+ 
     </main>
     <footer>
-        <p style="text-align: right;"><u>Jaguariúna - SP - Brazil - 2025</u></p>
+        <p style="text-align: right;"><u>Brazil - <label id="ano"></label></u></p>
     </footer>
 </body>
+<script>
+    function calcularIdade(nascimento) {
+        var nascimento = new Date(nascimento);
+        var diferenca = Date.now() - nascimento.getTime();
+        var idade = new Date(diferenca);
+        return Math.abs(idade.getUTCFullYear() - 1970);
+    }
+    document.querySelector('#idade').innerHTML = calcularIdade('1980/09/08');
+    document.querySelector('#ano').innerHTML = new Date().getFullYear();
+</script>
 
 </html>
