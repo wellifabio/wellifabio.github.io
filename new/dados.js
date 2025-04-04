@@ -4,6 +4,10 @@ const aplicacoes = [
 		text:"Prefeitura Jaguariúna"
 	},
 	{
+		href:"https://wellifabio.github.io/termosesi/",
+		text:"Jogo Termo TI (By Rodson)"
+	},
+	{
 		href: "https://wellifabio.github.io/newswfom/",
 		text: "NewsWFOM - Links e Notícias (pt-br)"
 	},
