@@ -1,7 +1,7 @@
 const aplicacoes = [
 	{
 		href:"https://wellifabio.github.io/termo/",
-		text:"Jogo Termo TI (By Rodson)"
+		text:"Jogo Termo TI (By Robson)"
 	},
 	{
 		href:"https://sistemas.jaguariuna.sp.gov.br/portalcidadao",

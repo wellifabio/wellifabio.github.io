@@ -1,0 +1,90 @@
+[
+    {
+        "id": 1,
+        "categoria": "Bebida",
+        "nome": "Bioleve",
+        "descricao": "Suco Bioleve",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/bioleve.png",
+        "preco": 5.00
+    },
+    {
+        "id": 2,
+        "categoria": "Salgado Frito",
+        "nome": "Coxinha",
+        "descricao": "Coxinha de Frango",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/coxinha.png",
+        "preco": 7.50
+    },
+    {
+        "id": 3,
+        "categoria": "Salgado Assado",
+        "nome": "Croissant",
+        "descricao": "Croissant",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/croissant.png",
+        "preco": 8.00
+    },
+    {
+        "id": 4,
+        "categoria": "Salgado Assado",
+        "nome": "Empada",
+        "descricao": "Empada",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/empada.png",
+        "preco": 8.00
+    },
+    {
+        "id": 5,
+        "categoria": "Salgado Assado",
+        "nome": "Hamburgão",
+        "descricao": "Hamburgão",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/hamburgao.png",
+        "preco": 8.00
+    },
+    {
+        "id": 6,
+        "categoria": "Salgado Assado",
+        "nome": "Salgado de Palmito",
+        "descricao": "Salgado de Palmito",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/palmito.png",
+        "preco": 8.00
+    },
+    {
+        "id": 7,
+        "categoria": "Pão de batata",
+        "nome": "Pão de batata",
+        "descricao": "Pão de Batata",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/pbatata.png",
+        "preco": 8.00
+    },
+    {
+        "id": 8,
+        "categoria": "Salgado Assado",
+        "nome": "Pão de Queijo",
+        "descricao": "Pão de queijo",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/pqueijo.png",
+        "preco": 4.00
+    },
+    {
+        "id": 9,
+        "categoria": "Bebida",
+        "nome": "Refri. KS",
+        "descricao": "Refrigerante 220",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/refri220.png",
+        "preco": 5.00
+    },
+    {
+        "id": 10,
+        "categoria": "Bebida",
+        "nome": "Refri. Lata",
+        "descricao": "Refrigerante 350",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/refri350.png",
+        "preco": 6.00
+    },
+    {
+        "id": 11,
+        "categoria": "Salgado Frito",
+        "nome": "Risole",
+        "descricao": "Risole de Presunto e queijo",
+        "imagem": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/cantina/risole.png",
+        "preco": 7.50
+    }
+]

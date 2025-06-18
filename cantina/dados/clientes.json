@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "nome": "Mariana Silva Ribeiro",
+        "telefone": "(11) 91234-5678",
+        "email": "mariana@email.com",
+        "avatar": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/avatares/cli1.png"
+    },
+    {
+        "id": 2,
+        "nome": "João Pedro Souza",
+        "telefone": "(11) 98765-4321",
+        "email": "joao@email.com",
+        "avatar": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/avatares/cli2.png"
+    },
+    {
+        "id": 3,
+        "nome": "Ana Clara Oliveira",
+        "telefone": "(11) 99876-5432",
+        "email": "mariana@email.com",
+        "avatar": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/avatares/cli3.png"
+    },
+    {
+        "id": 4,
+        "nome": "Luciana Martins",
+        "telefone": "(11) 92345-6789",
+        "email": "luciana@email.com",
+        "avatar": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/avatares/cli4.png"
+    },
+    {
+        "id": 5,
+        "nome": "Carlos Eduardo Lima",
+        "telefone": "(11) 93456-7890",
+        "email": "carlos@email.com",
+        "avatar": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/avatares/cli5.png"
+    },
+    {
+        "id": 6,
+        "nome": "Fernanda Costa",
+        "telefone": "(11) 94567-8901",
+        "email": "fernanda@email.com",
+        "avatar": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/avatares/cli6.png"
+    },
+    {
+        "id": 7,
+        "nome": "Ricardo Almeida",
+        "telefone": "(11) 95678-9012",
+        "email": "ricardo@email.com",
+        "avatar": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/avatares/cli7.png"
+    },
+    {
+        "id": 8,
+        "nome": "Patrícia Gomes",
+        "telefone": "(11) 96789-0123",
+        "email": "patricia@email.com",
+        "avatar": "https://raw.githubusercontent.com/wellifabio/senai2023/main/2des/projetos/assets/avatares/cli8.png"
+    }
+]

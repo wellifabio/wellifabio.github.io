@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Fiados Cantina</title>
+</head>
+
+<body>
+    <header>
+        <h1>Registro de pedidos pagamento mensal</h1>
+    </header>
+    <main>
+        <nav>
+            <button onclick="window.location.href='./index.html'">Pedidos</button>
+            <button onclick="window.location.href='./clientes.html'">Clientes</button>
+            <button onclick="window.location.href='./produtos.html'">Produtos</button>
+        </nav>
+        <section>
+            <table id="produtos">
+                <thead>
+                    <th>Id</th>
+                    <th>Categoria</th>
+                    <th>Nome</th>
+                    <th>Descrição</th>
+                    <th>Preço</th>
+                    <th>Imagem</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <h2>By #welllifabio</h2>
+        <p>Projeto para fins pedagógicos de análise de dados</p>
+    </footer>
+</body>
+<script>
+    const uri = './dados/produtos.json';
+    fetch(uri)
+        .then(response => response.json())
+        .then(data => {
+            const tbody = document.querySelector('tbody');
+            data.forEach(produto => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
+                        <td>${produto.id}</td>
+                        <td>${produto.categoria}</td>
+                        <td>${produto.nome}</td>
+                        <td>${produto.descricao}</td>
+                        <td>${produto.preco.toFixed(2).replace('.', ',')}</td>
+                        <td>${produto.imagem}</td>
+                    `;
+                tbody.appendChild(tr);
+            });
+        })
+        .catch(error => console.error('Erro ao carregar os produtos:', error));
+</script>
+
+</html>

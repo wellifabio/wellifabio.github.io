@@ -5,19 +5,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Pedidos</title>
+    <title>Fiados Cantina</title>
 </head>
 
 <body>
     <header>
-        <h1>Dados de pedidos em uma cantina</h1>
-        <h2>Para análise e criação de DashBoards em aulas de Excel ou Power BI</h2>
+        <h1>Registro de pedidos pagamento mensal</h1>
     </header>
-    <nav>
-        <a href="./pedidos">Pedidos</a>
-        <a href="./clientes">Clientes</a>
-        <a href="./produtos">Produtos</a>
-    </nav>
+    <main>
+        <nav>
+            <button onclick="window.location.href='./index.html'">Pedidos</button>
+            <button onclick="window.location.href='./clientes.html'">Clientes</button>
+            <button onclick="window.location.href='./produtos.html'">Produtos</button>
+        </nav>
+        <section>
+            <table id="pedidos">
+                <thead>
+                    <th>Id</th>
+                    <th>DataPedido</th>
+                    <th>IdCliente</th>
+                    <th>IdProduto</th>
+                    <th>Quantidade</th>
+                    <th>DataPagamento</th>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <h2>By #welllifabio</h2>
+        <p>Projeto para fins pedagógicos de análise de dados</p>
+    </footer>
 </body>
+<script>
+    const pedidos = [];
+    for (i = 0; i < 200; i++) {
+        pedidos.push({
+            id: i + 1,
+            dataPedido: new Date(Date.now() - (200 - i) * 24 * 60 * 60 * 1000).toLocaleDateString(),
+            idCliente: Math.floor(Math.random() * 8) + 1,
+            idProduto: Math.floor(Math.random() * 11) + 1,
+            quantidade: Math.floor(Math.random() * 5) + 1,
+            dataPagamento: i < 160 ? new Date(Date.now() - (200 - i) * 24 * 60 * 60 * 1000 + Math.floor(Math.random() * 30) * 24 * 60 * 60 * 1000).toLocaleDateString() : "Pendente"
+        });
+    }
+
+    const tbody = document.querySelector('tbody');
+    pedidos.forEach(pedido => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+                        <td>${pedido.id}</td>
+                        <td>${pedido.dataPedido}</td>
+                        <td>${pedido.idCliente}</td>
+                        <td>${pedido.idProduto}</td>
+                        <td>${pedido.quantidade}</td>
+                        <td>${pedido.dataPagamento}</td>
+                    `;
+        tbody.appendChild(tr);
+    });
+
+</script>
 
 </html>
