@@ -38,22 +38,25 @@
     </footer>
 </body>
 <script>
-    const pedidos = [];
-    for (i = 0; i < 200; i++) {
-        pedidos.push({
-            id: i + 1,
-            dataPedido: new Date(Date.now() - (200 - i) * 24 * 60 * 60 * 1000).toLocaleDateString(),
-            idCliente: Math.floor(Math.random() * 8) + 1,
-            idProduto: Math.floor(Math.random() * 11) + 1,
-            quantidade: Math.floor(Math.random() * 5) + 1,
-            dataPagamento: i < 160 ? new Date(Date.now() - (200 - i) * 24 * 60 * 60 * 1000 + Math.floor(Math.random() * 30) * 24 * 60 * 60 * 1000).toLocaleDateString() : "Pendente"
-        });
-    }
-
-    const tbody = document.querySelector('tbody');
-    pedidos.forEach(pedido => {
-        const tr = document.createElement('tr');
-        tr.innerHTML = `
+    // const pedidos = [];
+    // for (i = 0; i < 200; i++) {
+    //     pedidos.push({
+    //         id: i + 1,
+    //         dataPedido: new Date(Date.now() - (200 - i) * 24 * 60 * 60 * 1000).toLocaleDateString(),
+    //         idCliente: i < 160 ? Math.floor(Math.random() * 8) + 1 : Math.floor(Math.random() * 5) + 1,
+    //         idProduto: i < 160 ? Math.floor(Math.random() * 11) + 1: Math.floor(Math.random() * 8) + 1 ,
+    //         quantidade: Math.floor(Math.random() * 5) + 1,
+    //         dataPagamento: i < 160 ? new Date(Date.now() - (200 - i) * 24 * 60 * 60 * 1000 + Math.floor(Math.random() * 30) * 24 * 60 * 60 * 1000).toLocaleDateString() : "Pendente"
+    //     });
+    // }
+    const uri = './dados/pedidos.json';
+    fetch(uri)
+        .then(response => response.json())
+        .then(pedidos => {
+            const tbody = document.querySelector('tbody');
+            pedidos.forEach(pedido => {
+                const tr = document.createElement('tr');
+                tr.innerHTML = `
                         <td data-label = 'Id'>${pedido.id}</td>
                         <td data-label = 'Data do Pedido'>${pedido.dataPedido}</td>
                         <td data-label = 'Id do Cliente'>${pedido.idCliente}</td>
@@ -61,9 +64,10 @@
                         <td data-label = 'Quantidade'>${pedido.quantidade}</td>
                         <td data-label = 'Data do Pagamento'>${pedido.dataPagamento}</td>
                     `;
-        tbody.appendChild(tr);
-    });
-
+                tbody.appendChild(tr);
+            })
+        })
+        .catch(error => console.error('Erro ao carregar os pedidos:', error));
 </script>
 
 </html>
