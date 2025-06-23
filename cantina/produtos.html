@@ -21,6 +21,7 @@
         <section>
             <table id="produtos">
                 <thead>
+                    <th>Ilustração</th>
                     <th>Id</th>
                     <th>Categoria</th>
                     <th>Nome</th>
@@ -46,12 +47,13 @@
             data.forEach(produto => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                        <td>${produto.id}</td>
-                        <td>${produto.categoria}</td>
-                        <td>${produto.nome}</td>
-                        <td>${produto.descricao}</td>
-                        <td>${produto.preco.toFixed(2).replace('.', ',')}</td>
-                        <td>${produto.imagem}</td>
+                        <td data-label = 'Ilustração'><img src='${produto.imagem}' alt='${produto.nome}'></td>
+                        <td data-label = 'Id'>${produto.id}</td>
+                        <td data-label = 'Categoria'>${produto.categoria}</td>
+                        <td data-label = 'Nome'>${produto.nome}</td>
+                        <td data-label = 'Descrição'>${produto.descricao}</td>
+                        <td data-label = 'Preço'>${produto.preco.toFixed(2).replace('.', ',')}</td>
+                        <td data-label = 'Imagem'>${produto.imagem}</td>
                     `;
                 tbody.appendChild(tr);
             });

@@ -46,12 +46,12 @@
             data.forEach(cliente => {
                 const tr = document.createElement('tr');
                 tr.innerHTML = `
-                        <td><img src='${cliente.avatar}' alt='${cliente.nome}'></td>
-                        <td>${cliente.id}</td>
-                        <td>${cliente.nome}</td>
-                        <td>${cliente.telefone}</td>
-                        <td>${cliente.email}</td>
-                        <td>${cliente.avatar}</td>
+                        <td data-label = 'Avatar'><img src='${cliente.avatar}' alt='${cliente.nome}'></td>
+                        <td data-label = 'Id'>${cliente.id}</td>
+                        <td data-label = 'Nome'>${cliente.nome}</td>
+                        <td data-label = 'Telefone'>${cliente.telefone}</td>
+                        <td data-label = 'E-mail'>${cliente.email}</td>
+                        <td data-label = 'Link da imagem'>${cliente.avatar}</td>
                     `;
                 tbody.appendChild(tr);
             });

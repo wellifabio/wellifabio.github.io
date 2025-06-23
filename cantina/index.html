@@ -54,12 +54,12 @@
     pedidos.forEach(pedido => {
         const tr = document.createElement('tr');
         tr.innerHTML = `
-                        <td>${pedido.id}</td>
-                        <td>${pedido.dataPedido}</td>
-                        <td>${pedido.idCliente}</td>
-                        <td>${pedido.idProduto}</td>
-                        <td>${pedido.quantidade}</td>
-                        <td>${pedido.dataPagamento}</td>
+                        <td data-label = 'Id'>${pedido.id}</td>
+                        <td data-label = 'Data do Pedido'>${pedido.dataPedido}</td>
+                        <td data-label = 'Id do Cliente'>${pedido.idCliente}</td>
+                        <td data-label = 'Id do Produto'>${pedido.idProduto}</td>
+                        <td data-label = 'Quantidade'>${pedido.quantidade}</td>
+                        <td data-label = 'Data do Pagamento'>${pedido.dataPagamento}</td>
                     `;
         tbody.appendChild(tr);
     });
