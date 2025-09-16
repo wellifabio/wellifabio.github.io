@@ -78,7 +78,7 @@ header {
 
 h1 {
     font-size: 2.5em;
-    color: var(--color-primary);
+    color: var(--color-quinary);
     text-shadow: 2px 2px 2px var(--color-quaternary);
     text-align: center;
     margin: 20px;
@@ -91,6 +91,15 @@ header h1:hover {
     font-size: 3em;
     cursor: pointer;
     transition: all 0.5s;
+}
+
+h2 {
+    font-size: 1.5em;
+    color: var(--color-quinary);
+    text-shadow: 2px 2px 2px var(--color-secondary);
+    text-align: center;
+    max-width: 500px;
+    margin: 20px;
 }
 
 nav {
@@ -150,15 +159,6 @@ main button:hover {
     background-image: url('../assets/postitgreen.png');
     transition: all 0.3s;
     font-size: large;
-}
-
-h2 {
-    font-size: 1.5em;
-    color: var(--color-primary);
-    text-shadow: 2px 2px 2px var(--color-tertiary);
-    text-align: center;
-    max-width: 500px;
-    margin: 20px;
 }
 
 #about {
