@@ -17,7 +17,7 @@
     --color-tertiary: #999;
     --color-quaternary: #ccc;
     --color-quinary: #FFF;
-    --color-transparent: rgba(20, 20, 20, 0.3);
+    --color-transparent: rgba(f, f, f, 0.3);
 }
 
 body {
@@ -79,7 +79,7 @@ header {
 h1 {
     font-size: 2.5em;
     color: var(--color-quinary);
-    text-shadow: 2px 2px 2px var(--color-quaternary);
+    text-shadow: 1px 2px 2px var(--color-tertiary);
     text-align: center;
     margin: 20px;
     transition: all 0.5s;
@@ -87,7 +87,7 @@ h1 {
 
 header h1:hover {
     color: var(--color-quaternary);
-    text-shadow: 2px 2px 2px var(--color-primary);
+    text-shadow: 1px 2px 2px var(--color-primary);
     font-size: 3em;
     cursor: pointer;
     transition: all 0.5s;
@@ -121,8 +121,9 @@ nav button {
     cursor: pointer;
     font-style: italic;
     transition: all 0.3s;
-    background-color: var(--color-secondary);
-    color: var(--color-quinary);
+    background-color: var(--color-transparent);
+    color: var(--color-primary);
+    text-shadow: 1px 2px 2px var(--color-tertiary);
 }
 
 nav button:hover {
@@ -151,8 +152,9 @@ main button {
     cursor: pointer;
     font-style: italic;
     transition: all 0.3s;
-    color: var(--color-quinary);
-    text-shadow: 1px 2px 2px var(--color-secondary);
+    background-color: var(--color-transparent);
+    color: var(--color-primary);
+    text-shadow: 1px 2px 2px var(--color-tertiary);
     margin: 10px;
 }
 
@@ -164,8 +166,9 @@ main button:hover {
 }
 
 footer button {
-    color: var(--color-quinary);
-    text-shadow: 1px 2px 2px var(--color-secondary);
+    background-color: var(--color-transparent);
+    color: var(--color-primary);
+    text-shadow: 1px 2px 2px var(--color-tertiary);
 }
 
 #about {
@@ -245,8 +248,9 @@ footer button {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: var(--color-quinary);
-    text-shadow: 1px 2px 2px var(--color-primary);
+    background-color: var(--color-transparent);
+    color: var(--color-primary);
+    text-shadow: 1px 2px 2px var(--color-tertiary);
     font-style: oblique;
     font-size: 1.2em;
     text-align: center;
