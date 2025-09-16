@@ -17,7 +17,7 @@
     --color-tertiary: #999;
     --color-quaternary: #ccc;
     --color-quinary: #FFF;
-    --color-transparent: rgba(f, f, f, 0.3);
+    --color-fundo-bts: fff;
 }
 
 body {
@@ -121,7 +121,7 @@ nav button {
     cursor: pointer;
     font-style: italic;
     transition: all 0.3s;
-    background-color: var(--color-transparent);
+    background-color: var(--color-fundo-bts);
     color: var(--color-primary);
     text-shadow: 1px 2px 2px var(--color-tertiary);
 }
@@ -152,7 +152,7 @@ main button {
     cursor: pointer;
     font-style: italic;
     transition: all 0.3s;
-    background-color: var(--color-transparent);
+    background-color: var(--color-fundo-bts);
     color: var(--color-primary);
     text-shadow: 1px 2px 2px var(--color-tertiary);
     margin: 10px;
@@ -166,7 +166,7 @@ main button:hover {
 }
 
 footer button {
-    background-color: var(--color-transparent);
+    background-color: var(--color-fundo-bts);
     color: var(--color-primary);
     text-shadow: 1px 2px 2px var(--color-tertiary);
 }
@@ -248,7 +248,7 @@ footer button {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    background-color: var(--color-transparent);
+    background-color: var(--color-fundo-bts);
     color: var(--color-primary);
     text-shadow: 1px 2px 2px var(--color-tertiary);
     font-style: oblique;
