@@ -17,7 +17,7 @@
     --color-tertiary: #999;
     --color-quaternary: #ccc;
     --color-quinary: #FFF;
-    --color-fundo-bts: fff;
+    --color-fundo-bts: rgba(255,255,255,0.5);
 }
 
 body {
