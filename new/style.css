@@ -220,6 +220,7 @@ footer button {
     justify-content: space-around;
     max-width: 1000px;
     margin: 20px;
+    background-color: var(--color-fundo-bts);
 }
 
 #apps div,
@@ -233,7 +234,6 @@ footer button {
     cursor: pointer;
     font-style: italic;
     transition: all 0.3s;
-    background-color: var(--color-secondary);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,7 +248,6 @@ footer button {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    background-color: var(--color-fundo-bts);
     color: var(--color-primary);
     text-shadow: 1px 2px 2px var(--color-tertiary);
     font-style: oblique;
