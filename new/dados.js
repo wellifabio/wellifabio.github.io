@@ -1,19 +1,23 @@
 const aplicacoes = [
 	{
-		href:"https://wellifabio.github.io/termo/",
-		text:"Jogo Termo TI (By Robson)"
+		href: "../canvas",
+		text: "JS: Canvas Frame Maker (pt-br)"
 	},
 	{
-		href:"https://sistemas.jaguariuna.sp.gov.br/portalcidadao",
-		text:"Prefeitura Jaguariúna"
+		href: "https://wellifabio.github.io/termo/",
+		text: "Termo Play TI (By Robson)"
+	},
+	{
+		href: "https://wellifabio.github.io/receitas-web-2025/",
+		text: "Coockbook CRUD (pt-br)"
 	},
 	{
 		href: "https://wellifabio.github.io/newswfom/",
 		text: "NewsWFOM - Links e Notícias (pt-br)"
 	},
 	{
-		href: "../canvas",
-		text: "JS: Canvas Frame Maker (pt-br)"
+		href: "../blog/",
+		text: "Firebase Blog (pt-br)"
 	},
 	{
 		href: "../gantt",
@@ -21,15 +25,7 @@ const aplicacoes = [
 	},
 	{
 		href: "../avaliacao",
-		text: "JS: SENAI standard assessment generator (pt-br)"
-	},
-	{
-		href: "../timeline",
-		text: "JS: Gantt chart generator"
-	},
-	{
-		href: "../blog/",
-		text: "Firebase Blog (pt-br)"
+		text: "JS: SENAI standard assessment generator - MESEP(pt-br)"
 	},
 	{
 		href: "../bitola",
@@ -42,10 +38,6 @@ const aplicacoes = [
 	{
 		href: "../gadgets",
 		text: "JS - Gadgets"
-	},
-	{
-		href: "../pizzaria/cardapio",
-		text: "JS - Pizzaria(pt-br)"
 	},
 	{
 		href: "../delivery/delivery.html",
@@ -81,7 +73,11 @@ const aplicacoes = [
 	},
 	{
 		href: "../petshop",
-		text: "PetShop App Basic/PetShop básico Arquivos Locais (pt - br)"
+		text: "PetShop App Basic/PetShop, Local files (pt - br)"
+	},
+	{
+		href: "../cantina",
+		text: "Cantina UI, To Power BI classes (pt - br)"
 	},
 	{
 		href: "https://github.com/wellifabio/matematica.git",
@@ -95,7 +91,7 @@ const aplicacoes = [
 		href: "https://wellifabio.github.io/produtos-modais/",
 		text: "Modais with Vanilla-JS Examples (pt - br)"
 	},
-		{
+	{
 		href: "https://wellifabio.github.io/produtos-carrinho/",
 		text: "Shopping Cart with Vanilla-JS Examples (pt - br)"
 	},
@@ -106,118 +102,56 @@ const aplicacoes = [
 ];
 
 const portfolios = [
-	{
-		text: "Professor Robson",
-		href: "https://robsonbsouzaa.github.io/"
-	},
-	{
-		text: "Matheus Pignata",
-		href: "https://matheuspignata.github.io"
-	},
-	{
-		text: "Andre Fernandes Izidro",
-		href: "https://aizidro.github.io"
-	},
-	{
-		text: "Lucas Almeida Camacho",
-		href: "https://lcscamacho.github.io"
-	},
-	{
-		text: "Vinicius Vieira de Souza",
-		href: "https://vinisouza001.github.io/"
-	},
-	{
-		text: "Yukina Madum Shinhama",
-		href: "https://portfolio-2023-delta-sable.vercel.app/"
-	},
-	{
-		text: "Ana Clara Ortiz Ochner",
-		href: "https://anyocher.github.io"
-	},
-	{
-		text: "Bruno Otávio da Silva Ramos",
-		href: "https://bruno-otavio.github.io"
-	},
-	{
-		text: "Carla Carota Mozena",
-		href: "https://carla-coder.github.io"
-	},
-	{
-		text: "Carlos Augusto Rodrigues",
-		href: "https://carlosaugustorodrigues.github.io"
-	},
-	{
-		text: "Carlos Henrique de Oliveira Siqueira",
-		href: "https://carloshosiqueira.github.io"
-	},
-	{
-		text: "Cicero Ruan Soares Barbosa ",
-		href: "https://portfoliocisenai.netlify.app/"
-	},
-	{
-		text: "Gabriella Godoi Avila",
-		href: "https://avilagabriella.github.io"
-	},
-	{
-		text: "Guilherme Carvalho De Oliveira",
-		href: "https://caroliflow.000webhostapp.com"
-	},
-	{
-		text: "Igor Henrique Gonçalves",
-		href: "https://igorhenriqueg.github.io"
-	},
-	{
-		text: "Jaqueline Rodrigues",
-		href: "https://JaqueJak.github.io"
-	},
-	{
-		text: "João Victor Colosso",
-		href: "https://portfoliocolosso.netlify.app"
-	},
-	{
-		text: "João Vitor Castro Viana Marques",
-		href: "https://JMarques12.github.io"
-	},
-	{
-		text: "Leticia Aparecida Hofman de Souza",
-		href: "https://lehhofman.github.io"
-	},
-	{
-		text: "Otavio Bassi de freitas",
-		href: "https://freitas7portfolio.netlify.app"
-	},
-	{
-		text: "Vinícius Manzano dos Santos",
-		href: "https://vinimanzano.github.io/vinimanzano.io"
-	},
-	{
-		text: "Alefe de Magalhães Vigatto",
-		href: "https://alefedem.000webhostapp.com/"
-	},
-	{
-		text: "Camilla Piva Da Silva",
-		href: "https://Camispiva.github.io"
-	},
-	{
-		text: "Maria Fernanda Mattoso Oliveira Rello",
-		href: "https://fefemattoso.github.io"
-	},
-	{
-		text: "Erick da Silva de Jesus",
-		href: "https://ericksilva232323.github.io/"
-	},
-	{
-		text: "Richard Matheus Pinesi",
-		href: "https://richardpnsportfolio.netlify.app"
-	},
-	{
-		text: "Otavio Bueno",
-		href: "https://buenootavio.github.io/"
-	},
-	{
-		text: "Bryan Beckham",
-		href: "https://bryanbeckham06.github.io/"
-	}
+	{ text: "Professor Robson", href: "https://robsonbsouzaa.github.io/" },
+	{ text: "Matheus Pignata", href: "https://matheuspignata.github.io" },
+	{ text: "Beatriz Gabrielle Vizeu de Salles", href: "https://bia-vizeu.github.io/Portifolio/" },
+	{ text: "Dahra Felix Fagionato", href: "https://dahrafagionato.github.io/" },
+	{ text: "Eloá Pereira Florêncio", href: "https://eloapfe.github.io/eloapfe/" },
+	{ text: "Gabriel Zanon", href: "https://gabrielbzanon.github.io/" },
+	{ text: "Gabriel Araújo", href: "https://sharaujoo.github.io/portifolio/" },
+	{ text: "Gabriela Helena Demori", href: "https://gabihdemori.github.io/Portifolio/" },
+	{ text: "Guilherme Canina", href: "https://guilhermecanina.github.io/" },
+	{ text: "Guilherme Stafocher Massucatto", href: "https://guimassucatto.github.io/" },
+	{ text: "Lohaine Vitória de Mattos SIlva", href: "https://lohainemattos.github.io/Lohaine-Mattos" },
+	{ text: "Heloisa Bordini Mendonça", href: "https://heloisa-bm.github.io/Heloisa/" },
+	{ text: "Henrico Ramalho", href: "https://henricoramalho.github.io/" },
+	{ text: "Isabelle Cristina de Oliveira Almeida", href: "https://isabellealmeid4.github.io/porftolio/" },
+	{ text: "João Lucas Ribeiro Leite	", href: "https://jaolucas1234.github.io/" },
+	{ text: "Kauê Henrique Fidelis Cirqueira", href: "https://canalbaltellgrounds.github.io/" },
+	{ text: "Laila Casadei Macêdo", href: "https://lailacm.github.io" },
+	{ text: "Leonardo Fernandes de Oliveira", href: "https://leozin99.github.io/Portifolio/" },
+	{ text: "Lucas Gonçalves Giachetto", href: "https://lucasggiachetto.github.io/" },
+	{ text: "Lucas Hasmann Tavares Gonçalves", href: "https://lucashasmann.github.io/portifoliol7/" },
+	{ text: "Lucas Menegon", href: "https://menegonlucas.github.io/menegonlucas/" },
+	{ text: "Matheus Neves", href: "https://matheus-sneves.github.io/Matheus-SNeves/" },
+	{ text: "Maria Clara Pavan Caleffi", href: "https://mariapcaleffi.github.io/" },
+	{ text: "Maria Eduarda Bruna Berto", href: "https://dudaberto.github.io/" },
+	{ text: "Maria Eduarda Da Silva Barroso", href: "https://dud4silvaa.github.io/" },
+	{ text: "Marcos Vinicius de Oliveira", href: "https://viciousmark.github.io/" },
+	{ text: "Milena Felisbelo Da Silva", href: "https://milenafelisbelo.github.io/portifolio/" },
+	{ text: "Miriam Bordini Mendonça", href: "https://miriambordini.github.io/" },
+	{ text: "Nicole Araujo dos Santos", href: "https://nicolesantos0.github.io/" },
+	{ text: "Olavo Marques da Silva", href: "https://olavomarques.github.io/Portifolio/" },
+	{ text: "Pedro Henrique de Lima Batista", href: "https://carecalima.github.io/" },
+	{ text: "Andre Fernandes Izidro", href: "https://aizidro.github.io" },
+	{ text: "Lucas Almeida Camacho", href: "https://lcscamacho.github.io" },
+	{ text: "Vinicius Vieira de Souza", href: "https://vinisouza001.github.io/" },
+	{ text: "Bruno Otávio da Silva Ramos", href: "https://bruno-otavio.github.io" },
+	{ text: "Carla Carota Mozena", href: "https://carla-coder.github.io" },
+	{ text: "Carlos Henrique de Oliveira Siqueira", href: "https://carloshosiqueira.github.io" },
+	{ text: "Cicero Ruan Soares Barbosa ", href: "https://portfoliocisenai.netlify.app/" },
+	{ text: "Gabriella Godoi Avila", href: "https://avilagabriella.github.io" },
+	{ text: "Jaqueline Rodrigues", href: "https://JaqueJak.github.io" },
+	{ text: "João Victor Colosso", href: "https://portfoliocolosso.netlify.app" },
+	{ text: "João Vitor Castro Viana Marques", href: "https://JMarques12.github.io" },
+	{ text: "Leticia Aparecida Hofman de Souza", href: "https://lehhofman.github.io" },
+	{ text: "Otavio Bassi de freitas", href: "https://freitas7portfolio.netlify.app" },
+	{ text: "Vinícius Manzano dos Santos", href: "https://vinimanzano.github.io/vinimanzano.io" },
+	{ text: "Camilla Piva Da Silva", href: "https://Camispiva.github.io" },
+	{ text: "Maria Fernanda Mattoso Oliveira Rello", href: "https://fefemattoso.github.io" },
+	{ text: "Richard Matheus Pinesi", href: "https://richardpnsportfolio.netlify.app" },
+	{ text: "Otavio Bueno", href: "https://buenootavio.github.io/" },
+	{ text: "Bryan Beckham", href: "https://bryanbeckham06.github.io/" }
 ];
 
 const projetos = [
@@ -288,5 +222,9 @@ const projetos = [
 	{
 		href: "../assets/fatec_monografiapooe.pdf",
 		text: "Monografia - Graduação em Processamento de Dados (pt-br)"
-	}
+	},
+	{
+		href: "https://sistemas.jaguariuna.sp.gov.br/portalcidadao",
+		text: "Prefeitura Jaguariúna"
+	},
 ]
