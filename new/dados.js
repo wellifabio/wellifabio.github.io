@@ -8,6 +8,10 @@ const aplicacoes = [
 		text: "Termo Play TI (By Robson)"
 	},
 	{
+		href: "https://wellifabio.github.io/estacionamento-web-2025/",
+		text: "Zé Leitão Park (pt-br)"
+	},
+	{
 		href: "https://wellifabio.github.io/receitas-web-2025/",
 		text: "Coockbook CRUD (pt-br)"
 	},
