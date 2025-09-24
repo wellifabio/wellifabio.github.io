@@ -160,6 +160,10 @@ const portfolios = [
 
 const projetos = [
 	{
+		href: "../assets/ieqfg/",
+		text: "Projects AutoCad 3D - New IEQ Building"
+	},
+	{
 		href: "../assets/containner/",
 		text: "Projects AutoCad 3D - Container Snack Bar"
 	},

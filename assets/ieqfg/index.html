@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../icone.jpg">
+    <title>My architect CAD hobby</title>
+</head>
+<style>
+    body {
+        background-size: contain;
+        background-color: #000;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    img {
+        margin: 10px;
+        box-shadow: 0 0 10px #000;
+    }
+</style>
+
+<body>
+</body>
+<script>
+    const files = [
+        './foto01.png',
+        './foto02.png',
+        './foto03.png',
+        './foto04.png',
+        './foto05.png',
+        './foto06.png',
+        './foto07.png',
+        './foto08.png',
+        './foto09.png',
+        './foto10.png',
+        './foto11.png',
+        './foto12.png',
+        './foto13.png',
+        './foto14.png',
+        './foto15.png'
+    ]
+    files.forEach(file => {
+        const img = document.createElement('img');
+        img.src = file;
+        img.alt = file.split('.')[1].substring(1).toUpperCase();
+        document.body.appendChild(img);
+    })
+</script>
+
+</html>
