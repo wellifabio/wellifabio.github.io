@@ -5,7 +5,7 @@ const aplicacoes = [
 	},
 	{
 		href: "https://wellifabio.github.io/techman-web-2025/",
-		text: "Techman- Maintenance management - SAEP 2021 - (pt-br)"
+		text: "Techman - Maintenance management - SAEP 2021 - (pt-br)"
 	},	
 	{
 		href: "https://wellifabio.github.io/termo/",
