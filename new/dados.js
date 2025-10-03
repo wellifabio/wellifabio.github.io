@@ -4,6 +4,10 @@ const aplicacoes = [
 		text: "JS: Canvas Frame Maker (pt-br)"
 	},
 	{
+		href: "https://wellifabio.github.io/techman-web-2025/",
+		text: "Techman- Maintenance management - SAEP 2021 - (pt-br)"
+	},	
+	{
 		href: "https://wellifabio.github.io/termo/",
 		text: "Termo Play TI (By Robson)"
 	},
