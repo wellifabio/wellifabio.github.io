@@ -10,7 +10,11 @@ const aplicacoes = [
 	{
 		href: "https://wellifabio.github.io/techman-web-2025/",
 		text: "Techman- Maintenance management - SAEP 2021 - (pt-br)"
-	},	
+	},
+	{
+		href: "https://escolaprismapug-2023.vercel.app/",
+		text: "School Management System, Full-stack, Pug, Vercel, 2024- (pt-br)"
+	},
 	{
 		href: "https://wellifabio.github.io/estacionamento-web-2025/",
 		text: "Zé Leitão Park (pt-br)"
