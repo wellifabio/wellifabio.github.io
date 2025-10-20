@@ -4,12 +4,21 @@ const aplicacoes = [
 		text: "JS: Canvas Frame Maker (pt-br)"
 	},
 	{
+		href: "../gantt",
+		text: "JS: Gantt chart generator (pt-br)"
+	},
+	{
 		href: "https://wellifabio.github.io/techman-web-2025/",
+<<<<<<< HEAD
 		text: "Techman - Maintenance management - SAEP 2021 - (pt-br)"
 	},	
+=======
+		text: "Techman- Maintenance management - SAEP 2021 - (pt-br)"
+	},
+>>>>>>> ddb31a331028d5a359ba2bdc1108f5368126bce0
 	{
-		href: "https://wellifabio.github.io/termo/",
-		text: "Termo Play TI (By Robson)"
+		href: "https://escolaprismapug-2023.vercel.app/",
+		text: "School Management System, Full-stack, Pug, Vercel, 2024- (pt-br)"
 	},
 	{
 		href: "https://wellifabio.github.io/estacionamento-web-2025/",
@@ -20,16 +29,16 @@ const aplicacoes = [
 		text: "Coockbook CRUD (pt-br)"
 	},
 	{
+		href: "https://wellifabio.github.io/termo/",
+		text: "Termo Play TI (By Robson)"
+	},
+	{
 		href: "https://wellifabio.github.io/newswfom/",
 		text: "NewsWFOM - Links e Notícias (pt-br)"
 	},
 	{
 		href: "../blog/",
 		text: "Firebase Blog (pt-br)"
-	},
-	{
-		href: "../gantt",
-		text: "JS: Gantt chart generator (pt-br)"
 	},
 	{
 		href: "../avaliacao",
