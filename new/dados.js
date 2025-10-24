@@ -9,13 +9,8 @@ const aplicacoes = [
 	},
 	{
 		href: "https://wellifabio.github.io/techman-web-2025/",
-<<<<<<< HEAD
 		text: "Techman - Maintenance management - SAEP 2021 - (pt-br)"
-	},	
-=======
-		text: "Techman- Maintenance management - SAEP 2021 - (pt-br)"
 	},
->>>>>>> ddb31a331028d5a359ba2bdc1108f5368126bce0
 	{
 		href: "https://escolaprismapug-2023.vercel.app/",
 		text: "School Management System, Full-stack, Pug, Vercel, 2024- (pt-br)"
