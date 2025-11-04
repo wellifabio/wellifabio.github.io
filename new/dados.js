@@ -243,4 +243,8 @@ const projetos = [
 		href: "https://sistemas.jaguariuna.sp.gov.br/portalcidadao",
 		text: "Prefeitura Jaguariúna"
 	},
+	{
+		href: "https://portalsaep.senai.br/home"
+		text: "Portal SAEP"
+	}
 ]
