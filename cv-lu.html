@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/cv-lu.png">
+    <title>Currículo</title>
+    <style>
+        body {
+            margin: 5%;
+            max-width: 700px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align:center;">LUCIENE BISPO CUSTÓDIO MARTINS </h1>
+        <hr />
+        <p style="text-align:right;font-size: small;">Brasileira, casada, <label id="idade"></label> anos, dois filhos<br />
+            Residente em Amparo – SP – Brasil</p>
+        <p style="text-align:right;font-size: small;">
+            <b>WhatsApp: 55 19 99280-4140</b>
+            <b>Email:</b><a href="mailto:lucibcmartins@gmail.com">lucibcmartins@gmail.com</a> <br />
+        </p>
+        <h2>Objetivo: <i>Atendimento a pessoas, Educação, Administração, Empreendedorismo</i> </h2>
+    </header>
+    <main>
+        <h2>Formação:</h2>
+        <hr />
+        <ul>
+            <li><b>Graduação:</b> Licenciatura em Pedagogia<br />
+                UNIP – Americana – SP. Completo - 2014</li>
+            <li><b>Ensino Médio:</b>Técnica em Administração<br />
+                ETEC Sta. Bárbara D'Oeste - Completo - 2007<br /></li>
+            <li><b>Pós graduação:</b>Especialização em Educação Especial e Inclusiva<br />
+                FACUMINAS - Completo - 2025<br /></li>
+            <li><b>Pós graduação:</b>ABA - Análise do Comportamento Aplicada<br />
+                FACUMINAS - Completo - 2025<br /></li>
+            <li><b>Pós graduação:</b>ABA - Análise Comportamental Aplicada ao Altismo<br />
+                FACUMINAS - Completo - 2025<br /></li>
+            <li><b>Pós graduação:</b>Especialização em Neuropsicopedagogia<br />
+                Descomplica - Completo - 2022<br /></li>
+        </ul>
+        <h2>Experiência Profissional:</h2>
+        <hr />
+        <p>
+        <ul>
+            <li>
+                <b>Associação Educacional Maria do Carmo de Paula - Amparo – SP</b> <br />Cargo: <b>Professora de educação especial</b><br />
+                <b>Atividades:</b>Atuar em colaboração com equipe pedagógógica e professores para adaptar conteúdos, materiais e estratégias, visando a inclusão e desenvolvimento integral do aluno.<br />
+                De <b>Abril de 2024 a Janeiro de 2026</b>
+            </li>
+            <li>
+                <b>WE CAN BR - SAPORE - Jaguariúna – SP</b> <br />Cargo: <b>Atendente de Lanchonete</b><br />
+                <b>Atividades:</b> Atendente de caixa e serviços gerais em lanchonete dentro da empresa Motorola<br />
+                Temporário: de <b>Março a Julho de 2022.</b>
+            </li>
+            <li>
+                <b>Prefeitura de Americana – SP</b> <br />Cargo: <b>Agente Comunitário de Saúde</b><br />
+                <b>Atividades:</b> Acompanhar a saúde famíliar da comunidade através de visitas aos lares e registro em sistema com campanhas e ações preventivas e tratamentos diversos<br />
+                De <b>Maio de 2007 a Setembro de 2019.</b>
+            </li>
+        </ul>
+        <h2>Perfil profissional</h2>
+        <hr />
+            <i>Administração: Boa comunicação, atendimento a pessoas, resolução de problemas.
+                <br />Conhecimentos burocráticos, administrativos.
+                <br />Facilidade em executar trabalhos manuais.
+            </i>
+        <i><br>Educação: Atendimento individualizado oferecendo suporte direto aos alunos com necessidades especiais, auxiliando em suas atividades diárias incluindo higiene, alimantação e locomoção.
+                <br />Adaptação de materiais e estratégias que atendam as necessidades pedagógicas específicas de cada aluno.
+                <br />Mediação facilitando a comunicação e interação entre o aluno e os demais colegas e professores, promovendo um ambiente inclusivo e acolhedor.
+                <br />Articulação trabalhando em conjunto com a equipe pedagógica e família do aluno, buscando soluções para promover seu desenvolvimento.
+            </i>
+        <hr />
+    </main>
+    <footer>
+        <p style="text-align: right;"><u><label id="ano"></label></u></p>
+    </footer>
+</body>
+<script>
+    function calcularIdade(nascimento) {
+        var nascimento = new Date(nascimento);
+        var diferenca = Date.now() - nascimento.getTime();
+        var idade = new Date(diferenca);
+        return Math.abs(idade.getUTCFullYear() - 1970);
+    }
+    document.querySelector('#idade').innerHTML = calcularIdade('1981/10/03');
+    document.querySelector('#ano').innerHTML = new Date().getFullYear();
+</script>
+</html>
