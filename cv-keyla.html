@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/cv-lu.png">
+    <title>Currículo</title>
+    <style>
+        body {
+            margin: 5%;
+            max-width: 700px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align:center;">KEYLA BISPO MARTINS </h1>
+        <hr />
+        <p style="text-align:right;font-size: small;">Brasileira, solteira, <label id="idade"></label> anos<br />
+            Residente em Amparo – SP – Brasil</p>
+        <p style="text-align:right;font-size: small;">
+            <b>WhatsApp: 55 19 99280-4140</b>
+            <b>Email:</b><a href="mailto:lucibcmartins@gmail.com">lucibcmartins@gmail.com</a> <br />
+        </p>
+        <h2>Objetivo: <i>Serviços Gerais - PCD</i> </h2>
+    </header>
+    <main>
+        <h2>Formação:</h2>
+        <hr />
+        <ul>
+            <li><b>Ensino fundamental:</b> Educação especial<br />
+                Alfabetização: leitura e escrita de frases curtas.<br />
+                APAE – Jaguariúna – SP.</li>
+        </ul>
+        <h2>PCD:</h2>
+        <hr />
+        <p>
+        <ul>
+            <li>
+                <b>Deficiência intelectual leve</b>b
+            </li>
+        </ul>
+        <h2>Qualificações</h2>
+        <hr />
+            <i>Trabalhos manuais: Boa comunicação, atendimento a pessoas.
+                <br />Dispopnibilidade em ajudar e aprender.
+                <br />Bom relacionamento com colegas.
+            </i>
+        <hr />
+    </main>
+    <footer>
+        <p style="text-align: right;"><u><label id="ano"></label></u></p>
+    </footer>
+</body>
+<script>
+    function calcularIdade(nascimento) {
+        var nascimento = new Date(nascimento);
+        var diferenca = Date.now() - nascimento.getTime();
+        var idade = new Date(diferenca);
+        return Math.abs(idade.getUTCFullYear() - 1970);
+    }
+    document.querySelector('#idade').innerHTML = calcularIdade('2007/11/16');
+    document.querySelector('#ano').innerHTML = new Date().getFullYear();
+</script>
+</html>
