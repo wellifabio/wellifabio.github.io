@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./assets/cv-lu.png">
+    <title>Currículo</title>
+    <style>
+        body {
+            margin: 5%;
+            max-width: 700px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 style="text-align:center;">KAIO BISPO MARTINS </h1>
+        <hr />
+        <p style="text-align:right;font-size: small;">Brasileiro, solteiro, <label id="idade"></label> anos<br />
+            Residente no bairro Parque Modelo, Amparo – SP – Brasil
+        </p>
+        <p style="text-align:right;font-size: small;">
+            <b>WhatsApp: 55 19 99280-4140</b>
+            <b>Email:</b><a href="mailto:lucibcmartins@gmail.com">lucibcmartins@gmail.com</a> <br />
+        </p>
+        <h2>Objetivo: <i>Jovem aprendiz, Serviços Gerais</i> </h2>
+    </header>
+    <main>
+        <h2>Formação:</h2>
+        <hr />
+        <ul>
+            <li><b>Ensino Médio:</b> Cursando<br /><br />
+                Primeiro ano.<br /><br />
+                EE. Professora Dionísia Gerbi Beira.- Amparo - SP</li>
+        </ul>
+        <h2>Experiência Profissional:</h2>
+        <hr />
+        <p>
+        <ul>
+            <li>
+                <b>Não possuo experiência profissional, porém busco qualificação através de cursos livres e dedicação aos estudos</b>
+            </li>
+        </ul>
+        <h2>Qualificações</h2>
+        <hr />
+            <i><br />Trabalhos manuais, digitais e outros.
+                <br /><br />Dispopnibilidade em ajudar e aprender.
+                <br /><br />Bom relacionamento com colegas.
+            </i>
+        <hr />
+    </main>
+    <footer>
+        <p style="text-align: right;"><u><label id="ano"></label></u></p>
+    </footer>
+</body>
+<script>
+    function calcularIdade(nascimento) {
+        var nascimento = new Date(nascimento);
+        var diferenca = Date.now() - nascimento.getTime();
+        var idade = new Date(diferenca);
+        return Math.abs(idade.getUTCFullYear() - 1970);
+    }
+    document.querySelector('#idade').innerHTML = calcularIdade('2007/11/16');
+    document.querySelector('#ano').innerHTML = new Date().getFullYear();
+</script>
+</html>
