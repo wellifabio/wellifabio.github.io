@@ -1,5 +1,9 @@
 const aplicacoes = [
 	{
+		href:"https://wellifabio.github.io/chatbot_gemini_eu_prof_2026/",
+		text: "JS: My Bot with Gemini (pt-br)"
+	},
+	{
 		href: "../canvas",
 		text: "JS: Canvas Frame Maker (pt-br)"
 	},
