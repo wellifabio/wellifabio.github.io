@@ -16,29 +16,33 @@ async function data() {
 }
 
 //Exibir os links nos postits
-async function getLinks(lista, alvo, aqui) {
-	await lista.forEach((app) => {
+async function getLinks(lista, alvo, classe, aqui) {
+	for (const app of lista) {
 		const div = document.createElement("div");
-		div.style.rotate = (Math.floor(Math.random() * 10) - 5) + "deg";
 		const a = document.createElement("a");
 		a.href = app.href;
 		if (aqui == undefined) a.target = "_blank";
 		if (app.icone != undefined){
-			div.classList.add("div_img")
-			div.innerHTML = `<img src='${app.icone}' alt='${app.text}' width=120px>`;
+			div.classList.add("div_com_img")
+			div.innerHTML = `<img src='${app.icone}' alt='${app.text}' onclick='window.location.href="${app.href}"'>`;
+		}else{
+			div.classList.add("postit")
+			div.classList.add(classe)
+			div.style.rotate = (Math.floor(Math.random() * 8) - 3) + "deg";
 		}
 		a.innerText = app.text;
 		div.appendChild(a);
 		alvo.appendChild(div);
-	});
+		await new Promise((resolve) => setTimeout(resolve, 25));
+	}
 }
 
 // Montando as listas ao carregar a página
 async function montarLinks() {
 	let dados = await data();
-	await getLinks(dados.portfolios, ports, true);
-	await getLinks(dados.apps, apps);
-	await getLinks(dados.projetos, projs);
+	await getLinks(dados.portfolios, ports,"ports", true);
+	await getLinks(dados.apps, apps, "apps");
+	await getLinks(dados.projetos, projs, "projetos");
 }
 
 // Montando os portfolios ao carregar a pagina de portfolios
@@ -47,11 +51,11 @@ async function montarPortfolios() {
 	let dados = await data();
 	const turma = dados.portfolios.find(ports => ports.id == urlParams.get('turma'));
 	document.querySelector("#titulo").innerHTML = turma.text;
-	await getLinks(turma.ports, ports);
+	await getLinks(turma.ports, ports, "ports");
 }
 
 //Inclina levemente todos os botões
-ops.querySelectorAll("button").forEach((op) => {
+document.querySelectorAll("button").forEach((op) => {
 	op.style.rotate = (Math.floor(Math.random() * 8) - 3) + "deg";
 });
 

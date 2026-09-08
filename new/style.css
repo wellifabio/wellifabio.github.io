@@ -17,7 +17,7 @@
     --color-tertiary: #999;
     --color-quaternary: #ccc;
     --color-quinary: #FFF;
-    --color-fundo-bts: rgba(255,255,255,0.2);
+    --color-fundo-bts: rgba(255, 255, 255, 0.2);
 }
 
 body {
@@ -112,7 +112,7 @@ nav {
     max-width: 500px;
 }
 
-nav button {
+button {
     width: 130px;
     min-height: 100px;
     background-image: url('../assets/postit.png');
@@ -127,7 +127,7 @@ nav button {
     text-shadow: 1px 2px 2px var(--color-tertiary);
 }
 
-nav button:hover {
+button:hover {
     transform: scale(1.1);
     background-image: url('../assets/postitred.png');
     transition: all 0.3s;
@@ -142,34 +142,13 @@ main {
     justify-content: center;
 }
 
-main button {
-    width: 100%;
-    max-width: 140px;
-    min-height: 100px;
-    background-image: url('../assets/postit.png');
-    background-size: cover;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-style: italic;
-    transition: all 0.3s;
-    background-color: var(--color-fundo-bts);
+a {
+    text-decoration: none;
     color: var(--color-primary);
     text-shadow: 1px 2px 2px var(--color-tertiary);
-    margin: 10px;
-}
-
-main button:hover {
-    transform: scale(1.1);
-    background-image: url('../assets/postitgreen.png');
-    transition: all 0.3s;
-    font-size: large;
-}
-
-footer button {
-    background-color: var(--color-fundo-bts);
-    color: var(--color-primary);
-    text-shadow: 1px 2px 2px var(--color-tertiary);
+    font-style: oblique;
+    font-size: 1.2em;
+    text-align: center;
 }
 
 #about {
@@ -211,9 +190,19 @@ footer button {
     transition: all 0.5s;
 }
 
-#apps,
-#projs,
-#ports {
+.apps {
+    background-image: url('../assets/postitgreen.png');
+}
+
+.projetos {
+    background-image: url('../assets/postitred.png');
+}
+
+.ports {
+    background-image: url('../assets/postitblue.png');
+}
+
+.link_area {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -221,19 +210,9 @@ footer button {
     justify-content: space-around;
     max-width: 1000px;
     margin: 20px;
-    background-color: var(--color-fundo-bts);
 }
 
-.div_img{
-    width: fit-content;
-    width: 300px;
-    height: 100%;
-    max-height: 350px;
-}
-
-#apps div,
-#projs div,
-#ports div {
+.postit {
     width: 180px;
     min-height: 130px;
     background-size: cover;
@@ -250,30 +229,37 @@ footer button {
     transition: all 0.5s;
 }
 
-#apps a,
-#projs a,
-#ports a {
-    width: 100%;
-    height: 100%;
-    text-decoration: none;
-    color: var(--color-primary);
-    text-shadow: 1px 2px 2px var(--color-tertiary);
-    font-style: oblique;
-    font-size: 1.2em;
-    text-align: center;
+.postit:hover{
+    transform: scale(1.1) rotate(-5deg);
+    transition: all 0.3s;
 }
 
-#apps div {
-    background-image: url('../assets/postitgreen.png');
+.div_com_img {
+    background-image: radial-gradient(#f9fcfc, #baf7f7);
+    border-radius: 0 0 0 15px;
+    min-width: 220px;
+    max-width: 220px;
+    height: 260px;
+    max-height: 350px;
+    transition: all 0.3s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    transition: all 0.5s;
+    gap: 15px;
+    img{
+        width: 90%;
+        cursor: pointer;
+    }
 }
 
-#projs div {
-    background-image: url('../assets/postitred.png');
+.div_com_img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s;
 }
 
-#ports div {
-    background-image: url('../assets/postitblue.png');
-}
 
 @media screen and (max-width: 600px) {
 
