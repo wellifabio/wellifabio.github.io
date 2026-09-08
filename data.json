@@ -65,7 +65,7 @@
 			"text": "JS - Memory Game (pt - br)"
 		},
 		{
-			"href": "../apps/charts",
+			"href": "../apps/clima",
 			"text": "JS - Learning ChartJS"
 		},
 		{
@@ -95,10 +95,6 @@
 		{
 			"href": "../apps/cantina",
 			"text": "Cantina UI, To Power BI classes (pt - br)"
-		},
-		{
-			"href": "https://github.com/wellifabio/matematica.git",
-			"text": "Mathematical Expressions with Markdown (pt - br)"
 		},
 		{
 			"href": "https://wellifabio.github.io/produtos-cards/",
@@ -144,7 +140,7 @@
 		},
 		{
 			"href": "https://github.com/wellifabio/matematica.git",
-			"text": "Math with Markdown (pt-br)"
+			"text": "Mathematical Expressions with Markdown (pt - br)"
 		},
 		{
 			"href": "https://github.com/wellifabio/projetofullexemplo.git",
@@ -200,6 +196,7 @@
 			"text": "Colegas Instrutores",
 			"href": "./portfolios.html?turma=instrutores",
 			"id": "instrutores",
+			"icone": "../assets/icones/capelo.webp",
 			"ports": [
 				{
 					"text": "Professor Robson",
@@ -213,12 +210,14 @@
 		},
 		{
 			"text": "Turma ChatGPT de 2026",
-			"href": "https://wellifabio.github.io/senai_portfolio_fic_chatgpt_2026"
+			"href": "https://wellifabio.github.io/senai_portfolio_fic_chatgpt_2026",
+			"icone": "../assets/icones/dev.png"
 		},
 		{
 			"text": "Tec. Dev. Sistemas SESI 2025",
 			"href": "./portfolios.html?turma=devsesi2025",
 			"id": "devsesi2025",
+			"icone": "../assets/icones/dev.png",
 			"ports": [
 				{
 					"text": "Beatriz Gabrielle Vizeu de Salles",
@@ -342,6 +341,7 @@
 			"text": "Tec. Dev. Sistemas SENAI 2025",
 			"href": "./portfolios.html?turma=devseduc2025",
 			"id": "devseduc2025",
+			"icone": "../assets/icones/dev.png",
 			"ports": [
 				{
 					"text": "Erick Aguiar de Souza Pinto ",
@@ -469,6 +469,7 @@
 			"text": "Tec. Dev. Sistemas 2024",
 			"href": "./portfolios.html?turma=dev2024",
 			"id": "dev2024",
+			"icone": "../assets/icones/dev.png",
 			"ports": [
 				{
 					"text": "Vinicius Vieira de Souza",
@@ -545,6 +546,7 @@
 			"text": "Tec. Dev. Sistemas 2023",
 			"href": "./portfolios.html?turma=dev2023",
 			"id": "dev2023",
+			"icone": "../assets/icones/fosforo.png",
 			"ports": [
 				{
 					"text": "Andre Fernandes Izidro",

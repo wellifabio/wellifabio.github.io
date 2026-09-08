@@ -23,6 +23,10 @@ async function getLinks(lista, alvo, aqui) {
 		const a = document.createElement("a");
 		a.href = app.href;
 		if (aqui == undefined) a.target = "_blank";
+		if (app.icone != undefined){
+			div.classList.add("div_img")
+			div.innerHTML = `<img src='${app.icone}' alt='${app.text}' width=120px>`;
+		}
 		a.innerText = app.text;
 		div.appendChild(a);
 		alvo.appendChild(div);
@@ -58,4 +62,4 @@ function calcularIdade(nascimento) {
 	return Math.abs(idade.getUTCFullYear() - 1970);
 }
 const idade = document.querySelector("#idade");
-if(idade) idade.innerHTML = calcularIdade("1980/09/08");
+if (idade) idade.innerHTML = calcularIdade("1980/09/08");

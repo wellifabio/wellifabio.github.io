@@ -224,6 +224,13 @@ footer button {
     background-color: var(--color-fundo-bts);
 }
 
+.div_img{
+    width: fit-content;
+    width: 300px;
+    height: 100%;
+    max-height: 350px;
+}
+
 #apps div,
 #projs div,
 #ports div {
