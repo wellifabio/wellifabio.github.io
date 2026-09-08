@@ -1,0 +1,655 @@
+{
+	"apps": [
+		{
+			"href": "https://wellifabio.github.io/chatbot_gemini_eu_prof_2026/",
+			"text": "JS: My Bot with Gemini (pt-br)"
+		},
+		{
+			"href": "../apps/canvas",
+			"text": "JS: Canvas Frame Maker (pt-br)"
+		},
+		{
+			"href": "../apps/gantt",
+			"text": "JS: Gantt chart generator (pt-br)"
+		},
+		{
+			"href": "https://wellifabio.github.io/techman-web-2025/",
+			"text": "Techman - Maintenance management - SAEP 2021 - (pt-br)"
+		},
+		{
+			"href": "https://escolaprismapug-2023.vercel.app/",
+			"text": "School Management System, Full-stack, Pug, Vercel, 2024- (pt-br)"
+		},
+		{
+			"href": "https://wellifabio.github.io/estacionamento-web-2025/",
+			"text": "Zé Leitão Park (pt-br)"
+		},
+		{
+			"href": "https://wellifabio.github.io/receitas-web-2025/",
+			"text": "Coockbook CRUD (pt-br)"
+		},
+		{
+			"href": "https://wellifabio.github.io/termo/",
+			"text": "Termo Play TI (By Robson)"
+		},
+		{
+			"href": "https://wellifabio.github.io/newswfom/",
+			"text": "NewsWFOM - hrefs e Notícias (pt-br)"
+		},
+		{
+			"href": "https://wellifabio.github.io/siminvest/",
+			"text": "JS: Investment Simulator (pt-br)"
+		},
+		{
+			"href": "../apps/blog/",
+			"text": "Firebase Blog (pt-br)"
+		},
+		{
+			"href": "../apps/avaliacao",
+			"text": "JS: SENAI standard assessment generator - MESEP(pt-br)"
+		},
+		{
+			"href": "../apps/bitola",
+			"text": "JS: Cálc. Bitola p/ Cabo de Cobre (pt-br)"
+		},
+		{
+			"href": "../apps/gadgets",
+			"text": "JS - Gadgets"
+		},
+		{
+			"href": "../apps/delivery/delivery.html",
+			"text": "JS - Delivery Manager (pt-br)"
+		},
+		{
+			"href": "../apps/memoria",
+			"text": "JS - Memory Game (pt - br)"
+		},
+		{
+			"href": "../apps/charts",
+			"text": "JS - Learning ChartJS"
+		},
+		{
+			"href": "../apps/sena/bilhete.html",
+			"text": "Brazil lottery game generator Sena (pt - br)"
+		},
+		{
+			"href": "../apps/loto/bilhete.html",
+			"text": "Brazil lottery game generator Loto<br (pt - br)"
+		},
+		{
+			"href": "../apps/hash",
+			"text": "JS - Hash Game"
+		},
+		{
+			"href": "../apps/chat",
+			"text": "Chatroom / Sala de Bate papo (pt - br)"
+		},
+		{
+			"href": "../apps/rand",
+			"text": "Randomizer data/Gerador de dados aleatórios (pt - br)"
+		},
+		{
+			"href": "../apps/petshop",
+			"text": "PetShop App Basic/PetShop, Local files (pt - br)"
+		},
+		{
+			"href": "../apps/cantina",
+			"text": "Cantina UI, To Power BI classes (pt - br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/matematica.git",
+			"text": "Mathematical Expressions with Markdown (pt - br)"
+		},
+		{
+			"href": "https://wellifabio.github.io/produtos-cards/",
+			"text": "Cads with Vanilla-JS Examples (pt - br)"
+		},
+		{
+			"href": "https://wellifabio.github.io/produtos-modais/",
+			"text": "Modais with Vanilla-JS Examples (pt - br)"
+		},
+		{
+			"href": "https://wellifabio.github.io/produtos-carrinho/",
+			"text": "Shopping Cart with Vanilla-JS Examples (pt - br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/desafioslogica.git",
+			"text": "Logic challenges (pt - br)"
+		}
+	],
+	"projetos": [
+		{
+			"href": "../assets/ieqfg/",
+			"text": "Projects AutoCad 3D - New IEQ Building"
+		},
+		{
+			"href": "../assets/containner/",
+			"text": "Projects AutoCad 3D - Container Snack Bar"
+		},
+		{
+			"href": "../assets/diversos/",
+			"text": "Projects AutoCad 3D modelling"
+		},
+		{
+			"href": "../assets/academia/",
+			"text": "My architect CAD hobby"
+		},
+		{
+			"href": "../assets/minhacasa/",
+			"text": "My building hobby"
+		},
+		{
+			"href": "../assets/diversos/miniold.html",
+			"text": "Web Site - Old (pt-br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/matematica.git",
+			"text": "Math with Markdown (pt-br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/projetofullexemplo.git",
+			"text": "Full-Stack - ServiFacil - Servies Management (pt-br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/escolaprismapug.git",
+			"text": "School with prism and Pug (pt-br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/restaurante3des.git",
+			"text": "Restaurant deliveries and location (pt-br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/senai2022/blob/master/old/1des/fpoo/aula25/PetsLogin/doc/prototipo.pdf",
+			"text": "Java Desktop - PetShop Solution example (pt-br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/ProjetoHortelino/doc/prototipo.pdf",
+			"text": "Java Desktop - Inventory and sales management (pt-br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Estacionamento/docs/prototipo.pdf",
+			"text": "Java Desktop - Park Solution example (pt-br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Mapeador/docs/prototipo.pdf",
+			"text": "Java Desktop - Small Nets Solution example (pt-br)"
+		},
+		{
+			"href": "https://github.com/wellifabio/senai2021/blob/master/1des/fpoo/exemplosGUI/Money/docs/prototipo.pdf",
+			"text": "Java Desktop - Counting money Solution example (pt-br)"
+		},
+		{
+			"href": "../outros/fatec_artigopooe.pdf",
+			"text": "Artigo - Programação Orientada a Objetos em Equipes (pt-br)"
+		},
+		{
+			"href": "../outros/fatec_monografiapooe.pdf",
+			"text": "Monografia - Graduação em Processamento de Dados (pt-br)"
+		},
+		{
+			"href": "https://sistemas.jaguariuna.sp.gov.br/portalcidadao",
+			"text": "Prefeitura Jaguariúna"
+		},
+		{
+			"href": "https://portalsaep.senai.br/home",
+			"text": "Portal SAEP"
+		}
+	],
+	"portfolios": [
+		{
+			"text": "Colegas Instrutores",
+			"href": "./portfolios.html?turma=instrutores",
+			"id": "instrutores",
+			"ports": [
+				{
+					"text": "Professor Robson",
+					"href": "https://robsonbsouzaa.github.io/"
+				},
+				{
+					"text": "Matheus Pignata",
+					"href": "https://matheuspignata.github.io"
+				}
+			]
+		},
+		{
+			"text": "Turma ChatGPT de 2026",
+			"href": "https://wellifabio.github.io/senai_portfolio_fic_chatgpt_2026"
+		},
+		{
+			"text": "Tec. Dev. Sistemas SESI 2025",
+			"href": "./portfolios.html?turma=devsesi2025",
+			"id": "devsesi2025",
+			"ports": [
+				{
+					"text": "Beatriz Gabrielle Vizeu de Salles",
+					"href": "https://bia-vizeu.github.io/Portifolio/"
+				},
+				{
+					"text": "Dahra Felix Fagionato",
+					"href": "https://dahrafagionato.github.io/"
+				},
+				{
+					"text": "Eloá Pereira Florêncio",
+					"href": "https://eloapfe.github.io/eloapfe/"
+				},
+				{
+					"text": "Gabriel Zanon",
+					"href": "https://gabrielbzanon.github.io/"
+				},
+				{
+					"text": "Gabriel Araújo",
+					"href": "https://sharaujoo.github.io/portifolio/"
+				},
+				{
+					"text": "Gabriela Helena Demori",
+					"href": "https://gabihdemori.github.io/Portifolio/"
+				},
+				{
+					"text": "Guilherme Canina",
+					"href": "https://guilhermecanina.github.io/"
+				},
+				{
+					"text": "Guilherme Stafocher Massucatto",
+					"href": "https://guimassucatto.github.io/"
+				},
+				{
+					"text": "Lohaine Vitória de Mattos SIlva",
+					"href": "https://lohainemattos.github.io/Lohaine-Mattos"
+				},
+				{
+					"text": "Heloisa Bordini Mendonça",
+					"href": "https://heloisa-bm.github.io/Heloisa/"
+				},
+				{
+					"text": "Henrico Ramalho",
+					"href": "https://henricoramalho.github.io/"
+				},
+				{
+					"text": "Isabelle Cristina de Oliveira Almeida",
+					"href": "https://isabellealmeid4.github.io/porftolio/"
+				},
+				{
+					"text": "João Lucas Ribeiro Leite",
+					"href": "https://jaolucas1234.github.io/"
+				},
+				{
+					"text": "Kauê Henrique Fidelis Cirqueira",
+					"href": "https://canalbaltellgrounds.github.io/"
+				},
+				{
+					"text": "Laila Casadei Macêdo",
+					"href": "https://lailacm.github.io"
+				},
+				{
+					"text": "Leonardo Fernandes de Oliveira",
+					"href": "https://leozin99.github.io/Portifolio/"
+				},
+				{
+					"text": "Lucas Gonçalves Giachetto",
+					"href": "https://lucasggiachetto.github.io/"
+				},
+				{
+					"text": "Lucas Hasmann Tavares Gonçalves",
+					"href": "https://lucashasmann.github.io/portifoliol7/"
+				},
+				{
+					"text": "Lucas Menegon",
+					"href": "https://menegonlucas.github.io/menegonlucas/"
+				},
+				{
+					"text": "Matheus Neves",
+					"href": "https://matheus-sneves.github.io/Matheus-SNeves/"
+				},
+				{
+					"text": "Maria Clara Pavan Caleffi",
+					"href": "https://mariapcaleffi.github.io/"
+				},
+				{
+					"text": "Maria Eduarda Bruna Berto",
+					"href": "https://dudaberto.github.io/"
+				},
+				{
+					"text": "Maria Eduarda Da Silva Barroso",
+					"href": "https://dud4silvaa.github.io/"
+				},
+				{
+					"text": "Marcos Vinicius de Oliveira",
+					"href": "https://viciousmark.github.io/"
+				},
+				{
+					"text": "Milena Felisbelo Da Silva",
+					"href": "https://milenafelisbelo.github.io/portifolio/"
+				},
+				{
+					"text": "Miriam Bordini Mendonça",
+					"href": "https://miriambordini.github.io/"
+				},
+				{
+					"text": "Nicole Araujo dos Santos",
+					"href": "https://nicolesantos0.github.io/"
+				},
+				{
+					"text": "Olavo Marques da Silva",
+					"href": "https://olavomarques.github.io/Portifolio/"
+				},
+				{
+					"text": "Pedro Henrique de Lima Batista",
+					"href": "https://carecalima.github.io/"
+				}
+			]
+		},
+		{
+			"text": "Tec. Dev. Sistemas SENAI 2025",
+			"href": "./portfolios.html?turma=devseduc2025",
+			"id": "devseduc2025",
+			"ports": [
+				{
+					"text": "Erick Aguiar de Souza Pinto ",
+					"href": "https://erickaguiar06.github.io/Portfolio/"
+				},
+				{
+					"text": "Pedro Henrique de oliveira",
+					"href": "https://pedrokk52.github.io/portfolio/"
+				},
+				{
+					"text": "Hélio Alves de Oliveira",
+					"href": "https://helio000.github.io/portfolio/"
+				},
+				{
+					"text": "João Victor da Silva Angra",
+					"href": "https://joaoangra.github.io/Portif-lio---Jo-o-Angra/"
+				},
+				{
+					"text": "João pedro nepomuceno dos santos",
+					"href": "https://joaopedroncps.github.io/Portifolioepico/"
+				},
+				{
+					"text": "Larissa dos santos da rocha ",
+					"href": "https://larissadossantosdarocha.github.io/portfolio/"
+				},
+				{
+					"text": "Rebeca Lazarini",
+					"href": "https://rebecalazarini.github.io/"
+				},
+				{
+					"text": "Thiago Muniz dos Santos",
+					"href": "https://thiagomuniz08.github.io/MeuPortif-lio/"
+				},
+				{
+					"text": "Thamye Souza Correa",
+					"href": "https://thamyes.github.io/Portifolio2025/"
+				},
+				{
+					"text": "Hélio Alves de oliveira",
+					"href": "https://helio000.github.io/portfolio/"
+				},
+				{
+					"text": "Laís Nascimento Andrade",
+					"href": "https://andradelais.github.io/potiifoliolais/"
+				},
+				{
+					"text": "Rebeca Aparecida Lima do Nascimento",
+					"href": "https://rebecaalimaa.github.io/portifolio/"
+				},
+				{
+					"text": "Justo Willian Cardoso Carneiro",
+					"href": "https://justowillian.github.io/justowillian-portifolio/"
+				},
+				{
+					"text": "Fernando Joaquim Mota",
+					"href": "https://nandinho019.github.io/Portifolio/"
+				},
+				{
+					"text": "Arthur Souza de Oliveira",
+					"href": "https://arthurs0.github.io/Portfolio/"
+				},
+				{
+					"text": "Kamili Vitoria dos Santos",
+					"href": "https://kamibarts.github.io/Portif-lio/"
+				},
+				{
+					"text": "Mellyssa Silveira",
+					"href": "https://mellyssam.github.io/portifolioMellyssa/"
+				},
+				{
+					"text": "Pedro Duarte Naddeu Russo ",
+					"href": "https://pedrodnrusso.github.io/PortfolioRusso/"
+				},
+				{
+					"text": "Rodrigo Passberg de Oliveira",
+					"href": "https://rodrigopassberg.github.io/"
+				},
+				{
+					"text": "Evelyn Fernandes",
+					"href": "https://evelynferna.github.io/Portifolio/"
+				},
+				{
+					"text": "Willian Piedade Ferreira",
+					"href": "https://willianpiedade08.github.io/portifolio/"
+				},
+				{
+					"text": "Crislaine Leopoldo cândido",
+					"href": "https://crislainel.github.io/Portfolio/"
+				},
+				{
+					"text": "Beatriz Vitória Mendes de Almeida",
+					"href": " https://beatriz1094.github.io/portifolio/"
+				},
+				{
+					"text": "Rhayssa Maria",
+					"href": "https://rhay1102.github.io/portifolio/"
+				},
+				{
+					"text": "Diego Maradona Preti Costa Figuerêdo",
+					"href": "https://diegomaradona03.github.io/portfolio/"
+				},
+				{
+					"text": "Maria Luiza Alves Florêncio",
+					"href": "https://malu100.github.io/portifolio/"
+				},
+				{
+					"text": "Catarina Silva Pereira",
+					"href": " https://catarina2060.github.io/portifolio/"
+				},
+				{
+					"text": "Arthur Souza de Oliveira",
+					"href": "https://arthurs0.github.io/Portfolio/"
+				},
+				{
+					"text": "Arthur Souza de Oliveira",
+					"href": "https://arthurs0.github.io/Portfolio/"
+				},
+				{
+					"text": "Kathleen Carolini Silva Miranda",
+					"href": "https://mirandakathleen.github.io/meuportifolio/"
+				}
+			]
+		},
+		{
+			"text": "Tec. Dev. Sistemas 2024",
+			"href": "./portfolios.html?turma=dev2024",
+			"id": "dev2024",
+			"ports": [
+				{
+					"text": "Vinicius Vieira de Souza",
+					"href": "https://vinisouza001.github.io/"
+				},
+				{
+					"text": "Bruno Otávio da Silva Ramos",
+					"href": "https://bruno-otavio.github.io"
+				},
+				{
+					"text": "Carla Carota Mozena",
+					"href": "https://carla-coder.github.io"
+				},
+				{
+					"text": "Carlos Henrique de Oliveira Siqueira",
+					"href": "https://carloshosiqueira.github.io"
+				},
+				{
+					"text": "Cicero Ruan Soares Barbosa ",
+					"href": "https://portfoliocisenai.netlify.app/"
+				},
+				{
+					"text": "Gabriella Godoi Avila",
+					"href": "https://avilagabriella.github.io"
+				},
+				{
+					"text": "Jaqueline Rodrigues",
+					"href": "https://JaqueJak.github.io",
+					"turma": "Tec. Dev. Sistemas 2023"
+				},
+				{
+					"text": "João Victor Colosso",
+					"href": "https://portfoliocolosso.netlify.app"
+				},
+				{
+					"text": "João Vitor Castro Viana Marques",
+					"href": "https://JMarques12.github.io"
+				},
+				{
+					"text": "Leticia Aparecida Hofman de Souza",
+					"href": "https://lehhofman.github.io"
+				},
+				{
+					"text": "Otavio Bassi de freitas",
+					"href": "https://freitas7portfolio.netlify.app"
+				},
+				{
+					"text": "Vinícius Manzano dos Santos",
+					"href": "https://vinimanzano.github.io/vinimanzano.io"
+				},
+				{
+					"text": "Camilla Piva Da Silva",
+					"href": "https://Camispiva.github.io"
+				},
+				{
+					"text": "Maria Fernanda Mattoso Oliveira Rello",
+					"href": "https://fefemattoso.github.io"
+				},
+				{
+					"text": "Richard Matheus Pinesi",
+					"href": "https://richardpnsportfolio.netlify.app"
+				},
+				{
+					"text": "Otavio Bueno",
+					"href": "https://buenootavio.github.io/"
+				},
+				{
+					"text": "Bryan Beckham",
+					"href": "https://bryanbeckham06.github.io/"
+				}
+			]
+		},
+		{
+			"text": "Tec. Dev. Sistemas 2023",
+			"href": "./portfolios.html?turma=dev2023",
+			"id": "dev2023",
+			"ports": [
+				{
+					"text": "Andre Fernandes Izidro",
+					"href": "https://aizidro.github.io"
+				},
+				{
+					"text": "Lucas Almeida Camacho",
+					"href": "https://lcscamacho.github.io"
+				}
+			]
+		},
+		{
+			"text": "Assistente. ADM. Grimaldi SENAI 2025",
+			"href": "./portfolios.html?turma=grimaldi2025",
+			"id": "grimaldi2025",
+			"ports": [
+				{
+					"text": "Ana Caroliny de Oliveira Almeida",
+					"href": "https://ana-caroliny.my.canva.site/ana-caroliny"
+				},
+				{
+					"text": "Ana Júlia Tavares Teixeira",
+					"href": "https://www.canva.com/design/DAGldWPa30I/83r9SNZLSP9bbCz4dzKpPA/edit?utm_content=DAGldWPa30I&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+				},
+				{
+					"text": "Andreza Francisco da Silva",
+					"href": "https://andrezasilva.my.canva.site/"
+				},
+				{
+					"text": "Anna Karolline Carlos Pinto",
+					"href": "https://www.canva.com/design/DAGldWkT3gY/SNKTPlMK3u5LU5fckU1YPg/edit?utm_content=DAGldWkT3gY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+				},
+				{
+					"text": "Clara Gabriela Neres de Souza",
+					"href": "https://clara-souza.my.canva.site/"
+				},
+				{
+					"text": "Emanuelle Santos da Cruz",
+					"href": "https://cruzemanuelle.my.canva.site/"
+				},
+				{
+					"text": "Gabriela Costa de Lima",
+					"href": "https://gabriela-lima.my.canva.site/gabriela-llima"
+				},
+				{
+					"text": "Guilherme Expedito Ferigatti",
+					"href": "https://guilherme-fetigatti.my.canva.site/"
+				},
+				{
+					"text": "Jhennifer Synara da Silva",
+					"href": "https://jhennifer-synara.my.canva.site/jhennifer-silva"
+				},
+				{
+					"text": "Kezia dominique Jesus Aragão",
+					"href": "https://www.canva.com/design/DAGmHceSsBc/Go4-El5iPAcdmZhHpXC5qA/edit?utm_content=DAGmHceSsBc&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+				},
+				{
+					"text": "Leonardo dos Santos da Costa",
+					"href": "https://www.canva.com/design/DAGlde05anI/cP8iaodKGGHj_oRp4LcQdQ/edit"
+				},
+				{
+					"text": "Luiza Vitoria Scarpato Biason",
+					"href": "https://luizabiason.my.canva.site/luiza-biason"
+				},
+				{
+					"text": "Maria Cecília do Nascimento Castro",
+					"href": "https://maria-ceccy.my.canva.site/"
+				},
+				{
+					"text": "Milena Ariely Pereira do Carmo",
+					"href": "https://millenaariely.my.canva.site/"
+				},
+				{
+					"text": "Natalia moura de jesus Oliveira",
+					"href": "https://nataliamoura695985884884848484848484848.my.canva.site/"
+				},
+				{
+					"text": "Pedro Bueno Toledo Semeghini",
+					"href": "https://www.canva.com/design/DAGldbVNjNA/ZBfUStTzBGrflVirFw7M-g/edit?utm_content=DAGldbVNjNA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+				},
+				{
+					"text": "Pedro Henrique Damasio",
+					"href": "https://www.canva.com/design/DAGmHNQAWbg/HGkWiwE8JCudRAtSG5OB_w/edit?utm_content=DAGmHNQAWbg&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+				},
+				{
+					"text": "Pedro Henrique Dorta Zonzini",
+					"href": "https://portifoliodorta8.my.canva.site"
+				},
+				{
+					"text": "Riquelme Alves Bispo",
+					"href": "https://riquelme-alves.my.canva.site/"
+				},
+				{
+					"text": "Sarah Lavínia De Oliveira Martins",
+					"href": "https://sarahm3.my.canva.site/"
+				},
+				{
+					"text": "Tainá Gabrielli Francisco Roberto",
+					"href": "https://tainagabrielli.my.canva.site/contadora"
+				},
+				{
+					"text": "Tamires Brandão Mendes",
+					"href": "https://tamires-brandao.my.canva.site/"
+				}
+			]
+		}
+	]
+}

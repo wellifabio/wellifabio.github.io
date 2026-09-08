@@ -10,20 +10,20 @@
 	<title>Wellington Teacher</title>
 </head>
 
-<body>
+<body onload="montarLinks()">
 	<header id="inicio">
 		<div class="avatar" title="Meu avatar"></div>
 		<h1>Wellington Martins</h1>
 		<nav>
+			<button onclick="window.location.href='#ports'">Partners Portfs.</button>
 			<button onclick="window.location.href='#apps'">Apps</button>
-			<button onclick="window.location.href='#ports'">Others Portfs.</button>
 			<button onclick="window.location.href='#projs'">Projects</button>
 		</nav>
 	</header>
 	<main>
 		<section id="about">
-			<a href="https://linktr.ee/wellifabio" target="_blank"><img src="../assets/wellifabio.png" alt="Links tree with many contacts"
-					title="LinkTree" /></a>
+			<a href="https://linktr.ee/wellifabio" target="_blank"><img src="../assets/wellifabio.png"
+					alt="Links tree with many contacts" title="LinkTree" /></a>
 			<div>
 				<p>Technicals Courses Teacher, IT Tecnologian, FullStack Developer (NodeJS, js, ts, Java Spring, JSP,
 					PHP,
@@ -31,15 +31,14 @@
 				<p>Brazilian, married, <label id="idade"></label> years old, two children</p>
 			</div>
 		</section>
-		<h2>Projects and example exercises practiced in classes in the technical course on systems development:</h2>
+		<h2>Partners ans Students portfolios:</h2>
+		<section id="ports"></section>
+		<button onclick="window.location.href='#inicio'">Back to top</button>
+		<h2>IT projects and examples exercises practiced in classes in the technical course on systems development:</h2>
 		<p>All links below lead to external pages and open in a new tab.</p>
 		<section id="apps"></section>
 		<button onclick="window.location.href='#inicio'">Back to top</button>
-		<h2>Students portfolios:</h2>
-		<p>All links below lead to external pages and open in a new tab.</p>
-		<section id="ports"></section>
-		<button onclick="window.location.href='#inicio'">Back to top</button>
-		<h2>Projects, ideas in development, along with some hobbies and others links:</h2>
+		<h2>Others projects, ideas in development, along with some hobbies and others links:</h2>
 		<p>All links below lead to external pages and open in a new tab.</p>
 		<section id="projs"></section>
 		<p>All links below lead to external pages and open in a new tab, same links open PDF documents.</p>
@@ -49,13 +48,12 @@
 		<img src="../assets/cv.png" style="height: 100px;margin: 30px;" alt="foto 3 por 4 do wellington de gravata"
 			title="foto 3x4" />
 		<nav>
-			<button onclick="window.location.href='../cv.html'" style="margin: 20px;">CV</button>
-			<button onclick="window.location.href='../cv.pdf'" style="margin: 20px;">Curriculum Vitae
+			<button onclick="window.location.href='../outros/cv.html'" style="margin: 20px;">CV</button>
+			<button onclick="window.location.href='../outros/cv.pdf'" style="margin: 20px;">Curriculum Vitae
 				PDF<br />(pt-br)</button>
 		</nav>
 	</footer>
 </body>
-<script src="dados.js"></script>
 <script src="script.js"></script>
 
 </html>
