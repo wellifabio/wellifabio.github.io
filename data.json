@@ -113,6 +113,44 @@
 			"text": "Logic challenges (pt - br)"
 		}
 	],
+	"flutter": [
+		{
+			"href": "https://github.com/wellifabio/sesi_ppdm2_flutter_pedal_gps_2026.git",
+			"text": "App Pedal GPS - Flutter"
+		},
+		{
+			"href": "https://github.com/wellifabio/flutter_agrotech_api_jwt_crud_camera_2026.git",
+			"text": "App AgroTech - Flutter"
+		},
+		{
+			"href": "https://github.com/wellifabio/sesi_ppdm2_flutter_anotacoes_arquivo_local_2026.git",
+			"text": "Notepad - Flutter"
+		},
+		{
+			"href": "https://github.com/wellifabio/flutter_agenda_datepicker_file_2026.git",
+			"text": "Callendar - Flutter"
+		},
+		{
+			"href": "https://github.com/wellifabio/flutter_testes_simples_financiamentos_2026.git",
+			"text": "Calc financ - Flutter"
+		},
+		{
+			"href": "https://github.com/wellifabio/flutter_quiz_historia_computacao_2026.git",
+			"text": "Quiz Computing - Flutter"
+		},
+		{
+			"href": "https://github.com/wellifabio/flutter_quiz_mock_api_drag_2026.git",
+			"text": "Rand Quiz - Flutter"
+		},
+		{
+			"href": "https://github.com/wellifabio/flutter_papelaria_api_get_json_2026.git",
+			"text": "Papelaria App - Flutter"
+		},
+		{
+			"href": "https://github.com/wellifabio/flutter_techman_2025.git",
+			"text": "Techman Manutenção - Flutter"
+		}
+	],
 	"projetos": [
 		{
 			"href": "../assets/ieqfg/",

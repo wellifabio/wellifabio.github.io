@@ -1,7 +1,8 @@
 
 const uri = "../data.json";
-const apps = document.querySelector("#apps");
 const ports = document.querySelector("#ports");
+const apps = document.querySelector("#apps");
+const flutter = document.querySelector("#flutter");
 const projs = document.querySelector("#projs");
 const ops = document.querySelector("nav");
 
@@ -42,6 +43,7 @@ async function montarLinks() {
 	let dados = await data();
 	await getLinks(dados.portfolios, ports,"ports", true);
 	await getLinks(dados.apps, apps, "apps");
+	await getLinks(dados.flutter, flutter, "ports");
 	await getLinks(dados.projetos, projs, "projetos");
 }
 
