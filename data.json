@@ -252,6 +252,126 @@
 			"icone": "../assets/icones/dev.png"
 		},
 		{
+			"text": "Tec. Dev. Sistemas SESI_A 2026",
+			"href": "./portfolios.html?turma=devsesi2025",
+			"id": "devsesi2025a",
+			"icone": "../assets/icones/dev.png",
+			"ports": [
+				{
+					"text": "Leandro Saltorato Junior",
+					"href": "https://github.com/leandrosaltorato/portfolio"
+				},
+				{
+					"text": "Luís Otavio Scorcer da Silva",
+					"href": "https://recrocs.github.io/Portifolio/"
+				},
+				{
+					"text": "Luiza Amaral Corazin",
+					"href": "https://github.com/LuizaCorazin/portfolio.git"
+				},
+				{
+					"text": "Ítalo Mozer de Sousa",
+					"href": "https://github.com/italomtlindo/portifolio_italo2026"
+				},
+				{
+					"text": "Vicenzo Vieira Varandas",
+					"href": "https://vicenzovava.github.io/"
+				},
+				{
+					"text": "Juliano Rafael B. Moraes",
+					"href": "https://github.com/julianopls/Juliano-portifolioUP"
+				},
+				{
+					"text": "Matheus Spineli",
+					"href": "https://matheusspineli.github.io/portfolio/"
+				},
+				{
+					"text": "Marina Defendi",
+					"href": "https://github.com/marndefendi/portifolio_2026"
+				},
+				{
+					"text": "Mariana costa de carvalho",
+					"href": "https://github.com/maricostadecarvalho/portfolio-mari.git"
+				},
+				{
+					"text": "Otávio Benedeti",
+					"href": "https://github.com/otaviobenedeti/CodeChamp"
+				}
+			]
+		},
+		{
+			"text": "Tec. Dev. Sistemas SESI_B 2026",
+			"href": "./portfolios.html?turma=devsesi2025",
+			"id": "devsesi2026b",
+			"icone": "../assets/icones/dev.png",
+			"ports": [
+				{
+					"text": "Pietra Moroni",
+					"href": "https://piemoroni.github.io/portfolio_2026/"
+				},
+				{
+					"text": "Bruno Adala Vaz",
+					"href": "https://bruno18157.github.io/portfolio_psof_aula04/"
+				},
+				{
+					"text": "Gabrielly Teixeira Piffer",
+					"href": "https://gabriellypiffer.github.io/portif-lio/"
+				},
+				{
+					"text": "Livia Morais Pereira",
+					"href": "https://livlivm.github.io/portifolio_lili/#inicio"
+				},
+				{
+					"text": "Eduarda Massaro dos Santos",
+					"href": "https://github.com/dudamssr/portifoliomassaro"
+				},
+				{
+					"text": "Natalia Marangoni",
+					"href": "https://natmarangonii.github.io/PortifolioNataliaMarangoni/"
+				},
+				{
+					"text": "Heloá Vitória de Oliveira",
+					"href": "https://heloa15.github.io/portfolio_2026/"
+				},
+				{
+					"text": "Mathias Domingos Pereira",
+					"href": "https://mathias625.github.io/Mathias.github.io/"
+				},
+				{
+					"text": "Isabela Nascimento",
+					"href": "https://isabela0530.github.io/portifolio_2026/"
+				},
+				{
+					"text": "Ana Livia Prado",
+					"href": " https://analivia4276.github.io/portifolio/"
+				},
+				{
+					"text": "Lívia Mazzolini Guarizo",
+					"href": "https://livia-singer08.github.io/portfolio/"
+				},
+				{
+					"text": "Isabelle Emanuele de Almeida Borges",
+					"href": "https://portfolio-isabelle-five.vercel.app/"
+				},
+				{
+					"text": "Caroline Vitória de Lima Silva",
+					"href": "https://github.com/CarolSilva3667/Carol-portifolio"
+				},
+				{
+					"text": "Alice R. da Silva",
+					"href": "https://aliceteee.github.io/Alice-Portfolio/"
+				},
+				{
+					"text": "Caroline Vitória de Lima Silva",
+					"href": "https://carolsilva3667.github.io/Carol-portifolio/"
+				},
+				{
+					"text": "Letícia Doff Sotta Souza",
+					"href": "https://leticiadoffsottasouza.github.io/Portifolio_2026/"
+				}
+			]
+		},
+		{
 			"text": "Tec. Dev. Sistemas SESI 2025",
 			"href": "./portfolios.html?turma=devsesi2025",
 			"id": "devsesi2025",
