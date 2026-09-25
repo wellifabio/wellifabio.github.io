@@ -254,48 +254,24 @@
 		{
 			"text": "Tec. Dev. Sistemas SESI_A 2026",
 			"href": "./portfolios.html?turma=devsesi2026a",
-			"id": "devsesi2025a",
+			"id": "devsesi2026a",
 			"icone": "../assets/icones/dev.png",
 			"ports": [
 				{
 					"text": "Leandro Saltorato Junior",
-					"href": "https://github.com/leandrosaltorato/portfolio"
+					"href": "https://leandrosaltorato.github.io/portfolio/"
 				},
 				{
 					"text": "Luís Otavio Scorcer da Silva",
 					"href": "https://recrocs.github.io/Portifolio/"
 				},
 				{
-					"text": "Luiza Amaral Corazin",
-					"href": "https://github.com/LuizaCorazin/portfolio.git"
-				},
-				{
-					"text": "Ítalo Mozer de Sousa",
-					"href": "https://github.com/italomtlindo/portifolio_italo2026"
-				},
-				{
 					"text": "Vicenzo Vieira Varandas",
 					"href": "https://vicenzovava.github.io/"
 				},
 				{
-					"text": "Juliano Rafael B. Moraes",
-					"href": "https://github.com/julianopls/Juliano-portifolioUP"
-				},
-				{
 					"text": "Matheus Spineli",
 					"href": "https://matheusspineli.github.io/portfolio/"
-				},
-				{
-					"text": "Marina Defendi",
-					"href": "https://github.com/marndefendi/portifolio_2026"
-				},
-				{
-					"text": "Mariana costa de carvalho",
-					"href": "https://github.com/maricostadecarvalho/portfolio-mari.git"
-				},
-				{
-					"text": "Otávio Benedeti",
-					"href": "https://github.com/otaviobenedeti/CodeChamp"
 				}
 			]
 		},
@@ -323,7 +299,7 @@
 				},
 				{
 					"text": "Eduarda Massaro dos Santos",
-					"href": "https://github.com/dudamssr/portifoliomassaro"
+					"href": "https://dudamssr.github.io/portifoliomassaro/"
 				},
 				{
 					"text": "Natalia Marangoni",
@@ -355,15 +331,11 @@
 				},
 				{
 					"text": "Caroline Vitória de Lima Silva",
-					"href": "https://github.com/CarolSilva3667/Carol-portifolio"
+					"href": "https://carolsilva3667.github.io/Carol-portifolio/"
 				},
 				{
 					"text": "Alice R. da Silva",
 					"href": "https://aliceteee.github.io/Alice-Portfolio/"
-				},
-				{
-					"text": "Caroline Vitória de Lima Silva",
-					"href": "https://carolsilva3667.github.io/Carol-portifolio/"
 				},
 				{
 					"text": "Letícia Doff Sotta Souza",
