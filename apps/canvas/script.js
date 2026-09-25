@@ -3,7 +3,7 @@ const params = {
     onde: undefined,
     cor: 0,
     corHexa: ["#f7e388", "#f8b3b3", "#88eaf7"],
-    postit: ["../assets/postit.png", "../assets/postitred.png", "../assets/postitblue.png"],
+    postit: ["../../assets/postit.png", "../../assets/postitred.png", "../../assets/postitblue.png"],
     orientacoes: [
         "Aqui, devem ser relacionadas quais as outras empresas serão parceiras do negócio. Geralmente, são serviços necessários para o funcionamento do empreendimento e os fornecedores.",
         "Relacione aqui as ações necessárias para a realização da proposta de valor.",
