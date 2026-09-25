@@ -253,7 +253,7 @@
 		},
 		{
 			"text": "Tec. Dev. Sistemas SESI_A 2026",
-			"href": "./portfolios.html?turma=devsesi2025",
+			"href": "./portfolios.html?turma=devsesi2026a",
 			"id": "devsesi2025a",
 			"icone": "../assets/icones/dev.png",
 			"ports": [
@@ -301,7 +301,7 @@
 		},
 		{
 			"text": "Tec. Dev. Sistemas SESI_B 2026",
-			"href": "./portfolios.html?turma=devsesi2025",
+			"href": "./portfolios.html?turma=devsesi2026b",
 			"id": "devsesi2026b",
 			"icone": "../assets/icones/dev.png",
 			"ports": [
