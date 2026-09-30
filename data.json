@@ -245,13 +245,13 @@
 		{
 			"text": "Turma ChatGPT de 2026",
 			"href": "https://wellifabio.github.io/senai_portfolio_fic_chatgpt_2026",
-			"icone": "../assets/icones/sesia2026.png"
+			"icone": "../assets/icones/dev.png"
 		},
 		{
 			"text": "Tec. Dev. Sistemas SESI_A 2026",
 			"href": "./portfolios.html?turma=devsesi2026a",
 			"id": "devsesi2026a",
-			"icone": "../assets/icones/dev.png",
+			"icone": "../assets/icones/sesia2026.png",
 			"ports": [
 				{
 					"text": "Leandro Saltorato Junior",
