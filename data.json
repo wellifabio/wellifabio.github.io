@@ -1,6 +1,10 @@
 {
 	"apps": [
 		{
+			"href":"https://robsonbsouzaa.github.io/arcadia/",
+			"text":"ARCAD IA 2026"
+		},
+		{
 			"href": "https://wellifabio.github.io/chatbot_gemini_eu_prof_2026/",
 			"text": "JS: My Bot with Gemini (pt-br)"
 		},
